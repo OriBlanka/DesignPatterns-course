@@ -51,6 +51,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.m_MainTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
@@ -65,7 +66,7 @@
             this.buttonLogin.Location = new System.Drawing.Point(15, 15);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(169, 51);
+            this.buttonLogin.Size = new System.Drawing.Size(438, 55);
             this.buttonLogin.TabIndex = 36;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -148,14 +149,13 @@
             this.m_UserProfilePicture.TabIndex = 54;
             this.m_UserProfilePicture.TabStop = false;
             // 
-            // label1
+            // m_HelloUserLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1028, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 29);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "label1";
+            this.m_HelloUserLabel.AutoSize = true;
+            this.m_HelloUserLabel.Location = new System.Drawing.Point(1175, 93);
+            this.m_HelloUserLabel.Name = "m_HelloUserLabel";
+            this.m_HelloUserLabel.Size = new System.Drawing.Size(0, 32);
+            this.m_HelloUserLabel.TabIndex = 55;
             // 
             // listBox1
             // 
@@ -284,8 +284,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1970, 1423);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(2248, 1512);
+            this.Controls.Add(this.m_HelloUserLabel);
             this.Controls.Add(this.m_UserProfilePicture);
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.tabControl1);
@@ -333,6 +333,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label m_HelloUserLabel;
     }
 }
 
