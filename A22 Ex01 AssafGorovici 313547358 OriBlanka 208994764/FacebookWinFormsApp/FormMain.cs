@@ -13,6 +13,8 @@ namespace BasicFacebookFeatures
 {
     public partial class FormMain : Form
     {
+        User m_LoggedInUser;
+        LoginResult m_LoginResult;
         public FormMain()
         {
             InitializeComponent();
@@ -23,16 +25,8 @@ namespace BasicFacebookFeatures
         {
             Clipboard.SetText("design.patterns20cc"); /// the current password for Desig Patter
 
-            FacebookWrapper.LoginResult loginResult = FacebookService.Login(
-                    /// (This is Desig Patter's App ID. replace it with your own)
-                    "1450160541956417", 
-                    /// requested permissions:
-					"email",
-                    "public_profile"
-                    /// add any relevant permissions
-                    );
-
-            buttonLogin.Text = $"Logged in as {loginResult.LoggedInUser.Name}";
+            loginAndInit();
+            //buttonLogin.Text = $"Logged in as {m_LoginResult.LoggedInUser.Name}";
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
@@ -40,5 +34,41 @@ namespace BasicFacebookFeatures
 			FacebookService.LogoutWithUI();
 			buttonLogin.Text = "Login";
 		}
-	}
+
+        private void loginAndInit()
+        {
+            m_LoginResult = FacebookService.Login("4722021931181899", /// (desig patter's "Design Patterns Course App 2.4" app)
+					"email",
+                    "public_profile",
+                    "user_age_range",
+                    "user_birthday",
+                    "user_events",
+                    "user_friends",
+                    "user_gender",
+                    "user_hometown",
+                    "user_likes",
+                    "user_link",
+                    "user_location",
+                    "user_photos",
+                    "user_posts",
+                    "user_videos");
+
+            if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
+            {
+                m_LoggedInUser = m_LoginResult.LoggedInUser;
+
+                fetchUserInfo();
+            }
+            else
+            {
+                MessageBox.Show(m_LoginResult.ErrorMessage, "Login Failed");
+            }
+        }
+
+        private void fetchUserInfo()
+        {
+            m_UserProfilePicture.LoadAsync(m_LoggedInUser.PictureNormalURL);
+            
+        }
+    }
 }
