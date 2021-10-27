@@ -36,7 +36,7 @@
             this.m_FetchEventsTab = new System.Windows.Forms.TabPage();
             this.m_MutualLikedPagesTab = new System.Windows.Forms.TabPage();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +46,7 @@
             this.buttonLogin.Location = new System.Drawing.Point(17, 16);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(193, 55);
+            this.buttonLogin.Size = new System.Drawing.Size(438, 55);
             this.buttonLogin.TabIndex = 36;
             this.buttonLogin.Text = "Login";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -115,14 +115,13 @@
             this.m_UserProfilePicture.TabIndex = 54;
             this.m_UserProfilePicture.TabStop = false;
             // 
-            // label1
+            // m_HelloUserLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1175, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 32);
-            this.label1.TabIndex = 55;
-            this.label1.Text = "label1";
+            this.m_HelloUserLabel.AutoSize = true;
+            this.m_HelloUserLabel.Location = new System.Drawing.Point(1175, 93);
+            this.m_HelloUserLabel.Name = "m_HelloUserLabel";
+            this.m_HelloUserLabel.Size = new System.Drawing.Size(0, 32);
+            this.m_HelloUserLabel.TabIndex = 55;
             // 
             // FormMain
             // 
@@ -130,7 +129,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(2248, 1512);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.m_HelloUserLabel);
             this.Controls.Add(this.m_UserProfilePicture);
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.tabControl1);
@@ -158,7 +157,7 @@
         private System.Windows.Forms.TabPage m_FetchEventsTab;
         private System.Windows.Forms.TabPage m_MutualLikedPagesTab;
         private System.Windows.Forms.PictureBox m_UserProfilePicture;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label m_HelloUserLabel;
     }
 }
 

@@ -24,16 +24,16 @@ namespace BasicFacebookFeatures
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             Clipboard.SetText("design.patterns20cc"); /// the current password for Desig Patter
-
             loginAndInit();
-            //buttonLogin.Text = $"Logged in as {m_LoginResult.LoggedInUser.Name}";
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
 			FacebookService.LogoutWithUI();
 			buttonLogin.Text = "Login";
-		}
+            m_HelloUserLabel.Text = "";
+            m_UserProfilePicture.Image = Properties.Resources.FacebookLogo;
+        }
 
         private void loginAndInit()
         {
@@ -68,7 +68,8 @@ namespace BasicFacebookFeatures
         private void fetchUserInfo()
         {
             m_UserProfilePicture.LoadAsync(m_LoggedInUser.PictureNormalURL);
-            
+            m_HelloUserLabel.Text = $@"Hi {m_LoggedInUser.FirstName}!";
+            buttonLogin.Text = $@"Logged in as {m_LoggedInUser.Name}";
         }
     }
 }
