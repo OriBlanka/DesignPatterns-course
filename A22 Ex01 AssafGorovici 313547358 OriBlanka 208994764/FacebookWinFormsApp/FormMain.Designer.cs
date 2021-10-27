@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -105,9 +106,12 @@
             // 
             // m_UserProfilePicture
             // 
+            this.m_UserProfilePicture.Image = global::BasicFacebookFeatures.Properties.Resources.FacebookLogo;
+            this.m_UserProfilePicture.InitialImage = ((System.Drawing.Image)(resources.GetObject("m_UserProfilePicture.InitialImage")));
             this.m_UserProfilePicture.Location = new System.Drawing.Point(936, 16);
             this.m_UserProfilePicture.Name = "m_UserProfilePicture";
             this.m_UserProfilePicture.Size = new System.Drawing.Size(210, 216);
+            this.m_UserProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.m_UserProfilePicture.TabIndex = 54;
             this.m_UserProfilePicture.TabStop = false;
             // 
@@ -124,13 +128,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2241, 1421);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(2248, 1512);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_UserProfilePicture);
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonLogin);
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(2280, 1600);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
