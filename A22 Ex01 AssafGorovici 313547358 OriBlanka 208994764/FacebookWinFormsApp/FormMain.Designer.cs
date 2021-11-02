@@ -2,6 +2,7 @@
 {
     partial class FormMain
     {
+        
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -33,38 +34,38 @@
             this.buttonLogout = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.m_MainTab = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.buttonFetchPosts = new System.Windows.Forms.Button();
+            this.listBoxPosts = new System.Windows.Forms.ListBox();
             this.m_FetchEventsTab = new System.Windows.Forms.TabPage();
             this.m_MutualLikedPagesTab = new System.Windows.Forms.TabPage();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.m_MainTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLogin
             // 
             this.buttonLogin.Location = new System.Drawing.Point(15, 15);
-            this.buttonLogin.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(7);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(438, 55);
             this.buttonLogin.TabIndex = 36;
@@ -75,7 +76,7 @@
             // buttonLogout
             // 
             this.buttonLogout.Location = new System.Drawing.Point(1777, 15);
-            this.buttonLogout.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.buttonLogout.Margin = new System.Windows.Forms.Padding(7);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(169, 51);
             this.buttonLogout.TabIndex = 52;
@@ -109,8 +110,8 @@
             this.m_MainTab.Controls.Add(this.button3);
             this.m_MainTab.Controls.Add(this.listBox2);
             this.m_MainTab.Controls.Add(this.button2);
-            this.m_MainTab.Controls.Add(this.button1);
-            this.m_MainTab.Controls.Add(this.listBox1);
+            this.m_MainTab.Controls.Add(this.buttonFetchPosts);
+            this.m_MainTab.Controls.Add(this.listBoxPosts);
             this.m_MainTab.Location = new System.Drawing.Point(10, 49);
             this.m_MainTab.Name = "m_MainTab";
             this.m_MainTab.Padding = new System.Windows.Forms.Padding(3);
@@ -118,6 +119,128 @@
             this.m_MainTab.TabIndex = 0;
             this.m_MainTab.Text = "Main";
             this.m_MainTab.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(1405, 691);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(216, 123);
+            this.pictureBox4.TabIndex = 69;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(385, 671);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(216, 123);
+            this.pictureBox3.TabIndex = 68;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(1405, 312);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(216, 123);
+            this.pictureBox2.TabIndex = 67;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(385, 312);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(216, 123);
+            this.pictureBox1.TabIndex = 66;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(1063, 699);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(235, 85);
+            this.button5.TabIndex = 65;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(52, 709);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(235, 85);
+            this.button4.TabIndex = 64;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // listBox5
+            // 
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.ItemHeight = 31;
+            this.listBox5.Location = new System.Drawing.Point(1045, 820);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(673, 128);
+            this.listBox5.TabIndex = 63;
+            // 
+            // listBox4
+            // 
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 31;
+            this.listBox4.Location = new System.Drawing.Point(52, 837);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(673, 128);
+            this.listBox4.TabIndex = 62;
+            // 
+            // listBox3
+            // 
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 31;
+            this.listBox3.Location = new System.Drawing.Point(1063, 455);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(604, 128);
+            this.listBox3.TabIndex = 61;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1074, 316);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(211, 102);
+            this.button3.TabIndex = 60;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 31;
+            this.listBox2.Location = new System.Drawing.Point(52, 455);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(673, 128);
+            this.listBox2.TabIndex = 59;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(52, 333);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(235, 85);
+            this.button2.TabIndex = 58;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // buttonFetchPosts
+            // 
+            this.buttonFetchPosts.Location = new System.Drawing.Point(113, 103);
+            this.buttonFetchPosts.Name = "buttonFetchPosts";
+            this.buttonFetchPosts.Size = new System.Drawing.Size(251, 108);
+            this.buttonFetchPosts.TabIndex = 57;
+            this.buttonFetchPosts.Text = "Fetch Posts";
+            this.buttonFetchPosts.UseVisualStyleBackColor = true;
+            // 
+            // listBoxPosts
+            // 
+            this.listBoxPosts.FormattingEnabled = true;
+            this.listBoxPosts.ItemHeight = 31;
+            this.listBoxPosts.Location = new System.Drawing.Point(470, 65);
+            this.listBoxPosts.Name = "listBoxPosts";
+            this.listBoxPosts.Size = new System.Drawing.Size(1315, 190);
+            this.listBoxPosts.TabIndex = 56;
             // 
             // m_FetchEventsTab
             // 
@@ -149,135 +272,20 @@
             this.m_UserProfilePicture.TabIndex = 54;
             this.m_UserProfilePicture.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
+            // 
             // m_HelloUserLabel
             // 
             this.m_HelloUserLabel.AutoSize = true;
             this.m_HelloUserLabel.Location = new System.Drawing.Point(1175, 93);
             this.m_HelloUserLabel.Name = "m_HelloUserLabel";
-            this.m_HelloUserLabel.Size = new System.Drawing.Size(0, 32);
+            this.m_HelloUserLabel.Size = new System.Drawing.Size(0, 29);
             this.m_HelloUserLabel.TabIndex = 55;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 31;
-            this.listBox1.Location = new System.Drawing.Point(470, 65);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(1315, 190);
-            this.listBox1.TabIndex = 56;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(113, 103);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(251, 108);
-            this.button1.TabIndex = 57;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(52, 333);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(235, 85);
-            this.button2.TabIndex = 58;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 31;
-            this.listBox2.Location = new System.Drawing.Point(52, 455);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(673, 128);
-            this.listBox2.TabIndex = 59;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(1074, 316);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(211, 102);
-            this.button3.TabIndex = 60;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // listBox3
-            // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 31;
-            this.listBox3.Location = new System.Drawing.Point(1063, 455);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(604, 128);
-            this.listBox3.TabIndex = 61;
-            // 
-            // listBox4
-            // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 31;
-            this.listBox4.Location = new System.Drawing.Point(52, 837);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(673, 128);
-            this.listBox4.TabIndex = 62;
-            // 
-            // listBox5
-            // 
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 31;
-            this.listBox5.Location = new System.Drawing.Point(1045, 820);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(673, 128);
-            this.listBox5.TabIndex = 63;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(52, 709);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(235, 85);
-            this.button4.TabIndex = 64;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(1063, 699);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(235, 85);
-            this.button5.TabIndex = 65;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(385, 312);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 123);
-            this.pictureBox1.TabIndex = 66;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(1405, 312);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(216, 123);
-            this.pictureBox2.TabIndex = 67;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(385, 671);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(216, 123);
-            this.pictureBox3.TabIndex = 68;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(1405, 691);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(216, 123);
-            this.pictureBox4.TabIndex = 69;
-            this.pictureBox4.TabStop = false;
             // 
             // FormMain
             // 
@@ -290,7 +298,7 @@
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.buttonLogin);
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1998, 1502);
@@ -299,11 +307,11 @@
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.m_MainTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,8 +339,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button buttonFetchPosts;
+        private System.Windows.Forms.ListBox listBoxPosts;
         private System.Windows.Forms.Label m_HelloUserLabel;
     }
 }
