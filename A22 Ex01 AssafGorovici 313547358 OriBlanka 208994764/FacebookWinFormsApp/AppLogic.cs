@@ -46,13 +46,14 @@ namespace BasicFacebookFeatures
                     "user_location",
                     "user_photos",
                     "user_posts",
-                    "user_videos");
+                    "user_videos",
+                    "user_games_activity");
 
             if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
             {
                 m_LoggedInUser = m_LoginResult.LoggedInUser;
 
-               // fetchUserInfo();
+                //fetchUserInfo();
             }
             /*else
             {
