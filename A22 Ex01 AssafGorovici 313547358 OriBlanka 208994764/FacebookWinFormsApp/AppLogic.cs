@@ -46,8 +46,7 @@ namespace BasicFacebookFeatures
                     "user_location",
                     "user_photos",
                     "user_posts",
-                    "user_videos",
-                    "user_games_activity");
+                    "user_videos");
 
             if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
             {
