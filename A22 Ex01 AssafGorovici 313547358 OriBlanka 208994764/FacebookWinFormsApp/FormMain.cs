@@ -24,7 +24,7 @@ namespace BasicFacebookFeatures
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText("design.patterns20cc"); /// the current password for Desig Patter
+            Clipboard.SetText("design.patterns20aa"); /// the current password for Desig Patter
             r_AppLogic.loginAndLoadUserInfo();
             displayUserInfoAfterLogin();
         }
@@ -49,8 +49,8 @@ namespace BasicFacebookFeatures
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-			FacebookService.LogoutWithUI();
-			buttonLogin.Text = "Login";
+            FacebookService.LogoutWithUI();
+            buttonLogin.Text = "Login";
             m_HelloUserLabel.Text = "";
             m_UserProfilePicture.Image = Properties.Resources.FacebookLogo;
         }
@@ -85,13 +85,46 @@ namespace BasicFacebookFeatures
             }
         }
 
-        
+        public enum eEventStatus
+        {
+            Online = 0,
+            NotOnline = 1,
+            AllEvents = 2
+        }
 
         private void buttonFetchEvents_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Event> actions = r_AppLogic.LoggedInUser.Events;
+            FacebookObjectCollection<Event> allEvents = r_AppLogic.LoggedInUser.Events;
+            FacebookObjectCollection<Event> sortedEvents = new FacebookObjectCollection<Event>();
 
-            dataGridViewEvents.DataSource = actions;
+            switch (comboBoxEventsStatus.SelectedIndex)
+            {
+                case (int)eEventStatus.Online:
+                    foreach(Event events in allEvents)
+                    {
+                        if(events.IsOnline == true)
+                        {
+                            sortedEvents.Add(events);
+                        }
+                    }
+                    break;
+
+                case (int)eEventStatus.NotOnline:
+                    foreach (Event events in allEvents)
+                    {
+                        if (events.IsOnline == false)
+                        {
+                            sortedEvents.Add(events);
+                        }
+                    }
+                    break;
+
+                case (int)eEventStatus.AllEvents:
+                    sortedEvents = allEvents;
+                    break;
+            }
+
+            dataGridViewEvents.DataSource = sortedEvents;
         }
 
         private void buttonLikedPages_Click(object sender, EventArgs e)
