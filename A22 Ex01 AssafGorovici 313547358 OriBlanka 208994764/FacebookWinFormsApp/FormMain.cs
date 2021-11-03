@@ -87,6 +87,13 @@ namespace BasicFacebookFeatures
                 MessageBox.Show("No Posts to retrieve :(");
             }
         }
+
+        private void buttonFetchEvents_Click(object sender, EventArgs e)
+        {
+            FacebookObjectCollection<Event> actions = r_AppLogic.LoggedInUser.Events;
+
+            dataGridViewEvents.DataSource = actions;
+        }
     }
 
 
