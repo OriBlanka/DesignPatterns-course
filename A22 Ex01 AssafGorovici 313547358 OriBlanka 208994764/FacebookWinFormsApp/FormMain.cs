@@ -59,14 +59,11 @@ namespace BasicFacebookFeatures
 
         private void buttonFetchPosts_Click(object sender, EventArgs e)
         {
-            fetchPosts();
-        }
-
-        private void fetchPosts()
-        {
+            FacebookObjectCollection<Post> myPosts = new FacebookObjectCollection<Post>();
+            r_AppLogic.FetchPosts(ref myPosts);
             listBoxPosts.Items.Clear();
 
-            foreach (Post post in r_AppLogic.LoggedInUser.Posts)
+            foreach (Post post in myPosts)
             {
                 if (post.Message != null)
                 {
@@ -88,11 +85,88 @@ namespace BasicFacebookFeatures
             }
         }
 
+        
+
         private void buttonFetchEvents_Click(object sender, EventArgs e)
         {
             FacebookObjectCollection<Event> actions = r_AppLogic.LoggedInUser.Events;
 
             dataGridViewEvents.DataSource = actions;
+        }
+
+        private void buttonLikedPages_Click(object sender, EventArgs e)
+        {
+            FacebookObjectCollection<Page> likedPages = new FacebookObjectCollection<Page>();
+            r_AppLogic.FetchLikedPages(ref likedPages);
+
+            listBoxLikedPages.Items.Clear();
+            listBoxLikedPages.DisplayMember = "Name";
+
+            try
+            {
+                foreach (Page page in likedPages)
+                {
+                    listBoxLikedPages.Items.Add(page);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            if (listBoxLikedPages.Items.Count == 0)
+            {
+                MessageBox.Show("No liked pages to retrieve :(");
+            }
+        }
+
+        private void buttonFetchAlbums_Click(object sender, EventArgs e)
+        {
+            FacebookObjectCollection<Album> albums = new FacebookObjectCollection<Album>();
+            r_AppLogic.FetchAlbums(ref albums);
+
+            listBoxAlbums.Items.Clear();
+
+            foreach (Album album in albums)
+            {
+                listBoxAlbums.Items.Add(album);
+            }
+        }
+
+        private void buttonFetchGroups_Click(object sender, EventArgs e)
+        {
+            FacebookObjectCollection<Group> groups = new FacebookObjectCollection<Group>();
+            r_AppLogic.FetchGroups(ref groups);
+
+            listBoxGroups.Items.Clear();
+
+            foreach (Group group in groups)
+            {
+                listBoxGroups.Items.Add(group);
+            }
+        }
+
+        private void buttonFetchFavoriteTeams_Click(object sender, EventArgs e)
+        {
+            FacebookObjectCollection<Page> favoriteTeams = new FacebookObjectCollection<Page>();
+
+            listBoxFavoriteTeams.Items.Clear();
+
+            foreach (Page team in favoriteTeams)
+            {
+                listBoxFavoriteTeams.Items.Add(team);
+            }
+        }
+
+        private void buttonFetchFriends_Click(object sender, EventArgs e)
+        {
+            FacebookObjectCollection<FriendList> friendLists = new FacebookObjectCollection<FriendList>();
+
+            listBoxFriends.Items.Clear();
+
+            r_AppLogic.FetchFriends(ref friendLists);
+
+            
         }
     }
 
