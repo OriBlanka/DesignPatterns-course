@@ -54,37 +54,7 @@ namespace BasicFacebookFeatures
             m_HelloUserLabel.Text = "";
             m_UserProfilePicture.Image = Properties.Resources.FacebookLogo;
         }
-        /*
-        private void loginAndInit()
-        {
-            m_LoginResult = FacebookService.Login("4722021931181899", /// (desig patter's "Design Patterns Course App 2.4" app)
-					"email",
-                    "public_profile",
-                    "user_age_range",
-                    "user_birthday",
-                    "user_events",
-                    "user_friends",
-                    "user_gender",
-                    "user_hometown",
-                    "user_likes",
-                    "user_link",
-                    "user_location",
-                    "user_photos",
-                    "user_posts",
-                    "user_videos");
-
-            if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
-            {
-                m_LoggedInUser = m_LoginResult.LoggedInUser;
-
-                fetchUserInfo();
-            }
-            else
-            {
-                MessageBox.Show(m_LoginResult.ErrorMessage, "Login Failed");
-            }
-        }
-        */
+        
         
 
         private void buttonFetchPosts_Click(object sender, EventArgs e)
@@ -118,4 +88,6 @@ namespace BasicFacebookFeatures
             }
         }
     }
+
+
 }
