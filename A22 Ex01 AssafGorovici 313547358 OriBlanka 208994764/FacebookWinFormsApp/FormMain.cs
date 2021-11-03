@@ -24,7 +24,7 @@ namespace BasicFacebookFeatures
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText("design.patterns20cc"); /// the current password for Desig Patter
+            Clipboard.SetText("design.patterns20aa"); /// the current password for Desig Patter
             r_AppLogic.loginAndLoadUserInfo();
             displayUserInfoAfterLogin();
         }
@@ -49,43 +49,11 @@ namespace BasicFacebookFeatures
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-			FacebookService.LogoutWithUI();
-			buttonLogin.Text = "Login";
+            FacebookService.LogoutWithUI();
+            buttonLogin.Text = "Login";
             m_HelloUserLabel.Text = "";
             m_UserProfilePicture.Image = Properties.Resources.FacebookLogo;
         }
-        /*
-        private void loginAndInit()
-        {
-            m_LoginResult = FacebookService.Login("4722021931181899", /// (desig patter's "Design Patterns Course App 2.4" app)
-					"email",
-                    "public_profile",
-                    "user_age_range",
-                    "user_birthday",
-                    "user_events",
-                    "user_friends",
-                    "user_gender",
-                    "user_hometown",
-                    "user_likes",
-                    "user_link",
-                    "user_location",
-                    "user_photos",
-                    "user_posts",
-                    "user_videos");
-
-            if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
-            {
-                m_LoggedInUser = m_LoginResult.LoggedInUser;
-
-                fetchUserInfo();
-            }
-            else
-            {
-                MessageBox.Show(m_LoginResult.ErrorMessage, "Login Failed");
-            }
-        }
-        */
-        
 
         private void buttonFetchPosts_Click(object sender, EventArgs e)
         {
@@ -118,11 +86,46 @@ namespace BasicFacebookFeatures
             }
         }
 
+        public enum eEventStatus
+        {
+            Online = 0,
+            NotOnline = 1,
+            AllEvents = 2
+        }
+
         private void buttonFetchEvents_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Event> actions = r_AppLogic.LoggedInUser.Events;
+            FacebookObjectCollection<Event> allEvents = r_AppLogic.LoggedInUser.Events;
+            FacebookObjectCollection<Event> sortedEvents = new FacebookObjectCollection<Event>();
 
-            dataGridViewEvents.DataSource = actions;
+            switch (comboBoxEventsStatus.SelectedIndex)
+            {
+                case (int)eEventStatus.Online:
+                    foreach(Event events in allEvents)
+                    {
+                        if(events.IsOnline == true)
+                        {
+                            sortedEvents.Add(events);
+                        }
+                    }
+                    break;
+
+                case (int)eEventStatus.NotOnline:
+                    foreach (Event events in allEvents)
+                    {
+                        if (events.IsOnline == false)
+                        {
+                            sortedEvents.Add(events);
+                        }
+                    }
+                    break;
+
+                case (int)eEventStatus.AllEvents:
+                    sortedEvents = allEvents;
+                    break;
+            }
+
+            dataGridViewEvents.DataSource = sortedEvents;
         }
     }
 }

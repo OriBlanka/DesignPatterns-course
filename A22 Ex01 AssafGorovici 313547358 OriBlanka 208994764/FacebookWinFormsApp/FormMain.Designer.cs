@@ -54,14 +54,12 @@
             this.listBoxPosts = new System.Windows.Forms.ListBox();
             this.m_FetchEventsTab = new System.Windows.Forms.TabPage();
             this.buttonFetchEvents = new System.Windows.Forms.Button();
-            this.checkBoxEventsNotReplied = new System.Windows.Forms.CheckBox();
-            this.checkBoxEventdMaybe = new System.Windows.Forms.CheckBox();
-            this.checkBoxEventsDeclined = new System.Windows.Forms.CheckBox();
             this.dataGridViewEvents = new System.Windows.Forms.DataGridView();
             this.m_MutualLikedPagesTab = new System.Windows.Forms.TabPage();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
+            this.comboBoxEventsStatus = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.m_MainTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -297,10 +295,8 @@
             // 
             // m_FetchEventsTab
             // 
+            this.m_FetchEventsTab.Controls.Add(this.comboBoxEventsStatus);
             this.m_FetchEventsTab.Controls.Add(this.buttonFetchEvents);
-            this.m_FetchEventsTab.Controls.Add(this.checkBoxEventsNotReplied);
-            this.m_FetchEventsTab.Controls.Add(this.checkBoxEventdMaybe);
-            this.m_FetchEventsTab.Controls.Add(this.checkBoxEventsDeclined);
             this.m_FetchEventsTab.Controls.Add(this.dataGridViewEvents);
             this.m_FetchEventsTab.Location = new System.Drawing.Point(10, 51);
             this.m_FetchEventsTab.Name = "m_FetchEventsTab";
@@ -312,43 +308,13 @@
             // 
             // buttonFetchEvents
             // 
-            this.buttonFetchEvents.Location = new System.Drawing.Point(674, 7);
+            this.buttonFetchEvents.Location = new System.Drawing.Point(509, 7);
             this.buttonFetchEvents.Name = "buttonFetchEvents";
             this.buttonFetchEvents.Size = new System.Drawing.Size(295, 53);
             this.buttonFetchEvents.TabIndex = 4;
             this.buttonFetchEvents.Text = "Fetch events";
             this.buttonFetchEvents.UseVisualStyleBackColor = true;
             this.buttonFetchEvents.Click += new System.EventHandler(this.buttonFetchEvents_Click);
-            // 
-            // checkBoxEventsNotReplied
-            // 
-            this.checkBoxEventsNotReplied.AutoSize = true;
-            this.checkBoxEventsNotReplied.Location = new System.Drawing.Point(427, 15);
-            this.checkBoxEventsNotReplied.Name = "checkBoxEventsNotReplied";
-            this.checkBoxEventsNotReplied.Size = new System.Drawing.Size(214, 39);
-            this.checkBoxEventsNotReplied.TabIndex = 3;
-            this.checkBoxEventsNotReplied.Text = "Not Replied";
-            this.checkBoxEventsNotReplied.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEventdMaybe
-            // 
-            this.checkBoxEventdMaybe.AutoSize = true;
-            this.checkBoxEventdMaybe.Location = new System.Drawing.Point(222, 15);
-            this.checkBoxEventdMaybe.Name = "checkBoxEventdMaybe";
-            this.checkBoxEventdMaybe.Size = new System.Drawing.Size(144, 39);
-            this.checkBoxEventdMaybe.TabIndex = 2;
-            this.checkBoxEventdMaybe.Text = "Maybe";
-            this.checkBoxEventdMaybe.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxEventsDeclined
-            // 
-            this.checkBoxEventsDeclined.AutoSize = true;
-            this.checkBoxEventsDeclined.Location = new System.Drawing.Point(17, 15);
-            this.checkBoxEventsDeclined.Name = "checkBoxEventsDeclined";
-            this.checkBoxEventsDeclined.Size = new System.Drawing.Size(172, 39);
-            this.checkBoxEventsDeclined.TabIndex = 1;
-            this.checkBoxEventsDeclined.Text = "Declined";
-            this.checkBoxEventsDeclined.UseVisualStyleBackColor = true;
             // 
             // dataGridViewEvents
             // 
@@ -373,7 +339,7 @@
             // 
             this.m_UserProfilePicture.Image = global::BasicFacebookFeatures.Properties.Resources.FacebookLogo;
             this.m_UserProfilePicture.InitialImage = ((System.Drawing.Image)(resources.GetObject("m_UserProfilePicture.InitialImage")));
-            this.m_UserProfilePicture.Location = new System.Drawing.Point(1193, 20);
+            this.m_UserProfilePicture.Location = new System.Drawing.Point(1157, 36);
             this.m_UserProfilePicture.Name = "m_UserProfilePicture";
             this.m_UserProfilePicture.Size = new System.Drawing.Size(210, 216);
             this.m_UserProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -390,10 +356,23 @@
             // m_HelloUserLabel
             // 
             this.m_HelloUserLabel.AutoSize = true;
-            this.m_HelloUserLabel.Location = new System.Drawing.Point(1343, 99);
+            this.m_HelloUserLabel.Location = new System.Drawing.Point(1396, 128);
             this.m_HelloUserLabel.Name = "m_HelloUserLabel";
-            this.m_HelloUserLabel.Size = new System.Drawing.Size(0, 32);
+            this.m_HelloUserLabel.Size = new System.Drawing.Size(168, 32);
             this.m_HelloUserLabel.TabIndex = 55;
+            this.m_HelloUserLabel.Text = "Hello friend!";
+            // 
+            // comboBoxEventsStatus
+            // 
+            this.comboBoxEventsStatus.FormattingEnabled = true;
+            this.comboBoxEventsStatus.Items.AddRange(new object[] {
+            "Online envents",
+            "Physical attendance events",
+            "All events"});
+            this.comboBoxEventsStatus.Location = new System.Drawing.Point(22, 14);
+            this.comboBoxEventsStatus.Name = "comboBoxEventsStatus";
+            this.comboBoxEventsStatus.Size = new System.Drawing.Size(469, 41);
+            this.comboBoxEventsStatus.TabIndex = 5;
             // 
             // FormMain
             // 
@@ -422,7 +401,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.m_FetchEventsTab.ResumeLayout(false);
-            this.m_FetchEventsTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
             this.ResumeLayout(false);
@@ -459,11 +437,9 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBoxEventsDeclined;
         private System.Windows.Forms.DataGridView dataGridViewEvents;
         private System.Windows.Forms.Button buttonFetchEvents;
-        private System.Windows.Forms.CheckBox checkBoxEventsNotReplied;
-        private System.Windows.Forms.CheckBox checkBoxEventdMaybe;
+        private System.Windows.Forms.ComboBox comboBoxEventsStatus;
     }
 }
 
