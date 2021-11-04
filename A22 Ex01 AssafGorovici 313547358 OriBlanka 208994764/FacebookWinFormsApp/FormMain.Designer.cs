@@ -442,7 +442,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.ListBox listBoxFriends;
         private System.Windows.Forms.Button buttonFetchFriends;
-        private System.Windows.Forms.CheckBox checkBoxEventsDeclined;
         private System.Windows.Forms.DataGridView dataGridViewEvents;
         private System.Windows.Forms.Button buttonFetchEvents;
         private System.Windows.Forms.ComboBox comboBoxEventsStatus;

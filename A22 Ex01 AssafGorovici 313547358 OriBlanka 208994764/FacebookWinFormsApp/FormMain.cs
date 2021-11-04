@@ -100,23 +100,11 @@ namespace BasicFacebookFeatures
             switch (comboBoxEventsStatus.SelectedIndex)
             {
                 case (int)eEventStatus.Online:
-                    foreach(Event events in allEvents)
-                    {
-                        if(events.IsOnline == true)
-                        {
-                            sortedEvents.Add(events);
-                        }
-                    }
+                    r_AppLogic.FetchEvents(ref allEvents, ref sortedEvents, true);
                     break;
 
                 case (int)eEventStatus.NotOnline:
-                    foreach (Event events in allEvents)
-                    {
-                        if (events.IsOnline == false)
-                        {
-                            sortedEvents.Add(events);
-                        }
-                    }
+                    r_AppLogic.FetchEvents(ref allEvents, ref sortedEvents, false);
                     break;
 
                 case (int)eEventStatus.AllEvents:
@@ -131,7 +119,6 @@ namespace BasicFacebookFeatures
         {
             FacebookObjectCollection<Page> likedPages = new FacebookObjectCollection<Page>();
             r_AppLogic.FetchLikedPages(ref likedPages);
-
             listBoxLikedPages.Items.Clear();
             listBoxLikedPages.DisplayMember = "Name";
 
@@ -157,7 +144,6 @@ namespace BasicFacebookFeatures
         {
             FacebookObjectCollection<Album> albums = new FacebookObjectCollection<Album>();
             r_AppLogic.FetchAlbums(ref albums);
-
             listBoxAlbums.Items.Clear();
 
             foreach (Album album in albums)
@@ -170,7 +156,6 @@ namespace BasicFacebookFeatures
         {
             FacebookObjectCollection<Group> groups = new FacebookObjectCollection<Group>();
             r_AppLogic.FetchGroups(ref groups);
-
             listBoxGroups.Items.Clear();
 
             foreach (Group group in groups)
@@ -182,7 +167,7 @@ namespace BasicFacebookFeatures
         private void buttonFetchFavoriteTeams_Click(object sender, EventArgs e)
         {
             FacebookObjectCollection<Page> favoriteTeams = new FacebookObjectCollection<Page>();
-
+            r_AppLogic.FetchFavoriteTeams(ref favoriteTeams);
             listBoxFavoriteTeams.Items.Clear();
 
             foreach (Page team in favoriteTeams)
@@ -194,12 +179,8 @@ namespace BasicFacebookFeatures
         private void buttonFetchFriends_Click(object sender, EventArgs e)
         {
             FacebookObjectCollection<FriendList> friendLists = new FacebookObjectCollection<FriendList>();
-
             listBoxFriends.Items.Clear();
-
             r_AppLogic.FetchFriends(ref friendLists);
-
-            
         }
     }
 

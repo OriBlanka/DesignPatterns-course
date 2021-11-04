@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,18 +12,24 @@ namespace BasicFacebookFeatures
 {
     public class AppLogic
     {
+        private User m_LoggedInUser;
+
         public AppLogic()
         {
             
         }
 
-        public User LoggedInUser { get; set; }
+        public User LoggedInUser 
+        { 
+            get => m_LoggedInUser;
+            set => m_LoggedInUser = value;
+        }
 
         public LoginResult LoginResult { get; set; }
 
         public void LoginAndLoadUserInfo()
         {
-            LoginResult = FacebookService.Login("4722021931181899", /// (desig patter's "Design Patterns Course App 2.4" app)
+            LoginResult = FacebookService.Login("4722021931181899", 
 					"email",
                     "public_profile",
                     "user_age_range",
@@ -40,9 +47,7 @@ namespace BasicFacebookFeatures
 
             if (!string.IsNullOrEmpty(LoginResult.AccessToken))
             {
-                m_LoggedInUser = m_LoginResult.LoggedInUser;
-
-                
+                m_LoggedInUser = LoginResult.LoggedInUser;
             }
            
 
@@ -71,7 +76,8 @@ namespace BasicFacebookFeatures
                 io_Albums.Add(album);
             }
         }
-
+        
+        //Todo - From any reason this method doesn't work
         public void FetchGroups(ref FacebookObjectCollection<Group> io_Groups)
         {
             foreach (Group group in m_LoggedInUser.Groups)
@@ -80,6 +86,7 @@ namespace BasicFacebookFeatures
             }
         }
 
+        //Todo - Think on option that the user hasn't favorite teams - we getting null exception
         public void FetchFavoriteTeams(ref FacebookObjectCollection<Page> io_FavoriteTeams)
         {
             foreach (Page team in m_LoggedInUser.FavofriteTeams)
@@ -88,10 +95,37 @@ namespace BasicFacebookFeatures
             }
         }
 
+        //Todo: Doesn't success while trying to get friend list
         public void FetchFriends(ref FacebookObjectCollection<FriendList> io_Friends)
         {
-            io_Friends = m_LoggedInUser.FriendLists;
+            foreach (FriendList friend in m_LoggedInUser.FriendLists)
+            {
+                io_Friends.Add(friend);
+            }
         }
 
+        public void FetchEvents(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline)
+        {
+            if(i_IsOnline)
+            {
+                foreach (Event events in i_Events)
+                {
+                    if (events.IsOnline != null && (bool)events.IsOnline)
+                    {
+                        io_sortedEvents.Add(events);
+                    }
+                }
+            }
+            else
+            {
+                foreach (Event events in i_Events)
+                {
+                    if (events.IsOnline != null && (bool)!events.IsOnline)
+                    {
+                        io_sortedEvents.Add(events);
+                    }
+                }
+            }
+        }
     }
 }
