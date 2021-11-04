@@ -40,8 +40,58 @@ namespace BasicFacebookFeatures
 
             if (!string.IsNullOrEmpty(LoginResult.AccessToken))
             {
-                LoggedInUser = LoginResult.LoggedInUser;
+                m_LoggedInUser = m_LoginResult.LoggedInUser;
+
+                
+            }
+           
+
+        }
+
+        public void FetchLikedPages(ref FacebookObjectCollection<Page> io_LikedPages)
+        {
+            foreach (Page page in m_LoggedInUser.LikedPages)
+            {
+                io_LikedPages.Add(page);
             }
         }
+
+        public void FetchPosts(ref FacebookObjectCollection<Post> io_Posts)
+        {
+            foreach (Post post in m_LoggedInUser.Posts)
+            {
+                io_Posts.Add(post);
+            }
+        }
+
+        public void FetchAlbums(ref FacebookObjectCollection<Album> io_Albums)
+        {
+            foreach (Album album in m_LoggedInUser.Albums)
+            {
+                io_Albums.Add(album);
+            }
+        }
+
+        public void FetchGroups(ref FacebookObjectCollection<Group> io_Groups)
+        {
+            foreach (Group group in m_LoggedInUser.Groups)
+            {
+                io_Groups.Add(group);
+            }
+        }
+
+        public void FetchFavoriteTeams(ref FacebookObjectCollection<Page> io_FavoriteTeams)
+        {
+            foreach (Page team in m_LoggedInUser.FavofriteTeams)
+            {
+                io_FavoriteTeams.Add(team);
+            }
+        }
+
+        public void FetchFriends(ref FacebookObjectCollection<FriendList> io_Friends)
+        {
+            io_Friends = m_LoggedInUser.FriendLists;
+        }
+
     }
 }
