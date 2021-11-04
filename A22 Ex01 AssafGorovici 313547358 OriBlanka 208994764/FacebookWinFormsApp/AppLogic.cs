@@ -11,28 +11,18 @@ namespace BasicFacebookFeatures
 {
     public class AppLogic
     {
-        private User m_LoggedInUser;
-        private LoginResult m_LoginResult;
-
         public AppLogic()
         {
             
         }
-        public User LoggedInUser {
-            get { return m_LoggedInUser; }
 
-            set { m_LoggedInUser = value; }
-        }
+        public User LoggedInUser { get; set; }
 
-        public LoginResult LoginResult
+        public LoginResult LoginResult { get; set; }
+
+        public void LoginAndLoadUserInfo()
         {
-            get { return m_LoginResult; }
-
-            set { m_LoginResult = value; }
-        }
-        public void loginAndLoadUserInfo()
-        {
-            m_LoginResult = FacebookService.Login("4722021931181899", /// (desig patter's "Design Patterns Course App 2.4" app)
+            LoginResult = FacebookService.Login("4722021931181899", /// (desig patter's "Design Patterns Course App 2.4" app)
 					"email",
                     "public_profile",
                     "user_age_range",
@@ -48,18 +38,10 @@ namespace BasicFacebookFeatures
                     "user_posts",
                     "user_videos");
 
-            if (!string.IsNullOrEmpty(m_LoginResult.AccessToken))
+            if (!string.IsNullOrEmpty(LoginResult.AccessToken))
             {
-                m_LoggedInUser = m_LoginResult.LoggedInUser;
-
-                //fetchUserInfo();
+                LoggedInUser = LoginResult.LoggedInUser;
             }
-            /*else
-            {
-                // MessageBox.Show(m_LoginResult.ErrorMessage, "Login Failed");
-                m_LoginResult = null;
-            }*/
-
         }
     }
 }
