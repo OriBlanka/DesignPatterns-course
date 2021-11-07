@@ -55,8 +55,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSelectedLikedPage = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSelectedFavoriteTeam = new System.Windows.Forms.PictureBox();
             this.pictureBoxSelectedAlbum = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
@@ -64,8 +65,9 @@
             this.m_FetchEventsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSelectedLikedPage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSelectedFavoriteTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSelectedAlbum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -106,11 +108,12 @@
             // 
             // m_MainTab
             // 
+            this.m_MainTab.Controls.Add(this.pictureBoxSelectedLikedPage);
             this.m_MainTab.Controls.Add(this.linkLabel1);
             this.m_MainTab.Controls.Add(this.pictureBox5);
             this.m_MainTab.Controls.Add(this.listBoxFriends);
             this.m_MainTab.Controls.Add(this.buttonFetchFriends);
-            this.m_MainTab.Controls.Add(this.pictureBox4);
+            this.m_MainTab.Controls.Add(this.pictureBoxSelectedFavoriteTeam);
             this.m_MainTab.Controls.Add(this.pictureBoxSelectedAlbum);
             this.m_MainTab.Controls.Add(this.pictureBox2);
             this.m_MainTab.Controls.Add(this.buttonFetchFavoriteTeams);
@@ -226,6 +229,7 @@
             this.listBoxLikedPages.Name = "listBoxLikedPages";
             this.listBoxLikedPages.Size = new System.Drawing.Size(604, 97);
             this.listBoxLikedPages.TabIndex = 59;
+            this.listBoxLikedPages.SelectedIndexChanged += new System.EventHandler(this.listBoxLikedPages_SelectedIndexChanged);
             // 
             // buttonLikedPages
             // 
@@ -337,6 +341,18 @@
             this.m_UserProfilePicture.TabIndex = 54;
             this.m_UserProfilePicture.TabStop = false;
             // 
+            // pictureBoxSelectedLikedPage
+            // 
+            this.pictureBoxSelectedLikedPage.ErrorImage = global::BasicFacebookFeatures.Properties.Resources.likepagepicDefault;
+            this.pictureBoxSelectedLikedPage.Image = global::BasicFacebookFeatures.Properties.Resources.likepagepicDefault;
+            this.pictureBoxSelectedLikedPage.InitialImage = global::BasicFacebookFeatures.Properties.Resources.likepagepicDefault;
+            this.pictureBoxSelectedLikedPage.Location = new System.Drawing.Point(347, 295);
+            this.pictureBoxSelectedLikedPage.Name = "pictureBoxSelectedLikedPage";
+            this.pictureBoxSelectedLikedPage.Size = new System.Drawing.Size(213, 140);
+            this.pictureBoxSelectedLikedPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSelectedLikedPage.TabIndex = 74;
+            this.pictureBoxSelectedLikedPage.TabStop = false;
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Location = new System.Drawing.Point(1882, 312);
@@ -345,13 +361,18 @@
             this.pictureBox5.TabIndex = 72;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox4
+            // pictureBoxSelectedFavoriteTeam
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(1900, 708);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(216, 123);
-            this.pictureBox4.TabIndex = 69;
-            this.pictureBox4.TabStop = false;
+            this.pictureBoxSelectedFavoriteTeam.ErrorImage = global::BasicFacebookFeatures.Properties.Resources.sports;
+            this.pictureBoxSelectedFavoriteTeam.Image = global::BasicFacebookFeatures.Properties.Resources.sports;
+            this.pictureBoxSelectedFavoriteTeam.InitialImage = global::BasicFacebookFeatures.Properties.Resources.sports;
+            this.pictureBoxSelectedFavoriteTeam.Location = new System.Drawing.Point(1851, 655);
+            this.pictureBoxSelectedFavoriteTeam.Name = "pictureBoxSelectedFavoriteTeam";
+            this.pictureBoxSelectedFavoriteTeam.Size = new System.Drawing.Size(265, 163);
+            this.pictureBoxSelectedFavoriteTeam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSelectedFavoriteTeam.TabIndex = 69;
+            this.pictureBoxSelectedFavoriteTeam.TabStop = false;
+            this.pictureBoxSelectedFavoriteTeam.Click += new System.EventHandler(this.pictureBoxSelectedFavoriteTeam_Click);
             // 
             // pictureBoxSelectedAlbum
             // 
@@ -397,8 +418,9 @@
             this.m_FetchEventsTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSelectedLikedPage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSelectedFavoriteTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSelectedAlbum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -416,7 +438,7 @@
         private System.Windows.Forms.TabPage m_MutualLikedPagesTab;
         private System.Windows.Forms.PictureBox m_UserProfilePicture;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBoxSelectedFavoriteTeam;
         private System.Windows.Forms.PictureBox pictureBoxSelectedAlbum;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button buttonFetchFavoriteTeams;
@@ -437,6 +459,7 @@
         private System.Windows.Forms.DataGridView dataGridViewEvents;
         private System.Windows.Forms.Button buttonFetchEvents;
         private System.Windows.Forms.ComboBox comboBoxEventsStatus;
+        private System.Windows.Forms.PictureBox pictureBoxSelectedLikedPage;
     }
 }
 

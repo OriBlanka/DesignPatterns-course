@@ -131,6 +131,15 @@
   <ItemGroup>
     <None Include="Resources\albumPicDefault.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\likepagepicDefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LikedPage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sports.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

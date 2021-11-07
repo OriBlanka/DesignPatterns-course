@@ -138,6 +138,8 @@ namespace BasicFacebookFeatures
             {
                 MessageBox.Show("No liked pages to retrieve :(");
             }
+
+            pictureBoxSelectedLikedPage.Image = pictureBoxSelectedLikedPage.InitialImage;
         }
 
         private void buttonFetchAlbums_Click(object sender, EventArgs e)
@@ -176,6 +178,8 @@ namespace BasicFacebookFeatures
             {
                 listBoxFavoriteTeams.Items.Add(team);
             }
+
+            pictureBoxSelectedFavoriteTeam.Image = pictureBoxSelectedFavoriteTeam.InitialImage;
         }
 
         private void buttonFetchFriends_Click(object sender, EventArgs e)
@@ -183,6 +187,13 @@ namespace BasicFacebookFeatures
             FacebookObjectCollection<FriendList> friendLists = new FacebookObjectCollection<FriendList>();
             listBoxFriends.Items.Clear();
             r_AppLogic.FetchFriends(ref friendLists);
+        }
+
+        
+
+        private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            displaySelectedAlbum();
         }
 
         private void displaySelectedAlbum()
@@ -201,9 +212,46 @@ namespace BasicFacebookFeatures
             }
         }
 
-        private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBoxLikedPages_SelectedIndexChanged(object sender, EventArgs e)
         {
-            displaySelectedAlbum();
+            displaySelectedLikedPage();
+        }
+
+        private void displaySelectedLikedPage()
+        {
+            if (listBoxLikedPages.SelectedItems.Count == 1)
+            {
+                Page selectedPage = listBoxLikedPages.SelectedItem as Page;
+                if (selectedPage.PictureURL != null)
+                {
+                    pictureBoxSelectedLikedPage.LoadAsync(selectedPage.PictureURL);
+                }
+                else
+                {
+                    pictureBoxSelectedLikedPage.Image = pictureBoxSelectedLikedPage.ErrorImage;
+                }
+            }
+        }
+
+        private void pictureBoxSelectedFavoriteTeam_Click(object sender, EventArgs e)
+        {
+            displaySelectedFavoriteTeam();
+        }
+
+        private void displaySelectedFavoriteTeam()
+        {
+            if (listBoxFavoriteTeams.SelectedItems.Count == 1)
+            {
+                Page selectedFavoriteTeam = listBoxFavoriteTeams.SelectedItem as Page;
+                if (selectedFavoriteTeam.PictureURL != null)
+                {
+                    pictureBoxSelectedFavoriteTeam.LoadAsync(selectedFavoriteTeam.PictureURL);
+                }
+                else
+                {
+                    pictureBoxSelectedFavoriteTeam.Image = pictureBoxSelectedFavoriteTeam.ErrorImage;
+                }
+            }
         }
     }
 
