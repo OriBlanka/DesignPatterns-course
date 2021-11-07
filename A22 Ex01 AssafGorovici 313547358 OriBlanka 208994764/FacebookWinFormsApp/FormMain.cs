@@ -150,6 +150,8 @@ namespace BasicFacebookFeatures
             {
                 listBoxAlbums.Items.Add(album);
             }
+
+            pictureBoxSelectedAlbum.Image = pictureBoxSelectedAlbum.InitialImage;
         }
 
         private void buttonFetchGroups_Click(object sender, EventArgs e)
@@ -181,6 +183,27 @@ namespace BasicFacebookFeatures
             FacebookObjectCollection<FriendList> friendLists = new FacebookObjectCollection<FriendList>();
             listBoxFriends.Items.Clear();
             r_AppLogic.FetchFriends(ref friendLists);
+        }
+
+        private void displaySelectedAlbum()
+        {
+            if (listBoxAlbums.SelectedItems.Count == 1)
+            {
+                Album selectedAlbum = listBoxAlbums.SelectedItem as Album;
+                if (selectedAlbum.PictureAlbumURL != null)
+                {
+                    pictureBoxSelectedAlbum.LoadAsync(selectedAlbum.PictureAlbumURL);
+                }
+                else
+                {
+                    pictureBoxSelectedAlbum.Image = pictureBoxSelectedAlbum.ErrorImage;
+                }
+            }
+        }
+
+        private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            displaySelectedAlbum();
         }
     }
 

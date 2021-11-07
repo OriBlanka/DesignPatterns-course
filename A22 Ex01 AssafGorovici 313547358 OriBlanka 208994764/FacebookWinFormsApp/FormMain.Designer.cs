@@ -35,13 +35,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.m_MainTab = new System.Windows.Forms.TabPage();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.listBoxFriends = new System.Windows.Forms.ListBox();
             this.buttonFetchFriends = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonFetchFavoriteTeams = new System.Windows.Forms.Button();
             this.buttonFetchAlbums = new System.Windows.Forms.Button();
             this.listBoxFavoriteTeams = new System.Windows.Forms.ListBox();
@@ -53,23 +48,26 @@
             this.buttonFetchPosts = new System.Windows.Forms.Button();
             this.listBoxPosts = new System.Windows.Forms.ListBox();
             this.m_FetchEventsTab = new System.Windows.Forms.TabPage();
+            this.comboBoxEventsStatus = new System.Windows.Forms.ComboBox();
             this.buttonFetchEvents = new System.Windows.Forms.Button();
             this.dataGridViewEvents = new System.Windows.Forms.DataGridView();
             this.m_MutualLikedPagesTab = new System.Windows.Forms.TabPage();
-            this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
-            this.comboBoxEventsStatus = new System.Windows.Forms.ComboBox();
+            this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSelectedAlbum = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.m_MainTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.m_FetchEventsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvents)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSelectedAlbum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonLogin
@@ -113,9 +111,8 @@
             this.m_MainTab.Controls.Add(this.listBoxFriends);
             this.m_MainTab.Controls.Add(this.buttonFetchFriends);
             this.m_MainTab.Controls.Add(this.pictureBox4);
-            this.m_MainTab.Controls.Add(this.pictureBox3);
+            this.m_MainTab.Controls.Add(this.pictureBoxSelectedAlbum);
             this.m_MainTab.Controls.Add(this.pictureBox2);
-            this.m_MainTab.Controls.Add(this.pictureBox1);
             this.m_MainTab.Controls.Add(this.buttonFetchFavoriteTeams);
             this.m_MainTab.Controls.Add(this.buttonFetchAlbums);
             this.m_MainTab.Controls.Add(this.listBoxFavoriteTeams);
@@ -144,14 +141,6 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "linkLabel1";
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(1882, 312);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(216, 123);
-            this.pictureBox5.TabIndex = 72;
-            this.pictureBox5.TabStop = false;
-            // 
             // listBoxFriends
             // 
             this.listBoxFriends.FormattingEnabled = true;
@@ -170,38 +159,6 @@
             this.buttonFetchFriends.Text = "Friends";
             this.buttonFetchFriends.UseVisualStyleBackColor = true;
             this.buttonFetchFriends.Click += new System.EventHandler(this.buttonFetchFriends_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Location = new System.Drawing.Point(1900, 708);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(216, 123);
-            this.pictureBox4.TabIndex = 69;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(385, 671);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(216, 123);
-            this.pictureBox3.TabIndex = 68;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(1138, 695);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(216, 123);
-            this.pictureBox2.TabIndex = 67;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(385, 312);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 123);
-            this.pictureBox1.TabIndex = 66;
-            this.pictureBox1.TabStop = false;
             // 
             // buttonFetchFavoriteTeams
             // 
@@ -240,6 +197,7 @@
             this.listBoxAlbums.Name = "listBoxAlbums";
             this.listBoxAlbums.Size = new System.Drawing.Size(604, 97);
             this.listBoxAlbums.TabIndex = 62;
+            this.listBoxAlbums.SelectedIndexChanged += new System.EventHandler(this.listBoxAlbums_SelectedIndexChanged);
             // 
             // listBoxGroups
             // 
@@ -311,6 +269,18 @@
             this.m_FetchEventsTab.Text = "My Events";
             this.m_FetchEventsTab.UseVisualStyleBackColor = true;
             // 
+            // comboBoxEventsStatus
+            // 
+            this.comboBoxEventsStatus.FormattingEnabled = true;
+            this.comboBoxEventsStatus.Items.AddRange(new object[] {
+            "Online envents",
+            "Physical attendance events",
+            "All events"});
+            this.comboBoxEventsStatus.Location = new System.Drawing.Point(22, 14);
+            this.comboBoxEventsStatus.Name = "comboBoxEventsStatus";
+            this.comboBoxEventsStatus.Size = new System.Drawing.Size(469, 39);
+            this.comboBoxEventsStatus.TabIndex = 5;
+            // 
             // buttonFetchEvents
             // 
             this.buttonFetchEvents.Location = new System.Drawing.Point(509, 7);
@@ -340,17 +310,6 @@
             this.m_MutualLikedPagesTab.Text = "Mutual Liked Pages";
             this.m_MutualLikedPagesTab.UseVisualStyleBackColor = true;
             // 
-            // m_UserProfilePicture
-            // 
-            this.m_UserProfilePicture.Image = global::BasicFacebookFeatures.Properties.Resources.FacebookLogo;
-            this.m_UserProfilePicture.InitialImage = ((System.Drawing.Image)(resources.GetObject("m_UserProfilePicture.InitialImage")));
-            this.m_UserProfilePicture.Location = new System.Drawing.Point(1157, 36);
-            this.m_UserProfilePicture.Name = "m_UserProfilePicture";
-            this.m_UserProfilePicture.Size = new System.Drawing.Size(184, 202);
-            this.m_UserProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.m_UserProfilePicture.TabIndex = 54;
-            this.m_UserProfilePicture.TabStop = false;
-            // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(0, 0);
@@ -363,21 +322,56 @@
             this.m_HelloUserLabel.AutoSize = true;
             this.m_HelloUserLabel.Location = new System.Drawing.Point(1396, 128);
             this.m_HelloUserLabel.Name = "m_HelloUserLabel";
-            this.m_HelloUserLabel.Size = new System.Drawing.Size(168, 32);
+            this.m_HelloUserLabel.Size = new System.Drawing.Size(143, 29);
             this.m_HelloUserLabel.TabIndex = 55;
             this.m_HelloUserLabel.Text = "Hello friend!";
             // 
-            // comboBoxEventsStatus
+            // m_UserProfilePicture
             // 
-            this.comboBoxEventsStatus.FormattingEnabled = true;
-            this.comboBoxEventsStatus.Items.AddRange(new object[] {
-            "Online envents",
-            "Physical attendance events",
-            "All events"});
-            this.comboBoxEventsStatus.Location = new System.Drawing.Point(22, 14);
-            this.comboBoxEventsStatus.Name = "comboBoxEventsStatus";
-            this.comboBoxEventsStatus.Size = new System.Drawing.Size(469, 41);
-            this.comboBoxEventsStatus.TabIndex = 5;
+            this.m_UserProfilePicture.Image = global::BasicFacebookFeatures.Properties.Resources.FacebookLogo;
+            this.m_UserProfilePicture.InitialImage = ((System.Drawing.Image)(resources.GetObject("m_UserProfilePicture.InitialImage")));
+            this.m_UserProfilePicture.Location = new System.Drawing.Point(1157, 36);
+            this.m_UserProfilePicture.Name = "m_UserProfilePicture";
+            this.m_UserProfilePicture.Size = new System.Drawing.Size(184, 202);
+            this.m_UserProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.m_UserProfilePicture.TabIndex = 54;
+            this.m_UserProfilePicture.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(1882, 312);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(216, 123);
+            this.pictureBox5.TabIndex = 72;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(1900, 708);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(216, 123);
+            this.pictureBox4.TabIndex = 69;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBoxSelectedAlbum
+            // 
+            this.pictureBoxSelectedAlbum.ErrorImage = global::BasicFacebookFeatures.Properties.Resources.albumPicDefault;
+            this.pictureBoxSelectedAlbum.Image = global::BasicFacebookFeatures.Properties.Resources.albumPicDefault;
+            this.pictureBoxSelectedAlbum.InitialImage = global::BasicFacebookFeatures.Properties.Resources.albumPicDefault;
+            this.pictureBoxSelectedAlbum.Location = new System.Drawing.Point(347, 646);
+            this.pictureBoxSelectedAlbum.Name = "pictureBoxSelectedAlbum";
+            this.pictureBoxSelectedAlbum.Size = new System.Drawing.Size(227, 172);
+            this.pictureBoxSelectedAlbum.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSelectedAlbum.TabIndex = 68;
+            this.pictureBoxSelectedAlbum.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(1138, 695);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(216, 123);
+            this.pictureBox2.TabIndex = 67;
+            this.pictureBox2.TabStop = false;
             // 
             // FormMain
             // 
@@ -400,14 +394,13 @@
             this.tabControl1.ResumeLayout(false);
             this.m_MainTab.ResumeLayout(false);
             this.m_MainTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.m_FetchEventsTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEvents)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSelectedAlbum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,9 +417,8 @@
         private System.Windows.Forms.PictureBox m_UserProfilePicture;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBoxSelectedAlbum;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonFetchFavoriteTeams;
         private System.Windows.Forms.Button buttonFetchAlbums;
         private System.Windows.Forms.ListBox listBoxFavoriteTeams;
