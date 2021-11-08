@@ -77,6 +77,11 @@ namespace BasicFacebookFeatures
             }
         }
 
+        public City FetchHometown()
+        {
+            return m_LoggedInUser.Hometown;
+        }
+
         public void FetchAlbums(ref FacebookObjectCollection<Album> io_Albums)
         {
             foreach (Album album in m_LoggedInUser.Albums)
@@ -106,10 +111,7 @@ namespace BasicFacebookFeatures
         //Todo: Doesn't success while trying to get friend list
         public void FetchFriends(ref FacebookObjectCollection<FriendList> io_Friends)
         {
-            foreach (FriendList friend in m_LoggedInUser.FriendLists)
-            {
-                io_Friends.Add(friend);
-            }
+            
         }
 
         public void FetchEvents(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline)

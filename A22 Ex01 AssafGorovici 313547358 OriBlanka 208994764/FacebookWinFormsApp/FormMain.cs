@@ -190,7 +190,7 @@ namespace BasicFacebookFeatures
 
             foreach (Video video in videos)
             {
-                listBoxGroups.Items.Add(video.CreatedTime);
+                listBoxGroups.Items.Add(video);
             }
         }
 
@@ -211,9 +211,9 @@ namespace BasicFacebookFeatures
 
         private void buttonFetchFriends_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<FriendList> friendLists = new FacebookObjectCollection<FriendList>();
-            listBoxFriends.Items.Clear();
-            r_AppLogic.FetchFriends(ref friendLists);
+           
+
+
         }
 
         private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)
