@@ -69,6 +69,14 @@ namespace BasicFacebookFeatures
             }
         }
 
+        public void FetchVideo(ref FacebookObjectCollection<Video> io_Videos)
+        {
+            foreach (Video video in m_LoggedInUser.Videos)
+            {
+                io_Videos.Add(video);
+            }
+        }
+
         public void FetchAlbums(ref FacebookObjectCollection<Album> io_Albums)
         {
             foreach (Album album in m_LoggedInUser.Albums)
