@@ -154,47 +154,10 @@ namespace BasicFacebookFeatures
             pictureBoxSelectedAlbum.Image = pictureBoxSelectedAlbum.InitialImage;
         }
 
-        private void buttonFetchGroups_Click(object sender, EventArgs e)
+        private void buttonFetchUpcomingBirthdays_Click(object sender, EventArgs e)
         {
-            /*FacebookObjectCollection<Group> groups = new FacebookObjectCollection<Group>();
-            r_AppLogic.FetchGroups(ref groups);
-            listBoxGroups.Items.Clear();
 
-            foreach (Group group in groups)
-            {
-                listBoxGroups.Items.Add(group);
-            }*/
-
-            listBoxGroups.Items.Clear();
-            /*listBoxGroups.DisplayMember = "Name";
-
-            try
-            {
-                foreach (Group group in r_AppLogic.LoggedInUser.Groups)
-                {
-                    listBoxGroups.Items.Add(group);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            if (listBoxGroups.Items.Count == 0)
-            {
-                MessageBox.Show("No groups to retrieve :(");
-            }*/
-
-            FacebookObjectCollection<Video> videos = new FacebookObjectCollection<Video>();
-            r_AppLogic.FetchVideo(ref videos);
-
-            foreach (Video video in videos)
-            {
-                listBoxGroups.Items.Add(video);
-            }
         }
-
-
 
         private void buttonFetchFavoriteTeams_Click(object sender, EventArgs e)
         {
@@ -277,6 +240,11 @@ namespace BasicFacebookFeatures
                     pictureBoxSelectedFavoriteTeam.Image = pictureBoxSelectedFavoriteTeam.ErrorImage;
                 }
             }
+        }
+
+        private void buttonFetchGroups_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
