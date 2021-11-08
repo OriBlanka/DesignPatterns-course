@@ -250,7 +250,7 @@
             this.buttonFetchUpcomingBirthdays.TabIndex = 60;
             this.buttonFetchUpcomingBirthdays.Text = "Upcoming Birthdays";
             this.buttonFetchUpcomingBirthdays.UseVisualStyleBackColor = true;
-            this.buttonFetchUpcomingBirthdays.Click += new System.EventHandler(this.buttonFetchGroups_Click);
+            this.buttonFetchUpcomingBirthdays.Click += new System.EventHandler(this.buttonFetchUpcomingBirthdays_Click);
             // 
             // listBoxLikedPages
             // 

@@ -156,7 +156,22 @@ namespace BasicFacebookFeatures
 
         private void buttonFetchUpcomingBirthdays_Click(object sender, EventArgs e)
         {
+            bool areFriendsBDaysThisMonth = false;
 
+            foreach (User friend in r_AppLogic.LoggedInUser.Friends)
+            {
+                DateTime friendBirthday = DateTime.Parse(friend.Birthday);
+                if (friendBirthday.Month == DateTime.Now.Month)
+                {
+                    areFriendsBDaysThisMonth = true;
+                    listBoxUpcomingBirthdays.Items.Add($"{friend.Name} - {friend.Birthday} ");
+                }
+            }
+
+            if (!areFriendsBDaysThisMonth)
+            {
+                listBoxUpcomingBirthdays.Items.Add($"No friends birthdays on {DateTime.Now:M}");
+            }
         }
 
         private void buttonFetchFavoriteTeams_Click(object sender, EventArgs e)
@@ -240,11 +255,6 @@ namespace BasicFacebookFeatures
                     pictureBoxSelectedFavoriteTeam.Image = pictureBoxSelectedFavoriteTeam.ErrorImage;
                 }
             }
-        }
-
-        private void buttonFetchGroups_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
