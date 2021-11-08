@@ -13,8 +13,15 @@ namespace BasicFacebookFeatures
 {
     public partial class FormMain : Form
     {
-        
+        public enum eEventStatus
+        {
+            Online = 0,
+            NotOnline = 1,
+            AllEvents = 2
+        }
+
         private readonly AppLogic r_AppLogic;
+
         public FormMain()
         {
             InitializeComponent();
@@ -54,8 +61,6 @@ namespace BasicFacebookFeatures
             m_HelloUserLabel.Text = "";
             m_UserProfilePicture.Image = Properties.Resources.FacebookLogo;
         }
-        
-        
 
         private void buttonFetchPosts_Click(object sender, EventArgs e)
         {
@@ -63,13 +68,13 @@ namespace BasicFacebookFeatures
             r_AppLogic.FetchPosts(ref myPosts);
             listBoxPosts.Items.Clear();
 
-            foreach (Post post in myPosts)
+            foreach(Post post in myPosts)
             {
-                if (post.Message != null)
+                if(post.Message != null)
                 {
                     listBoxPosts.Items.Add(post.Message);
                 }
-                else if (post.Caption != null)
+                else if(post.Caption != null)
                 {
                     listBoxPosts.Items.Add(post.Caption);
                 }
@@ -79,17 +84,10 @@ namespace BasicFacebookFeatures
                 }
             }
 
-            if (listBoxPosts.Items.Count == 0)
+            if(listBoxPosts.Items.Count == 0)
             {
                 MessageBox.Show("No Posts to retrieve :(");
             }
-        }
-
-        public enum eEventStatus
-        {
-            Online = 0,
-            NotOnline = 1,
-            AllEvents = 2
         }
 
         private void buttonFetchEvents_Click(object sender, EventArgs e)
@@ -173,13 +171,12 @@ namespace BasicFacebookFeatures
             FacebookObjectCollection<Page> favoriteTeams = new FacebookObjectCollection<Page>();
             r_AppLogic.FetchFavoriteTeams(ref favoriteTeams);
             listBoxFavoriteTeams.Items.Clear();
+            Page selectedFavoriteTeam = listBoxFavoriteTeams.SelectedItem as Page;
 
             foreach (Page team in favoriteTeams)
             {
                 listBoxFavoriteTeams.Items.Add(team);
             }
-
-            pictureBoxSelectedFavoriteTeam.Image = pictureBoxSelectedFavoriteTeam.InitialImage;
         }
 
         private void buttonFetchFriends_Click(object sender, EventArgs e)
@@ -188,8 +185,6 @@ namespace BasicFacebookFeatures
             listBoxFriends.Items.Clear();
             r_AppLogic.FetchFriends(ref friendLists);
         }
-
-        
 
         private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -233,7 +228,7 @@ namespace BasicFacebookFeatures
             }
         }
 
-        private void pictureBoxSelectedFavoriteTeam_Click(object sender, EventArgs e)
+        private void listBoxFavoriteTeams_SelectedIndexChanged(object sender, EventArgs e)
         {
             displaySelectedFavoriteTeam();
         }
@@ -254,6 +249,4 @@ namespace BasicFacebookFeatures
             }
         }
     }
-
-
 }
