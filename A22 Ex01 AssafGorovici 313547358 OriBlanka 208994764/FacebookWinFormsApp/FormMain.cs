@@ -150,6 +150,8 @@ namespace BasicFacebookFeatures
             {
                 listBoxAlbums.Items.Add(album);
             }
+
+            pictureBoxSelectedAlbum.Image = pictureBoxSelectedAlbum.InitialImage;
         }
 
         private void buttonFetchUpcomingBirthdays_Click(object sender, EventArgs e)
@@ -184,6 +186,8 @@ namespace BasicFacebookFeatures
             {
                 listBoxFavoriteTeams.Items.Add(team);
             }
+
+            pictureBoxSelectedFavoriteTeam.Image = pictureBoxSelectedFavoriteTeam.InitialImage;
         }
 
         private void buttonFetchRandomPicture_Click(object sender, EventArgs e)
