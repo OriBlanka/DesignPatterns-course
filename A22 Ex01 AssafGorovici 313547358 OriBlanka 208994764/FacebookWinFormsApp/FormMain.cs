@@ -150,8 +150,6 @@ namespace BasicFacebookFeatures
             {
                 listBoxAlbums.Items.Add(album);
             }
-
-            pictureBoxSelectedAlbum.Image = pictureBoxSelectedAlbum.InitialImage;
         }
 
         private void buttonFetchUpcomingBirthdays_Click(object sender, EventArgs e)
@@ -188,11 +186,16 @@ namespace BasicFacebookFeatures
             }
         }
 
-        private void buttonFetchFriends_Click(object sender, EventArgs e)
+        private void buttonFetchRandomPicture_Click(object sender, EventArgs e)
         {
-           
-
-
+            try
+            {
+                pictureBoxRandomPicture.Image = r_AppLogic.GetRandomImage();
+            }
+            catch (Exception pictureException)
+            {
+                MessageBox.Show($@"An error occurred with the facebook API: {Environment.NewLine} {pictureException.Message}");
+            }
         }
 
         private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)

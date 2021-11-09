@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
@@ -26,6 +27,8 @@ namespace BasicFacebookFeatures
         }
 
         public LoginResult LoginResult { get; set; }
+
+        private readonly Random r_Random = new Random();
 
         public void LoginAndLoadUserInfo()
         {
@@ -89,15 +92,6 @@ namespace BasicFacebookFeatures
                 io_Albums.Add(album);
             }
         }
-        
-        //Todo - From any reason this method doesn't work
-        public void FetchGroups(ref FacebookObjectCollection<Group> io_Groups)
-        {
-            foreach (Group group in m_LoggedInUser.Groups)
-            {
-                io_Groups.Add(group);
-            }
-        }
 
         //Todo - Think on option that the user hasn't favorite teams - we getting null exception
         public void FetchFavoriteTeams(ref FacebookObjectCollection<Page> io_FavoriteTeams)
@@ -108,11 +102,6 @@ namespace BasicFacebookFeatures
             }
         }
 
-        //Todo: Doesn't success while trying to get friend list
-        public void FetchFriends(ref FacebookObjectCollection<FriendList> io_Friends)
-        {
-            
-        }
 
         public void FetchEvents(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline)
         {
@@ -136,6 +125,18 @@ namespace BasicFacebookFeatures
                     }
                 }
             }
+        }
+
+        public Image GetRandomImage()
+        {
+            FacebookObjectCollection<Photo> taggedPictures = m_LoggedInUser.PhotosTaggedIn;
+            if (taggedPictures.Count < 1)
+            {
+                throw new Exception("No Tagged pictures");
+            }
+
+            int randomizedIndex = r_Random.Next(taggedPictures.Count);
+            return taggedPictures[randomizedIndex].ImageAlbum;
         }
     }
 }
