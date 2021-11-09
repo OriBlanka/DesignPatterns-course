@@ -138,5 +138,34 @@ namespace BasicFacebookFeatures
             int randomizedIndex = r_Random.Next(taggedPictures.Count);
             return taggedPictures[randomizedIndex].ImageAlbum;
         }
+
+        public void FetchFriends(ref FacebookObjectCollection<User> io_Friends)
+        {
+            foreach (User user in m_LoggedInUser.Friends)
+            {
+                io_Friends.Add(user);
+            }
+        }
+
+        public void GetFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest)
+        {
+            foreach (User friend in LoggedInUser.Friends)
+            {
+                int friendCommonLikedPages = 0;
+                foreach (Page friendLikedPage in friend.LikedPages)
+                {
+                    if (LoggedInUser.LikedPages.Contains(friendLikedPage))
+                    {
+                        io_IsFriendWithCommonInterest = true;
+                        friendCommonLikedPages++;
+                    }
+                }
+
+                if (friendCommonLikedPages > 0)
+                {
+                    io_FriendsCommonPagesLikes.Add(friend.Name, friendCommonLikedPages);
+                }
+            }
+        }
     }
 }

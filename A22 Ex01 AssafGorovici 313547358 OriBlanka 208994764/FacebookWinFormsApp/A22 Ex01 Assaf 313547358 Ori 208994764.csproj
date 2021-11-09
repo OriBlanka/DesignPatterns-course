@@ -140,6 +140,12 @@
   <ItemGroup>
     <None Include="Resources\sports.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\likeGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LieGif.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

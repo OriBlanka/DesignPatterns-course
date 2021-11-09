@@ -259,5 +259,40 @@ namespace BasicFacebookFeatures
                 }
             }
         }
+
+        private void linkLabelFetchFriends_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FacebookObjectCollection<User> friends = new FacebookObjectCollection<User>();
+            r_AppLogic.FetchFriends(ref friends);
+            listBoxAlbums.Items.Clear();
+
+            foreach (User friend in friends)
+            {
+                listBoxAlbums.Items.Add(friend);
+            }
+        }
+
+        private void buttonCommonInterest_Click(object sender, EventArgs e)
+        {
+            fetchFriendsWithCommonInterest();
+        }
+
+        private void fetchFriendsWithCommonInterest()
+        {
+            bool isFriendWithCommonInterest = false;
+            Dictionary<string, int> friendsCommonPagesLikes = new Dictionary<string, int>();
+
+            r_AppLogic.GetFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest);
+
+            foreach (KeyValuePair<string, int> friendInDictionary in friendsCommonPagesLikes)
+            {
+                listBoxCommonInterest.Items.Add($"{friendInDictionary.Key} - {friendInDictionary.Value.ToString()} Pages");
+            }
+
+            if (!isFriendWithCommonInterest)
+            {
+                listBoxCommonInterest.Items.Add("No Friends With Common Liked Pages");
+            }
+        }
     }
 }
