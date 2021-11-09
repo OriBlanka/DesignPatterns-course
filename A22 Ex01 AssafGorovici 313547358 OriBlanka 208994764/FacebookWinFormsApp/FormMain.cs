@@ -159,6 +159,7 @@ namespace BasicFacebookFeatures
             bool areFriendsBDaysThisMonth = false;
 
             foreach (User friend in r_AppLogic.LoggedInUser.Friends)
+
             {
                 DateTime friendBirthday = DateTime.Parse(friend.Birthday);
                 if (friendBirthday.Month == DateTime.Now.Month)
