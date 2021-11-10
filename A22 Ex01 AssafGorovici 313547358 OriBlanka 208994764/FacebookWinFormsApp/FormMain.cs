@@ -31,7 +31,7 @@ namespace BasicFacebookFeatures
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText("design.patterns20aa"); /// the current password for Desig Patter
+            Clipboard.SetText("design.patterns20aa"); 
             r_AppLogic.LoginAndLoadUserInfo();
             displayUserInfoAfterLogin();
         }
@@ -49,9 +49,9 @@ namespace BasicFacebookFeatures
         }
         private void fetchUserInfo()
         {
-            m_UserProfilePicture.LoadAsync(r_AppLogic.LoggedInUser.PictureNormalURL);
-            m_HelloUserLabel.Text = $@"Hi {r_AppLogic.LoggedInUser.FirstName}!";
-            buttonLogin.Text = $@"Logged in as {r_AppLogic.LoggedInUser.Name}";
+            m_UserProfilePicture.LoadAsync(r_AppLogic.LoggedUser.PictureNormalURL);
+            m_HelloUserLabel.Text = $@"Hi {r_AppLogic.LoggedUser.FirstName}!";
+            buttonLogin.Text = $@"Logged in as {r_AppLogic.LoggedUser.Name}";
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace BasicFacebookFeatures
 
         private void buttonFetchEvents_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Event> allEvents = r_AppLogic.LoggedInUser.Events;
+            FacebookObjectCollection<Event> allEvents = r_AppLogic.LoggedUser.Events;
             FacebookObjectCollection<Event> sortedEvents = new FacebookObjectCollection<Event>();
 
             switch (comboBoxEventsStatus.SelectedIndex)
@@ -115,41 +115,19 @@ namespace BasicFacebookFeatures
 
         private void buttonLikedPages_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Page> likedPages = new FacebookObjectCollection<Page>();
-            r_AppLogic.FetchLikedPages(ref likedPages);
+            FacebookObjectCollection<Page> likedPages = r_AppLogic.LoggedUser.LikedPages;
             listBoxLikedPages.Items.Clear();
             listBoxLikedPages.DisplayMember = "Name";
-
-            try
-            {
-                foreach (Page page in likedPages)
-                {
-                    listBoxLikedPages.Items.Add(page);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            if (listBoxLikedPages.Items.Count == 0)
-            {
-                MessageBox.Show("No liked pages to retrieve :(");
-            }
+            fillListBoxes(likedPages, listBoxLikedPages);
 
             pictureBoxSelectedLikedPage.Image = pictureBoxSelectedLikedPage.InitialImage;
         }
 
         private void buttonFetchAlbums_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Album> albums = new FacebookObjectCollection<Album>();
-            r_AppLogic.FetchAlbums(ref albums);
+            FacebookObjectCollection<Album> albums = r_AppLogic.LoggedUser.Albums;
             listBoxAlbums.Items.Clear();
-
-            foreach (Album album in albums)
-            {
-                listBoxAlbums.Items.Add(album);
-            }
+            fillListBoxes(albums, listBoxAlbums);
 
             pictureBoxSelectedAlbum.Image = pictureBoxSelectedAlbum.InitialImage;
         }
@@ -158,7 +136,7 @@ namespace BasicFacebookFeatures
         {
             bool areFriendsBDaysThisMonth = false;
 
-            foreach (User friend in r_AppLogic.LoggedInUser.Friends)
+            foreach (User friend in r_AppLogic.LoggedUser.Friends)
 
             {
                 DateTime friendBirthday = DateTime.Parse(friend.Birthday);
@@ -176,16 +154,10 @@ namespace BasicFacebookFeatures
         }
 
         private void buttonFetchFavoriteTeams_Click(object sender, EventArgs e)
-        {
-            FacebookObjectCollection<Page> favoriteTeams = new FacebookObjectCollection<Page>();
-            r_AppLogic.FetchFavoriteTeams(ref favoriteTeams);
+        { 
+            FacebookObjectCollection<Link> favoriteTeams = r_AppLogic.LoggedUser.PostedLinks;
             listBoxFavoriteTeams.Items.Clear();
-            Page selectedFavoriteTeam = listBoxFavoriteTeams.SelectedItem as Page;
-
-            foreach (Page team in favoriteTeams)
-            {
-                listBoxFavoriteTeams.Items.Add(team);
-            }
+            fillListBoxes(favoriteTeams, listBoxFavoriteTeams);
 
             pictureBoxSelectedFavoriteTeam.Image = pictureBoxSelectedFavoriteTeam.InitialImage;
         }
@@ -246,7 +218,7 @@ namespace BasicFacebookFeatures
 
         private void listBoxFavoriteTeams_SelectedIndexChanged(object sender, EventArgs e)
         {
-            displaySelectedFavoriteTeam();
+            //displaySelectedFavoriteTeam();
         }
 
         private void displaySelectedFavoriteTeam()
@@ -254,26 +226,7 @@ namespace BasicFacebookFeatures
             if (listBoxFavoriteTeams.SelectedItems.Count == 1)
             {
                 Page selectedFavoriteTeam = listBoxFavoriteTeams.SelectedItem as Page;
-                if (selectedFavoriteTeam.PictureURL != null)
-                {
-                    pictureBoxSelectedFavoriteTeam.LoadAsync(selectedFavoriteTeam.PictureURL);
-                }
-                else
-                {
-                    pictureBoxSelectedFavoriteTeam.Image = pictureBoxSelectedFavoriteTeam.ErrorImage;
-                }
-            }
-        }
-
-        private void linkLabelFetchFriends_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FacebookObjectCollection<User> friends = new FacebookObjectCollection<User>();
-            r_AppLogic.FetchFriends(ref friends);
-            listBoxAlbums.Items.Clear();
-
-            foreach (User friend in friends)
-            {
-                listBoxAlbums.Items.Add(friend);
+                showCurrentItemPicture(pictureBoxSelectedFavoriteTeam, selectedFavoriteTeam.PictureURL);
             }
         }
 
@@ -286,7 +239,6 @@ namespace BasicFacebookFeatures
         {
             bool isFriendWithCommonInterest = false;
             Dictionary<string, int> friendsCommonPagesLikes = new Dictionary<string, int>();
-
             r_AppLogic.GetFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest);
 
             foreach (KeyValuePair<string, int> friendInDictionary in friendsCommonPagesLikes)
@@ -297,6 +249,38 @@ namespace BasicFacebookFeatures
             if (!isFriendWithCommonInterest)
             {
                 listBoxCommonInterest.Items.Add("No Friends With Common Liked Pages");
+            }
+        }
+
+        private void fillListBoxes<T>(FacebookObjectCollection<T> i_FacebookItemsCollection, ListBox io_FacebookItemsList)
+        {
+            try
+            {
+                foreach(T item in i_FacebookItemsCollection)
+                {
+                    io_FacebookItemsList.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            if(io_FacebookItemsList.Items.Count == 0)
+            {
+                io_FacebookItemsList.Items.Add("No liked pages to retrieve :(");
+            }
+        }
+
+        private void showCurrentItemPicture(PictureBox io_ItemPicture, string i_ItemPictureURL)
+        {
+            if (!string.IsNullOrEmpty(i_ItemPictureURL))
+            {
+                io_ItemPicture.LoadAsync(i_ItemPictureURL);
+            }
+            else
+            {
+                io_ItemPicture.Image = io_ItemPicture.ErrorImage;
             }
         }
     }
