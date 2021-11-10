@@ -150,6 +150,8 @@ namespace BasicFacebookFeatures
             {
                 listBoxAlbums.Items.Add(album);
             }
+
+            pictureBoxSelectedAlbum.Image = pictureBoxSelectedAlbum.InitialImage;
         }
 
         private void buttonFetchUpcomingBirthdays_Click(object sender, EventArgs e)
@@ -157,6 +159,7 @@ namespace BasicFacebookFeatures
             bool areFriendsBDaysThisMonth = false;
 
             foreach (User friend in r_AppLogic.LoggedInUser.Friends)
+
             {
                 DateTime friendBirthday = DateTime.Parse(friend.Birthday);
                 if (friendBirthday.Month == DateTime.Now.Month)
@@ -183,6 +186,8 @@ namespace BasicFacebookFeatures
             {
                 listBoxFavoriteTeams.Items.Add(team);
             }
+
+            pictureBoxSelectedFavoriteTeam.Image = pictureBoxSelectedFavoriteTeam.InitialImage;
         }
 
         private void buttonFetchRandomPicture_Click(object sender, EventArgs e)
