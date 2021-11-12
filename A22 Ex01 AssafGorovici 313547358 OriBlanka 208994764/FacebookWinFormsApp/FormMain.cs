@@ -47,44 +47,44 @@ namespace BasicFacebookFeatures
                 MessageBox.Show(r_AppLogic.LoginResult.ErrorMessage, "Login Failed");
             }
         }
+
         private void fetchUserInfo()
         {
             m_UserProfilePicture.LoadAsync(r_AppLogic.LoggedUser.PictureNormalURL);
             m_HelloUserLabel.Text = $@"Hi {r_AppLogic.LoggedUser.FirstName}!";
-            buttonLogin.Text = $@"Logged in as {r_AppLogic.LoggedUser.Name}";
+            m_LoginButton.Text = $@"Logged in as {r_AppLogic.LoggedUser.Name}";
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
             FacebookService.LogoutWithUI();
-            buttonLogin.Text = "Login";
+            m_LoginButton.Text = "Login";
             m_HelloUserLabel.Text = "";
             m_UserProfilePicture.Image = Properties.Resources.FacebookLogo;
         }
 
         private void buttonFetchPosts_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Post> myPosts = new FacebookObjectCollection<Post>();
-            r_AppLogic.FetchPosts(ref myPosts);
-            listBoxPosts.Items.Clear();
+            FacebookObjectCollection<Post> myPosts = r_AppLogic.LoggedUser.Posts;
+            m_PostsListBox.Items.Clear();
 
             foreach(Post post in myPosts)
             {
                 if(post.Message != null)
                 {
-                    listBoxPosts.Items.Add(post.Message);
+                    m_PostsListBox.Items.Add(post.Message);
                 }
                 else if(post.Caption != null)
                 {
-                    listBoxPosts.Items.Add(post.Caption);
+                    m_PostsListBox.Items.Add(post.Caption);
                 }
                 else
                 {
-                    listBoxPosts.Items.Add(string.Format("[{0}]", post.Type));
+                    m_PostsListBox.Items.Add(string.Format("[{0}]", post.Type));
                 }
             }
 
-            if(listBoxPosts.Items.Count == 0)
+            if(m_PostsListBox.Items.Count == 0)
             {
                 MessageBox.Show("No Posts to retrieve :(");
             }
@@ -95,7 +95,7 @@ namespace BasicFacebookFeatures
             FacebookObjectCollection<Event> allEvents = r_AppLogic.LoggedUser.Events;
             FacebookObjectCollection<Event> sortedEvents = new FacebookObjectCollection<Event>();
 
-            switch (comboBoxEventsStatus.SelectedIndex)
+            switch (m_EventStatusComboBox.SelectedIndex)
             {
                 case (int)eEventStatus.Online:
                     r_AppLogic.FetchEvents(ref allEvents, ref sortedEvents, true);
@@ -110,26 +110,22 @@ namespace BasicFacebookFeatures
                     break;
             }
 
-            dataGridViewEvents.DataSource = sortedEvents;
+            m_EventGridView.DataSource = sortedEvents;
         }
 
         private void buttonLikedPages_Click(object sender, EventArgs e)
         {
             FacebookObjectCollection<Page> likedPages = r_AppLogic.LoggedUser.LikedPages;
-            listBoxLikedPages.Items.Clear();
-            listBoxLikedPages.DisplayMember = "Name";
-            fillListBoxes(likedPages, listBoxLikedPages);
-
-            pictureBoxSelectedLikedPage.Image = pictureBoxSelectedLikedPage.InitialImage;
+            m_LikedPagesListBox.Items.Clear();
+            m_LikedPagesListBox.DisplayMember = "Name";
+            fillListBoxes(likedPages, m_LikedPagesListBox);
         }
 
         private void buttonFetchAlbums_Click(object sender, EventArgs e)
         {
             FacebookObjectCollection<Album> albums = r_AppLogic.LoggedUser.Albums;
-            listBoxAlbums.Items.Clear();
-            fillListBoxes(albums, listBoxAlbums);
-
-            pictureBoxSelectedAlbum.Image = pictureBoxSelectedAlbum.InitialImage;
+            m_AlbumsListBox.Items.Clear();
+            fillListBoxes(albums, m_AlbumsListBox);
         }
 
         private void buttonFetchUpcomingBirthdays_Click(object sender, EventArgs e)
@@ -143,30 +139,28 @@ namespace BasicFacebookFeatures
                 if (friendBirthday.Month == DateTime.Now.Month)
                 {
                     areFriendsBDaysThisMonth = true;
-                    listBoxUpcomingBirthdays.Items.Add($"{friend.Name} - {friend.Birthday} ");
+                    m_UpcomingBirthdayListBox.Items.Add($"{friend.Name} - {friend.Birthday} ");
                 }
             }
 
             if (!areFriendsBDaysThisMonth)
             {
-                listBoxUpcomingBirthdays.Items.Add($"No friends birthdays on {DateTime.Now:M}");
+                m_UpcomingBirthdayListBox.Items.Add($"No friends birthdays on {DateTime.Now:M}");
             }
         }
 
-        private void buttonFetchFavoriteTeams_Click(object sender, EventArgs e)
+        private void buttonFetchGroups_Click(object sender, EventArgs e)
         { 
-            FacebookObjectCollection<Link> favoriteTeams = r_AppLogic.LoggedUser.PostedLinks;
-            listBoxFavoriteTeams.Items.Clear();
-            fillListBoxes(favoriteTeams, listBoxFavoriteTeams);
-
-            pictureBoxSelectedFavoriteTeam.Image = pictureBoxSelectedFavoriteTeam.InitialImage;
+            FacebookObjectCollection<Group> favoriteTeams = r_AppLogic.LoggedUser.Groups;
+            m_GroupsListBox.Items.Clear();
+            fillListBoxes(favoriteTeams, m_GroupsListBox);
         }
 
         private void buttonFetchRandomPicture_Click(object sender, EventArgs e)
         {
             try
             {
-                pictureBoxRandomPicture.Image = r_AppLogic.GetRandomImage();
+                m_RandomImagePictureBox.Image = r_AppLogic.GetRandomImage();
             }
             catch (Exception pictureException)
             {
@@ -179,60 +173,46 @@ namespace BasicFacebookFeatures
             displaySelectedAlbum();
         }
 
-        private void displaySelectedAlbum()
-        {
-            if (listBoxAlbums.SelectedItems.Count == 1)
-            {
-                Album selectedAlbum = listBoxAlbums.SelectedItem as Album;
-                if (selectedAlbum.PictureAlbumURL != null)
-                {
-                    pictureBoxSelectedAlbum.LoadAsync(selectedAlbum.PictureAlbumURL);
-                }
-                else
-                {
-                    pictureBoxSelectedAlbum.Image = pictureBoxSelectedAlbum.ErrorImage;
-                }
-            }
-        }
-
         private void listBoxLikedPages_SelectedIndexChanged(object sender, EventArgs e)
         {
             displaySelectedLikedPage();
         }
 
-        private void displaySelectedLikedPage()
+        private void listBoxGroups_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBoxLikedPages.SelectedItems.Count == 1)
-            {
-                Page selectedPage = listBoxLikedPages.SelectedItem as Page;
-                if (selectedPage.PictureURL != null)
-                {
-                    pictureBoxSelectedLikedPage.LoadAsync(selectedPage.PictureURL);
-                }
-                else
-                {
-                    pictureBoxSelectedLikedPage.Image = pictureBoxSelectedLikedPage.ErrorImage;
-                }
-            }
-        }
-
-        private void listBoxFavoriteTeams_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //displaySelectedFavoriteTeam();
-        }
-
-        private void displaySelectedFavoriteTeam()
-        {
-            if (listBoxFavoriteTeams.SelectedItems.Count == 1)
-            {
-                Page selectedFavoriteTeam = listBoxFavoriteTeams.SelectedItem as Page;
-                showCurrentItemPicture(pictureBoxSelectedFavoriteTeam, selectedFavoriteTeam.PictureURL);
-            }
+            displaySelectedFavoriteTeam();
         }
 
         private void buttonCommonInterest_Click(object sender, EventArgs e)
         {
             fetchFriendsWithCommonInterest();
+        }
+
+        private void displaySelectedAlbum()
+        {
+            if (m_AlbumsListBox.SelectedItems.Count == 1)
+            {
+                Album selectedAlbum = m_AlbumsListBox.SelectedItem as Album;
+                showCurrentItemPicture(m_SelectedAlbumPictureBox, selectedAlbum.PictureAlbumURL);
+            }
+        }
+
+        private void displaySelectedLikedPage()
+        {
+            if (m_LikedPagesListBox.SelectedItems.Count == 1)
+            {
+                Page selectedPage = m_LikedPagesListBox.SelectedItem as Page;
+                showCurrentItemPicture(m_SelectedLikedPagePictureBox, selectedPage.PictureURL);
+            }
+        }
+
+        private void displaySelectedFavoriteTeam()
+        {
+            if (m_GroupsListBox.SelectedItems.Count == 1)
+            {
+                Page selectedFavoriteTeam = m_GroupsListBox.SelectedItem as Page;
+                showCurrentItemPicture(m_SelectedGroupPictureBox, selectedFavoriteTeam.PictureURL);
+            }
         }
 
         private void fetchFriendsWithCommonInterest()

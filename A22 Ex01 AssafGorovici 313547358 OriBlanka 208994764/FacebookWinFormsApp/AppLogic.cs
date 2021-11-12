@@ -13,16 +13,16 @@ namespace BasicFacebookFeatures
 {
     public class AppLogic
     {
-        public User LoggedUser { get; set; }
-
-        public LoginResult LoginResult { get; set; }
-
         private readonly Random r_Random = new Random();
 
         public AppLogic()
         {
             
         }
+
+        public User LoggedUser { get; set; }
+
+        public LoginResult LoginResult { get; set; }
 
         public void LoginAndLoadUserInfo()
         {
@@ -45,14 +45,6 @@ namespace BasicFacebookFeatures
             if (!string.IsNullOrEmpty(LoginResult.AccessToken))
             {
                 LoggedUser = LoginResult.LoggedInUser;
-            }
-        }
-
-        public void FetchPosts(ref FacebookObjectCollection<Post> io_Posts)
-        {
-            foreach (Post post in LoggedUser.Posts)
-            {
-                io_Posts.Add(post);
             }
         }
 
