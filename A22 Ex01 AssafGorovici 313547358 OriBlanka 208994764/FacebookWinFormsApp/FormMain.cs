@@ -80,7 +80,7 @@ namespace BasicFacebookFeatures
                 }
                 else
                 {
-                    m_PostsListBox.Items.Add(string.Format("[{0}]", post.Type));
+                    m_PostsListBox.Items.Add($"[{post.Type}]");
                 }
             }
 
@@ -131,19 +131,18 @@ namespace BasicFacebookFeatures
         private void buttonFetchUpcomingBirthdays_Click(object sender, EventArgs e)
         {
             bool areFriendsBDaysThisMonth = false;
-
-            foreach (User friend in r_AppLogic.LoggedUser.Friends)
+            foreach(User friend in r_AppLogic.LoggedUser.Friends)
 
             {
                 DateTime friendBirthday = DateTime.Parse(friend.Birthday);
-                if (friendBirthday.Month == DateTime.Now.Month)
+                if(friendBirthday.Month == DateTime.Now.Month)
                 {
                     areFriendsBDaysThisMonth = true;
                     m_UpcomingBirthdayListBox.Items.Add($"{friend.Name} - {friend.Birthday} ");
                 }
             }
 
-            if (!areFriendsBDaysThisMonth)
+            if(!areFriendsBDaysThisMonth)
             {
                 m_UpcomingBirthdayListBox.Items.Add($"No friends birthdays on {DateTime.Now:M}");
             }
@@ -223,12 +222,12 @@ namespace BasicFacebookFeatures
 
             foreach (KeyValuePair<string, int> friendInDictionary in friendsCommonPagesLikes)
             {
-                listBoxCommonInterest.Items.Add($"{friendInDictionary.Key} - {friendInDictionary.Value.ToString()} Pages");
+                m_CommonInterestListBox.Items.Add($"{friendInDictionary.Key} - {friendInDictionary.Value.ToString()} Pages");
             }
 
             if (!isFriendWithCommonInterest)
             {
-                listBoxCommonInterest.Items.Add("No Friends With Common Liked Pages");
+                m_CommonInterestListBox.Items.Add("No Friends With Common Liked Pages");
             }
         }
 

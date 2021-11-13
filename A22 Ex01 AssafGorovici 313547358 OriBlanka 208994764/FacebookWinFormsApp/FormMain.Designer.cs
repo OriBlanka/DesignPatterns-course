@@ -35,7 +35,6 @@
             this.m_AppTabControl = new System.Windows.Forms.TabControl();
             this.m_MainTab = new System.Windows.Forms.TabPage();
             this.m_SelectedLikedPagePictureBox = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.m_RandomImagePictureBox = new System.Windows.Forms.PictureBox();
             this.m_FetchRandomPictureButton = new System.Windows.Forms.Button();
             this.m_SelectedGroupPictureBox = new System.Windows.Forms.PictureBox();
@@ -55,9 +54,9 @@
             this.m_FetchEventButtons = new System.Windows.Forms.Button();
             this.m_EventGridView = new System.Windows.Forms.DataGridView();
             this.m_MutualLikedPagesTab = new System.Windows.Forms.TabPage();
-            this.listBoxCommonInterest = new System.Windows.Forms.ListBox();
-            this.buttonCommonInterest = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.m_CommonInterestListBox = new System.Windows.Forms.ListBox();
+            this.m_FetchCommonInterest = new System.Windows.Forms.Button();
+            this.m_LikePictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
@@ -70,7 +69,7 @@
             this.m_FetchEventsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_EventGridView)).BeginInit();
             this.m_MutualLikedPagesTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +110,6 @@
             // m_MainTab
             // 
             this.m_MainTab.Controls.Add(this.m_SelectedLikedPagePictureBox);
-            this.m_MainTab.Controls.Add(this.linkLabel1);
             this.m_MainTab.Controls.Add(this.m_RandomImagePictureBox);
             this.m_MainTab.Controls.Add(this.m_FetchRandomPictureButton);
             this.m_MainTab.Controls.Add(this.m_SelectedGroupPictureBox);
@@ -145,16 +143,6 @@
             this.m_SelectedLikedPagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.m_SelectedLikedPagePictureBox.TabIndex = 74;
             this.m_SelectedLikedPagePictureBox.TabStop = false;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(597, 1034);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(152, 35);
-            this.linkLabel1.TabIndex = 73;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
             // 
             // m_RandomImagePictureBox
             // 
@@ -344,9 +332,9 @@
             // 
             // m_MutualLikedPagesTab
             // 
-            this.m_MutualLikedPagesTab.Controls.Add(this.listBoxCommonInterest);
-            this.m_MutualLikedPagesTab.Controls.Add(this.buttonCommonInterest);
-            this.m_MutualLikedPagesTab.Controls.Add(this.pictureBox1);
+            this.m_MutualLikedPagesTab.Controls.Add(this.m_CommonInterestListBox);
+            this.m_MutualLikedPagesTab.Controls.Add(this.m_FetchCommonInterest);
+            this.m_MutualLikedPagesTab.Controls.Add(this.m_LikePictureBox);
             this.m_MutualLikedPagesTab.Location = new System.Drawing.Point(10, 51);
             this.m_MutualLikedPagesTab.Name = "m_MutualLikedPagesTab";
             this.m_MutualLikedPagesTab.Size = new System.Drawing.Size(2519, 1243);
@@ -354,34 +342,34 @@
             this.m_MutualLikedPagesTab.Text = "Mutual Liked Pages";
             this.m_MutualLikedPagesTab.UseVisualStyleBackColor = true;
             // 
-            // listBoxCommonInterest
+            // m_CommonInterestListBox
             // 
-            this.listBoxCommonInterest.FormattingEnabled = true;
-            this.listBoxCommonInterest.ItemHeight = 33;
-            this.listBoxCommonInterest.Location = new System.Drawing.Point(714, 224);
-            this.listBoxCommonInterest.Name = "listBoxCommonInterest";
-            this.listBoxCommonInterest.Size = new System.Drawing.Size(1083, 565);
-            this.listBoxCommonInterest.TabIndex = 2;
+            this.m_CommonInterestListBox.FormattingEnabled = true;
+            this.m_CommonInterestListBox.ItemHeight = 33;
+            this.m_CommonInterestListBox.Location = new System.Drawing.Point(714, 224);
+            this.m_CommonInterestListBox.Name = "m_CommonInterestListBox";
+            this.m_CommonInterestListBox.Size = new System.Drawing.Size(1083, 565);
+            this.m_CommonInterestListBox.TabIndex = 2;
             // 
-            // buttonCommonInterest
+            // m_FetchCommonInterest
             // 
-            this.buttonCommonInterest.Location = new System.Drawing.Point(869, 90);
-            this.buttonCommonInterest.Name = "buttonCommonInterest";
-            this.buttonCommonInterest.Size = new System.Drawing.Size(728, 96);
-            this.buttonCommonInterest.TabIndex = 1;
-            this.buttonCommonInterest.Text = "Click here to see your friends that like similar pages";
-            this.buttonCommonInterest.UseVisualStyleBackColor = true;
-            this.buttonCommonInterest.Click += new System.EventHandler(this.buttonCommonInterest_Click);
+            this.m_FetchCommonInterest.Location = new System.Drawing.Point(869, 90);
+            this.m_FetchCommonInterest.Name = "m_FetchCommonInterest";
+            this.m_FetchCommonInterest.Size = new System.Drawing.Size(728, 96);
+            this.m_FetchCommonInterest.TabIndex = 1;
+            this.m_FetchCommonInterest.Text = "Click here to see your friends that like similar pages";
+            this.m_FetchCommonInterest.UseVisualStyleBackColor = true;
+            this.m_FetchCommonInterest.Click += new System.EventHandler(this.buttonCommonInterest_Click);
             // 
-            // pictureBox1
+            // m_LikePictureBox
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2141, 958);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(362, 267);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.m_LikePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("m_LikePictureBox.Image")));
+            this.m_LikePictureBox.Location = new System.Drawing.Point(2141, 958);
+            this.m_LikePictureBox.Name = "m_LikePictureBox";
+            this.m_LikePictureBox.Size = new System.Drawing.Size(362, 267);
+            this.m_LikePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.m_LikePictureBox.TabIndex = 0;
+            this.m_LikePictureBox.TabStop = false;
             // 
             // label1
             // 
@@ -430,7 +418,6 @@
             this.Text = "Our Facebook App";
             this.m_AppTabControl.ResumeLayout(false);
             this.m_MainTab.ResumeLayout(false);
-            this.m_MainTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_SelectedLikedPagePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_RandomImagePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_SelectedGroupPictureBox)).EndInit();
@@ -438,7 +425,7 @@
             this.m_FetchEventsTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_EventGridView)).EndInit();
             this.m_MutualLikedPagesTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -468,16 +455,15 @@
         private System.Windows.Forms.Button m_FetchPostsButton;
         private System.Windows.Forms.ListBox m_PostsListBox;
         private System.Windows.Forms.Label m_HelloUserLabel;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox m_RandomImagePictureBox;
         private System.Windows.Forms.Button m_FetchRandomPictureButton;
         private System.Windows.Forms.DataGridView m_EventGridView;
         private System.Windows.Forms.Button m_FetchEventButtons;
         private System.Windows.Forms.ComboBox m_EventStatusComboBox;
         private System.Windows.Forms.PictureBox m_SelectedLikedPagePictureBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox listBoxCommonInterest;
-        private System.Windows.Forms.Button buttonCommonInterest;
+        private System.Windows.Forms.PictureBox m_LikePictureBox;
+        private System.Windows.Forms.ListBox m_CommonInterestListBox;
+        private System.Windows.Forms.Button m_FetchCommonInterest;
     }
 }
 
