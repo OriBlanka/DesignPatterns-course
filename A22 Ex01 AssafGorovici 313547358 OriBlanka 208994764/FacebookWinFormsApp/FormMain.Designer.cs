@@ -34,7 +34,11 @@
             this.m_LogoutButton = new System.Windows.Forms.Button();
             this.m_AppTabControl = new System.Windows.Forms.TabControl();
             this.m_MainTab = new System.Windows.Forms.TabPage();
+            this.m_SelectedLikedPagePictureBox = new System.Windows.Forms.PictureBox();
+            this.m_RandomImagePictureBox = new System.Windows.Forms.PictureBox();
             this.m_FetchRandomPictureButton = new System.Windows.Forms.Button();
+            this.m_SelectedGroupPictureBox = new System.Windows.Forms.PictureBox();
+            this.m_SelectedAlbumPictureBox = new System.Windows.Forms.PictureBox();
             this.m_FetchGroupsButton = new System.Windows.Forms.Button();
             this.m_FetchAlbumsButton = new System.Windows.Forms.Button();
             this.m_GroupsListBox = new System.Windows.Forms.ListBox();
@@ -52,25 +56,21 @@
             this.m_MutualLikedPagesTab = new System.Windows.Forms.TabPage();
             this.m_CommonInterestListBox = new System.Windows.Forms.ListBox();
             this.m_FetchCommonInterest = new System.Windows.Forms.Button();
+            this.m_LikePictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
-            this.m_SelectedLikedPagePictureBox = new System.Windows.Forms.PictureBox();
-            this.m_RandomImagePictureBox = new System.Windows.Forms.PictureBox();
-            this.m_SelectedGroupPictureBox = new System.Windows.Forms.PictureBox();
-            this.m_SelectedAlbumPictureBox = new System.Windows.Forms.PictureBox();
-            this.m_LikePictureBox = new System.Windows.Forms.PictureBox();
             this.m_AppTabControl.SuspendLayout();
             this.m_MainTab.SuspendLayout();
-            this.m_FetchEventsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_EventGridView)).BeginInit();
-            this.m_MutualLikedPagesTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_SelectedLikedPagePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_RandomImagePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_SelectedGroupPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_SelectedAlbumPictureBox)).BeginInit();
+            this.m_FetchEventsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_EventGridView)).BeginInit();
+            this.m_MutualLikedPagesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // m_LoginButton
@@ -117,12 +117,45 @@
             this.m_MainTab.Name = "m_MainTab";
             this.m_MainTab.UseVisualStyleBackColor = true;
             // 
+            // m_SelectedLikedPagePictureBox
+            // 
+            this.m_SelectedLikedPagePictureBox.ErrorImage = global::BasicFacebookFeatures.Properties.Resources.likepagepicDefault;
+            this.m_SelectedLikedPagePictureBox.Image = global::BasicFacebookFeatures.Properties.Resources.likepagepicDefault;
+            this.m_SelectedLikedPagePictureBox.InitialImage = global::BasicFacebookFeatures.Properties.Resources.likepagepicDefault;
+            resources.ApplyResources(this.m_SelectedLikedPagePictureBox, "m_SelectedLikedPagePictureBox");
+            this.m_SelectedLikedPagePictureBox.Name = "m_SelectedLikedPagePictureBox";
+            this.m_SelectedLikedPagePictureBox.TabStop = false;
+            // 
+            // m_RandomImagePictureBox
+            // 
+            resources.ApplyResources(this.m_RandomImagePictureBox, "m_RandomImagePictureBox");
+            this.m_RandomImagePictureBox.Name = "m_RandomImagePictureBox";
+            this.m_RandomImagePictureBox.TabStop = false;
+            // 
             // m_FetchRandomPictureButton
             // 
             resources.ApplyResources(this.m_FetchRandomPictureButton, "m_FetchRandomPictureButton");
             this.m_FetchRandomPictureButton.Name = "m_FetchRandomPictureButton";
             this.m_FetchRandomPictureButton.UseVisualStyleBackColor = true;
             this.m_FetchRandomPictureButton.Click += new System.EventHandler(this.buttonFetchRandomPicture_Click);
+            // 
+            // m_SelectedGroupPictureBox
+            // 
+            this.m_SelectedGroupPictureBox.ErrorImage = global::BasicFacebookFeatures.Properties.Resources.sports;
+            this.m_SelectedGroupPictureBox.Image = global::BasicFacebookFeatures.Properties.Resources.sports;
+            this.m_SelectedGroupPictureBox.InitialImage = global::BasicFacebookFeatures.Properties.Resources.sports;
+            resources.ApplyResources(this.m_SelectedGroupPictureBox, "m_SelectedGroupPictureBox");
+            this.m_SelectedGroupPictureBox.Name = "m_SelectedGroupPictureBox";
+            this.m_SelectedGroupPictureBox.TabStop = false;
+            // 
+            // m_SelectedAlbumPictureBox
+            // 
+            this.m_SelectedAlbumPictureBox.ErrorImage = global::BasicFacebookFeatures.Properties.Resources.pictureaalbum;
+            this.m_SelectedAlbumPictureBox.Image = global::BasicFacebookFeatures.Properties.Resources.pictureaalbum;
+            this.m_SelectedAlbumPictureBox.InitialImage = global::BasicFacebookFeatures.Properties.Resources.pictureaalbum;
+            resources.ApplyResources(this.m_SelectedAlbumPictureBox, "m_SelectedAlbumPictureBox");
+            this.m_SelectedAlbumPictureBox.Name = "m_SelectedAlbumPictureBox";
+            this.m_SelectedAlbumPictureBox.TabStop = false;
             // 
             // m_FetchGroupsButton
             // 
@@ -247,6 +280,12 @@
             this.m_FetchCommonInterest.UseVisualStyleBackColor = true;
             this.m_FetchCommonInterest.Click += new System.EventHandler(this.buttonCommonInterest_Click);
             // 
+            // m_LikePictureBox
+            // 
+            resources.ApplyResources(this.m_LikePictureBox, "m_LikePictureBox");
+            this.m_LikePictureBox.Name = "m_LikePictureBox";
+            this.m_LikePictureBox.TabStop = false;
+            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
@@ -264,45 +303,6 @@
             this.m_UserProfilePicture.Name = "m_UserProfilePicture";
             this.m_UserProfilePicture.TabStop = false;
             // 
-            // m_SelectedLikedPagePictureBox
-            // 
-            this.m_SelectedLikedPagePictureBox.ErrorImage = global::BasicFacebookFeatures.Properties.Resources.likepagepicDefault;
-            this.m_SelectedLikedPagePictureBox.Image = global::BasicFacebookFeatures.Properties.Resources.likepagepicDefault;
-            resources.ApplyResources(this.m_SelectedLikedPagePictureBox, "m_SelectedLikedPagePictureBox");
-            this.m_SelectedLikedPagePictureBox.InitialImage = global::BasicFacebookFeatures.Properties.Resources.likepagepicDefault;
-            this.m_SelectedLikedPagePictureBox.Name = "m_SelectedLikedPagePictureBox";
-            this.m_SelectedLikedPagePictureBox.TabStop = false;
-            // 
-            // m_RandomImagePictureBox
-            // 
-            resources.ApplyResources(this.m_RandomImagePictureBox, "m_RandomImagePictureBox");
-            this.m_RandomImagePictureBox.Name = "m_RandomImagePictureBox";
-            this.m_RandomImagePictureBox.TabStop = false;
-            // 
-            // m_SelectedGroupPictureBox
-            // 
-            this.m_SelectedGroupPictureBox.ErrorImage = global::BasicFacebookFeatures.Properties.Resources.groupicon;
-            this.m_SelectedGroupPictureBox.Image = global::BasicFacebookFeatures.Properties.Resources.groupicon;
-            resources.ApplyResources(this.m_SelectedGroupPictureBox, "m_SelectedGroupPictureBox");
-            this.m_SelectedGroupPictureBox.InitialImage = global::BasicFacebookFeatures.Properties.Resources.groupicon;
-            this.m_SelectedGroupPictureBox.Name = "m_SelectedGroupPictureBox";
-            this.m_SelectedGroupPictureBox.TabStop = false;
-            // 
-            // m_SelectedAlbumPictureBox
-            // 
-            this.m_SelectedAlbumPictureBox.ErrorImage = global::BasicFacebookFeatures.Properties.Resources.pictureaalbum;
-            this.m_SelectedAlbumPictureBox.Image = global::BasicFacebookFeatures.Properties.Resources.pictureaalbum;
-            resources.ApplyResources(this.m_SelectedAlbumPictureBox, "m_SelectedAlbumPictureBox");
-            this.m_SelectedAlbumPictureBox.InitialImage = global::BasicFacebookFeatures.Properties.Resources.pictureaalbum;
-            this.m_SelectedAlbumPictureBox.Name = "m_SelectedAlbumPictureBox";
-            this.m_SelectedAlbumPictureBox.TabStop = false;
-            // 
-            // m_LikePictureBox
-            // 
-            resources.ApplyResources(this.m_LikePictureBox, "m_LikePictureBox");
-            this.m_LikePictureBox.Name = "m_LikePictureBox";
-            this.m_LikePictureBox.TabStop = false;
-            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -317,15 +317,15 @@
             this.Name = "FormMain";
             this.m_AppTabControl.ResumeLayout(false);
             this.m_MainTab.ResumeLayout(false);
-            this.m_FetchEventsTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_EventGridView)).EndInit();
-            this.m_MutualLikedPagesTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_SelectedLikedPagePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_RandomImagePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_SelectedGroupPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_SelectedAlbumPictureBox)).EndInit();
+            this.m_FetchEventsTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_EventGridView)).EndInit();
+            this.m_MutualLikedPagesTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

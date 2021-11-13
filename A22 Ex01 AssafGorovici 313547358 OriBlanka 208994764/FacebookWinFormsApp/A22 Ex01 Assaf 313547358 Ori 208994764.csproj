@@ -144,9 +144,6 @@
   <ItemGroup>
     <None Include="Resources\pictureaalbum.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\groupicon.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
