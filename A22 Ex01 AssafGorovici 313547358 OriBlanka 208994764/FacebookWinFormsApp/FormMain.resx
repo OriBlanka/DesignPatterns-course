@@ -174,66 +174,6 @@
   <data name="&gt;&gt;m_LogoutButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;m_MainTab.Name" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_MainTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_MainTab.Parent" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_MainTab.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.Name" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.Parent" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Name" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Parent" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="m_AppTabControl.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Miriam, 9.900001pt</value>
-  </data>
-  <data name="m_AppTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 254</value>
-  </data>
-  <data name="m_AppTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2545, 1168</value>
-  </data>
-  <data name="m_AppTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.Name" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="&gt;&gt;m_SelectedLikedPagePictureBox.Name" xml:space="preserve">
     <value>m_SelectedLikedPagePictureBox</value>
   </data>
@@ -440,6 +380,195 @@
   </data>
   <data name="&gt;&gt;m_MainTab.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="m_EventStatusComboBox.Items" xml:space="preserve">
+    <value>Online envents</value>
+  </data>
+  <data name="m_EventStatusComboBox.Items1" xml:space="preserve">
+    <value>Physical attendance events</value>
+  </data>
+  <data name="m_EventStatusComboBox.Items2" xml:space="preserve">
+    <value>All events</value>
+  </data>
+  <data name="m_EventStatusComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 23</value>
+  </data>
+  <data name="m_EventStatusComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>535, 41</value>
+  </data>
+  <data name="m_EventStatusComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;m_EventStatusComboBox.Name" xml:space="preserve">
+    <value>m_EventStatusComboBox</value>
+  </data>
+  <data name="&gt;&gt;m_EventStatusComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_EventStatusComboBox.Parent" xml:space="preserve">
+    <value>m_FetchEventsTab</value>
+  </data>
+  <data name="&gt;&gt;m_EventStatusComboBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="m_FetchEventButtons.Location" type="System.Drawing.Point, System.Drawing">
+    <value>572, 15</value>
+  </data>
+  <data name="m_FetchEventButtons.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 53</value>
+  </data>
+  <data name="m_FetchEventButtons.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="m_FetchEventButtons.Text" xml:space="preserve">
+    <value>Fetch events</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventButtons.Name" xml:space="preserve">
+    <value>m_FetchEventButtons</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventButtons.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventButtons.Parent" xml:space="preserve">
+    <value>m_FetchEventsTab</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventButtons.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="m_EventGridView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 82</value>
+  </data>
+  <data name="m_EventGridView.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="m_EventGridView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2513, 1019</value>
+  </data>
+  <data name="m_EventGridView.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;m_EventGridView.Name" xml:space="preserve">
+    <value>m_EventGridView</value>
+  </data>
+  <data name="&gt;&gt;m_EventGridView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_EventGridView.Parent" xml:space="preserve">
+    <value>m_FetchEventsTab</value>
+  </data>
+  <data name="&gt;&gt;m_EventGridView.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_FetchEventsTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 51</value>
+  </data>
+  <data name="m_FetchEventsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="m_FetchEventsTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2525, 1107</value>
+  </data>
+  <data name="m_FetchEventsTab.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="m_FetchEventsTab.Text" xml:space="preserve">
+    <value>My Events</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventsTab.Name" xml:space="preserve">
+    <value>m_FetchEventsTab</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventsTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventsTab.Parent" xml:space="preserve">
+    <value>m_AppTabControl</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventsTab.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;m_CommonInterestListBox.Name" xml:space="preserve">
+    <value>m_CommonInterestListBox</value>
+  </data>
+  <data name="&gt;&gt;m_CommonInterestListBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_CommonInterestListBox.Parent" xml:space="preserve">
+    <value>m_MutualLikedPagesTab</value>
+  </data>
+  <data name="&gt;&gt;m_CommonInterestListBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;m_FetchCommonInterest.Name" xml:space="preserve">
+    <value>m_FetchCommonInterest</value>
+  </data>
+  <data name="&gt;&gt;m_FetchCommonInterest.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_FetchCommonInterest.Parent" xml:space="preserve">
+    <value>m_MutualLikedPagesTab</value>
+  </data>
+  <data name="&gt;&gt;m_FetchCommonInterest.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;m_LikePictureBox.Name" xml:space="preserve">
+    <value>m_LikePictureBox</value>
+  </data>
+  <data name="&gt;&gt;m_LikePictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_LikePictureBox.Parent" xml:space="preserve">
+    <value>m_MutualLikedPagesTab</value>
+  </data>
+  <data name="&gt;&gt;m_LikePictureBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 51</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2525, 1107</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.Text" xml:space="preserve">
+    <value>Mutual Liked Pages</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.Name" xml:space="preserve">
+    <value>m_MutualLikedPagesTab</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.Parent" xml:space="preserve">
+    <value>m_AppTabControl</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_AppTabControl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Miriam, 9.900001pt</value>
+  </data>
+  <data name="m_AppTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 254</value>
+  </data>
+  <data name="m_AppTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2545, 1168</value>
+  </data>
+  <data name="m_AppTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.Name" xml:space="preserve">
+    <value>m_AppTabControl</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="m_SelectedLikedPagePictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>479, 341</value>
@@ -801,212 +930,11 @@
   <data name="&gt;&gt;m_PostsListBox.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.Name" xml:space="preserve">
-    <value>m_EventStatusComboBox</value>
-  </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.Name" xml:space="preserve">
-    <value>m_FetchEventButtons</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.Name" xml:space="preserve">
-    <value>m_EventGridView</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="m_FetchEventsTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 51</value>
-  </data>
-  <data name="m_FetchEventsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="m_FetchEventsTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2525, 1107</value>
-  </data>
-  <data name="m_FetchEventsTab.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="m_FetchEventsTab.Text" xml:space="preserve">
-    <value>My Events</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.Name" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.Parent" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="m_EventStatusComboBox.Items" xml:space="preserve">
-    <value>Online envents</value>
-  </data>
-  <data name="m_EventStatusComboBox.Items1" xml:space="preserve">
-    <value>Physical attendance events</value>
-  </data>
-  <data name="m_EventStatusComboBox.Items2" xml:space="preserve">
-    <value>All events</value>
-  </data>
-  <data name="m_EventStatusComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 15</value>
-  </data>
-  <data name="m_EventStatusComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>535, 41</value>
-  </data>
-  <data name="m_EventStatusComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.Name" xml:space="preserve">
-    <value>m_EventStatusComboBox</value>
-  </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="m_FetchEventButtons.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 7</value>
-  </data>
-  <data name="m_FetchEventButtons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 53</value>
-  </data>
-  <data name="m_FetchEventButtons.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="m_FetchEventButtons.Text" xml:space="preserve">
-    <value>Fetch events</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.Name" xml:space="preserve">
-    <value>m_FetchEventButtons</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="m_EventGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 80</value>
-  </data>
-  <data name="m_EventGridView.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>102</value>
-  </data>
-  <data name="m_EventGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2507, 1157</value>
-  </data>
-  <data name="m_EventGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.Name" xml:space="preserve">
-    <value>m_EventGridView</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.Name" xml:space="preserve">
-    <value>m_CommonInterestListBox</value>
-  </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.Parent" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.Name" xml:space="preserve">
-    <value>m_FetchCommonInterest</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.Parent" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.Name" xml:space="preserve">
-    <value>m_LikePictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.Parent" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 51</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2525, 1107</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.Text" xml:space="preserve">
-    <value>Mutual Liked Pages</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Name" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Parent" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="m_CommonInterestListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>33</value>
   </data>
   <data name="m_CommonInterestListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>816, 239</value>
+    <value>605, 224</value>
   </data>
   <data name="m_CommonInterestListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>1237, 598</value>
@@ -1027,7 +955,7 @@
     <value>0</value>
   </data>
   <data name="m_FetchCommonInterest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>993, 96</value>
+    <value>782, 81</value>
   </data>
   <data name="m_FetchCommonInterest.Size" type="System.Drawing.Size, System.Drawing">
     <value>832, 103</value>
@@ -36830,10 +36758,10 @@
 </value>
   </data>
   <data name="m_LikePictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2447, 1024</value>
+    <value>2131, 838</value>
   </data>
   <data name="m_LikePictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>414, 285</value>
+    <value>377, 252</value>
   </data>
   <data name="m_LikePictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
