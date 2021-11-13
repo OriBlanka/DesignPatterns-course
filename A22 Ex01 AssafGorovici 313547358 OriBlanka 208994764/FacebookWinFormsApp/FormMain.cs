@@ -179,7 +179,7 @@ namespace BasicFacebookFeatures
 
         private void listBoxGroups_SelectedIndexChanged(object sender, EventArgs e)
         {
-            displaySelectedFavoriteTeam();
+            displaySelectedGroup();
         }
 
         private void buttonCommonInterest_Click(object sender, EventArgs e)
@@ -205,7 +205,7 @@ namespace BasicFacebookFeatures
             }
         }
 
-        private void displaySelectedFavoriteTeam()
+        private void displaySelectedGroup()
         {
             if (m_GroupsListBox.SelectedItems.Count == 1)
             {
