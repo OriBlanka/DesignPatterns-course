@@ -29,7 +29,7 @@ namespace BasicFacebookFeatures
             FacebookWrapper.FacebookService.s_CollectionLimit = 100;
             r_AppLogic = new AppLogic();
             /*m_AppSettings = new AppSettings();
-
+            this.StartPosition = FormStartPosition.Manual;
             this.Size = m_AppSettings.LastWindowSize;
             this.Location = m_AppSettings.LastWindowLocation;
             this.checkBoxRememberUser.Checked = m_AppSettings.RememberUser;
