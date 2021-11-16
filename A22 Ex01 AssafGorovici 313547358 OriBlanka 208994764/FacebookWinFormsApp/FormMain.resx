@@ -119,14 +119,14 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="m_LoginButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 17</value>
+    <value>17, 16</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="m_LoginButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>9, 7, 9, 7</value>
+    <value>8, 7, 8, 7</value>
   </data>
   <data name="m_LoginButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>573, 63</value>
+    <value>501, 59</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="m_LoginButton.TabIndex" type="System.Int32, mscorlib">
@@ -145,16 +145,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;m_LoginButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="m_LogoutButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2333, 17</value>
+    <value>2041, 16</value>
   </data>
   <data name="m_LogoutButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>9, 7, 9, 7</value>
+    <value>8, 7, 8, 7</value>
   </data>
   <data name="m_LogoutButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 59</value>
+    <value>193, 55</value>
   </data>
   <data name="m_LogoutButton.TabIndex" type="System.Int32, mscorlib">
     <value>52</value>
@@ -172,7 +172,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;m_LogoutButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
+  </data>
+  <data name="m_SelectedLikedPagePictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>419, 319</value>
+  </data>
+  <data name="m_SelectedLikedPagePictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 150</value>
+  </data>
+  <data name="m_SelectedLikedPagePictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="m_SelectedLikedPagePictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
   </data>
   <data name="&gt;&gt;m_SelectedLikedPagePictureBox.Name" xml:space="preserve">
     <value>m_SelectedLikedPagePictureBox</value>
@@ -186,6 +198,18 @@
   <data name="&gt;&gt;m_SelectedLikedPagePictureBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="m_RandomImagePictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>849, 446</value>
+  </data>
+  <data name="m_RandomImagePictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>526, 487</value>
+  </data>
+  <data name="m_RandomImagePictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="m_RandomImagePictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
   <data name="&gt;&gt;m_RandomImagePictureBox.Name" xml:space="preserve">
     <value>m_RandomImagePictureBox</value>
   </data>
@@ -197,6 +221,18 @@
   </data>
   <data name="&gt;&gt;m_RandomImagePictureBox.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="m_FetchRandomPictureButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>955, 347</value>
+  </data>
+  <data name="m_FetchRandomPictureButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>298, 85</value>
+  </data>
+  <data name="m_FetchRandomPictureButton.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="m_FetchRandomPictureButton.Text" xml:space="preserve">
+    <value>Random Picture</value>
   </data>
   <data name="&gt;&gt;m_FetchRandomPictureButton.Name" xml:space="preserve">
     <value>m_FetchRandomPictureButton</value>
@@ -210,6 +246,18 @@
   <data name="&gt;&gt;m_FetchRandomPictureButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="m_SelectedGroupPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1853, 705</value>
+  </data>
+  <data name="m_SelectedGroupPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 174</value>
+  </data>
+  <data name="m_SelectedGroupPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="m_SelectedGroupPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
   <data name="&gt;&gt;m_SelectedGroupPictureBox.Name" xml:space="preserve">
     <value>m_SelectedGroupPictureBox</value>
   </data>
@@ -221,6 +269,18 @@
   </data>
   <data name="&gt;&gt;m_SelectedGroupPictureBox.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="m_SelectedAlbumPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 695</value>
+  </data>
+  <data name="m_SelectedAlbumPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 184</value>
+  </data>
+  <data name="m_SelectedAlbumPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="m_SelectedAlbumPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
   </data>
   <data name="&gt;&gt;m_SelectedAlbumPictureBox.Name" xml:space="preserve">
     <value>m_SelectedAlbumPictureBox</value>
@@ -234,6 +294,18 @@
   <data name="&gt;&gt;m_SelectedAlbumPictureBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="m_FetchGroupsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1552, 788</value>
+  </data>
+  <data name="m_FetchGroupsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 82</value>
+  </data>
+  <data name="m_FetchGroupsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="m_FetchGroupsButton.Text" xml:space="preserve">
+    <value>Grups</value>
+  </data>
   <data name="&gt;&gt;m_FetchGroupsButton.Name" xml:space="preserve">
     <value>m_FetchGroupsButton</value>
   </data>
@@ -245,6 +317,18 @@
   </data>
   <data name="&gt;&gt;m_FetchGroupsButton.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="m_FetchAlbumsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 785</value>
+  </data>
+  <data name="m_FetchAlbumsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 85</value>
+  </data>
+  <data name="m_FetchAlbumsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="m_FetchAlbumsButton.Text" xml:space="preserve">
+    <value>Albums</value>
   </data>
   <data name="&gt;&gt;m_FetchAlbumsButton.Name" xml:space="preserve">
     <value>m_FetchAlbumsButton</value>
@@ -258,6 +342,18 @@
   <data name="&gt;&gt;m_FetchAlbumsButton.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="m_GroupsListBox.ItemHeight" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="m_GroupsListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1552, 895</value>
+  </data>
+  <data name="m_GroupsListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>604, 97</value>
+  </data>
+  <data name="m_GroupsListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
   <data name="&gt;&gt;m_GroupsListBox.Name" xml:space="preserve">
     <value>m_GroupsListBox</value>
   </data>
@@ -269,6 +365,18 @@
   </data>
   <data name="&gt;&gt;m_GroupsListBox.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="m_AlbumsListBox.ItemHeight" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="m_AlbumsListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 895</value>
+  </data>
+  <data name="m_AlbumsListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>604, 97</value>
+  </data>
+  <data name="m_AlbumsListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
   </data>
   <data name="&gt;&gt;m_AlbumsListBox.Name" xml:space="preserve">
     <value>m_AlbumsListBox</value>
@@ -282,6 +390,18 @@
   <data name="&gt;&gt;m_AlbumsListBox.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <data name="m_UpcomingBirthdayListBox.ItemHeight" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="m_UpcomingBirthdayListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1552, 497</value>
+  </data>
+  <data name="m_UpcomingBirthdayListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>604, 97</value>
+  </data>
+  <data name="m_UpcomingBirthdayListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
   <data name="&gt;&gt;m_UpcomingBirthdayListBox.Name" xml:space="preserve">
     <value>m_UpcomingBirthdayListBox</value>
   </data>
@@ -293,6 +413,18 @@
   </data>
   <data name="&gt;&gt;m_UpcomingBirthdayListBox.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="m_FetchUpcomingBirthdayButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1670, 347</value>
+  </data>
+  <data name="m_FetchUpcomingBirthdayButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>311, 85</value>
+  </data>
+  <data name="m_FetchUpcomingBirthdayButton.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="m_FetchUpcomingBirthdayButton.Text" xml:space="preserve">
+    <value>Upcoming Birthdays</value>
   </data>
   <data name="&gt;&gt;m_FetchUpcomingBirthdayButton.Name" xml:space="preserve">
     <value>m_FetchUpcomingBirthdayButton</value>
@@ -306,6 +438,18 @@
   <data name="&gt;&gt;m_FetchUpcomingBirthdayButton.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="m_LikedPagesListBox.ItemHeight" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="m_LikedPagesListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 497</value>
+  </data>
+  <data name="m_LikedPagesListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>604, 97</value>
+  </data>
+  <data name="m_LikedPagesListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
   <data name="&gt;&gt;m_LikedPagesListBox.Name" xml:space="preserve">
     <value>m_LikedPagesListBox</value>
   </data>
@@ -317,6 +461,18 @@
   </data>
   <data name="&gt;&gt;m_LikedPagesListBox.ZOrder" xml:space="preserve">
     <value>11</value>
+  </data>
+  <data name="m_LikedPagesButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 347</value>
+  </data>
+  <data name="m_LikedPagesButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 85</value>
+  </data>
+  <data name="m_LikedPagesButton.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="m_LikedPagesButton.Text" xml:space="preserve">
+    <value>Liked Pages</value>
   </data>
   <data name="&gt;&gt;m_LikedPagesButton.Name" xml:space="preserve">
     <value>m_LikedPagesButton</value>
@@ -330,6 +486,18 @@
   <data name="&gt;&gt;m_LikedPagesButton.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <data name="m_FetchPostsButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 63</value>
+  </data>
+  <data name="m_FetchPostsButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>251, 96</value>
+  </data>
+  <data name="m_FetchPostsButton.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="m_FetchPostsButton.Text" xml:space="preserve">
+    <value>Fetch Posts</value>
+  </data>
   <data name="&gt;&gt;m_FetchPostsButton.Name" xml:space="preserve">
     <value>m_FetchPostsButton</value>
   </data>
@@ -341,6 +509,18 @@
   </data>
   <data name="&gt;&gt;m_FetchPostsButton.ZOrder" xml:space="preserve">
     <value>13</value>
+  </data>
+  <data name="m_PostsListBox.ItemHeight" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="m_PostsListBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>543, 63</value>
+  </data>
+  <data name="m_PostsListBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1315, 97</value>
+  </data>
+  <data name="m_PostsListBox.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
   </data>
   <data name="&gt;&gt;m_PostsListBox.Name" xml:space="preserve">
     <value>m_PostsListBox</value>
@@ -355,13 +535,13 @@
     <value>14</value>
   </data>
   <data name="m_MainTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 51</value>
+    <value>10, 49</value>
   </data>
   <data name="m_MainTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="m_MainTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2525, 1107</value>
+    <value>2207, 1034</value>
   </data>
   <data name="m_MainTab.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -391,10 +571,10 @@
     <value>All events</value>
   </data>
   <data name="m_EventStatusComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 23</value>
+    <value>13, 22</value>
   </data>
   <data name="m_EventStatusComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>535, 41</value>
+    <value>469, 39</value>
   </data>
   <data name="m_EventStatusComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -412,10 +592,10 @@
     <value>0</value>
   </data>
   <data name="m_FetchEventButtons.Location" type="System.Drawing.Point, System.Drawing">
-    <value>572, 15</value>
+    <value>500, 14</value>
   </data>
   <data name="m_FetchEventButtons.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 53</value>
+    <value>258, 50</value>
   </data>
   <data name="m_FetchEventButtons.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -436,13 +616,13 @@
     <value>1</value>
   </data>
   <data name="m_EventGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 82</value>
+    <value>5, 77</value>
   </data>
   <data name="m_EventGridView.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>102</value>
   </data>
   <data name="m_EventGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2513, 1019</value>
+    <value>2199, 953</value>
   </data>
   <data name="m_EventGridView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -460,13 +640,13 @@
     <value>2</value>
   </data>
   <data name="m_FetchEventsTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 51</value>
+    <value>10, 49</value>
   </data>
   <data name="m_FetchEventsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="m_FetchEventsTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2525, 1107</value>
+    <value>2207, 1034</value>
   </data>
   <data name="m_FetchEventsTab.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -486,458 +666,14 @@
   <data name="&gt;&gt;m_FetchEventsTab.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.Name" xml:space="preserve">
-    <value>m_CommonInterestListBox</value>
-  </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.Parent" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.Name" xml:space="preserve">
-    <value>m_FetchCommonInterest</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.Parent" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.Name" xml:space="preserve">
-    <value>m_LikePictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.Parent" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 51</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2525, 1107</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.Text" xml:space="preserve">
-    <value>Mutual Liked Pages</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Name" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Parent" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="m_AppTabControl.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Miriam, 9.900001pt</value>
-  </data>
-  <data name="m_AppTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 254</value>
-  </data>
-  <data name="m_AppTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2545, 1168</value>
-  </data>
-  <data name="m_AppTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.Name" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="m_SelectedLikedPagePictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>479, 341</value>
-  </data>
-  <data name="m_SelectedLikedPagePictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>278, 160</value>
-  </data>
-  <data name="m_SelectedLikedPagePictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="m_SelectedLikedPagePictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>74</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedLikedPagePictureBox.Name" xml:space="preserve">
-    <value>m_SelectedLikedPagePictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedLikedPagePictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedLikedPagePictureBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedLikedPagePictureBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="m_RandomImagePictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>970, 477</value>
-  </data>
-  <data name="m_RandomImagePictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>601, 521</value>
-  </data>
-  <data name="m_RandomImagePictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="m_RandomImagePictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
-  <data name="&gt;&gt;m_RandomImagePictureBox.Name" xml:space="preserve">
-    <value>m_RandomImagePictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_RandomImagePictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_RandomImagePictureBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_RandomImagePictureBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="m_FetchRandomPictureButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1091, 371</value>
-  </data>
-  <data name="m_FetchRandomPictureButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>340, 91</value>
-  </data>
-  <data name="m_FetchRandomPictureButton.TabIndex" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="m_FetchRandomPictureButton.Text" xml:space="preserve">
-    <value>Random Picture</value>
-  </data>
-  <data name="&gt;&gt;m_FetchRandomPictureButton.Name" xml:space="preserve">
-    <value>m_FetchRandomPictureButton</value>
-  </data>
-  <data name="&gt;&gt;m_FetchRandomPictureButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchRandomPictureButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchRandomPictureButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="m_SelectedGroupPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2118, 754</value>
-  </data>
-  <data name="m_SelectedGroupPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>346, 186</value>
-  </data>
-  <data name="m_SelectedGroupPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="m_SelectedGroupPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>69</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedGroupPictureBox.Name" xml:space="preserve">
-    <value>m_SelectedGroupPictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedGroupPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedGroupPictureBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedGroupPictureBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="m_SelectedAlbumPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>453, 743</value>
-  </data>
-  <data name="m_SelectedAlbumPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 197</value>
-  </data>
-  <data name="m_SelectedAlbumPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="m_SelectedAlbumPictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedAlbumPictureBox.Name" xml:space="preserve">
-    <value>m_SelectedAlbumPictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedAlbumPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedAlbumPictureBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedAlbumPictureBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="m_FetchGroupsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1774, 842</value>
-  </data>
-  <data name="m_FetchGroupsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 88</value>
-  </data>
-  <data name="m_FetchGroupsButton.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="m_FetchGroupsButton.Text" xml:space="preserve">
-    <value>Grups</value>
-  </data>
-  <data name="&gt;&gt;m_FetchGroupsButton.Name" xml:space="preserve">
-    <value>m_FetchGroupsButton</value>
-  </data>
-  <data name="&gt;&gt;m_FetchGroupsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchGroupsButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchGroupsButton.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="m_FetchAlbumsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 839</value>
-  </data>
-  <data name="m_FetchAlbumsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 91</value>
-  </data>
-  <data name="m_FetchAlbumsButton.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="m_FetchAlbumsButton.Text" xml:space="preserve">
-    <value>Albums</value>
-  </data>
-  <data name="&gt;&gt;m_FetchAlbumsButton.Name" xml:space="preserve">
-    <value>m_FetchAlbumsButton</value>
-  </data>
-  <data name="&gt;&gt;m_FetchAlbumsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchAlbumsButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchAlbumsButton.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="m_GroupsListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="m_GroupsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1774, 957</value>
-  </data>
-  <data name="m_GroupsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 103</value>
-  </data>
-  <data name="m_GroupsListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="&gt;&gt;m_GroupsListBox.Name" xml:space="preserve">
-    <value>m_GroupsListBox</value>
-  </data>
-  <data name="&gt;&gt;m_GroupsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_GroupsListBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_GroupsListBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="m_AlbumsListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="m_AlbumsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 957</value>
-  </data>
-  <data name="m_AlbumsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 103</value>
-  </data>
-  <data name="m_AlbumsListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="&gt;&gt;m_AlbumsListBox.Name" xml:space="preserve">
-    <value>m_AlbumsListBox</value>
-  </data>
-  <data name="&gt;&gt;m_AlbumsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_AlbumsListBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_AlbumsListBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="m_UpcomingBirthdayListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="m_UpcomingBirthdayListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1774, 531</value>
-  </data>
-  <data name="m_UpcomingBirthdayListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 103</value>
-  </data>
-  <data name="m_UpcomingBirthdayListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="&gt;&gt;m_UpcomingBirthdayListBox.Name" xml:space="preserve">
-    <value>m_UpcomingBirthdayListBox</value>
-  </data>
-  <data name="&gt;&gt;m_UpcomingBirthdayListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_UpcomingBirthdayListBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_UpcomingBirthdayListBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="m_FetchUpcomingBirthdayButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1909, 371</value>
-  </data>
-  <data name="m_FetchUpcomingBirthdayButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 91</value>
-  </data>
-  <data name="m_FetchUpcomingBirthdayButton.TabIndex" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="m_FetchUpcomingBirthdayButton.Text" xml:space="preserve">
-    <value>Upcoming Birthdays</value>
-  </data>
-  <data name="&gt;&gt;m_FetchUpcomingBirthdayButton.Name" xml:space="preserve">
-    <value>m_FetchUpcomingBirthdayButton</value>
-  </data>
-  <data name="&gt;&gt;m_FetchUpcomingBirthdayButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchUpcomingBirthdayButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchUpcomingBirthdayButton.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="m_LikedPagesListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="m_LikedPagesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>59, 531</value>
-  </data>
-  <data name="m_LikedPagesListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 103</value>
-  </data>
-  <data name="m_LikedPagesListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>59</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesListBox.Name" xml:space="preserve">
-    <value>m_LikedPagesListBox</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesListBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesListBox.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="m_LikedPagesButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>67, 371</value>
-  </data>
-  <data name="m_LikedPagesButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 91</value>
-  </data>
-  <data name="m_LikedPagesButton.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="m_LikedPagesButton.Text" xml:space="preserve">
-    <value>Liked Pages</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesButton.Name" xml:space="preserve">
-    <value>m_LikedPagesButton</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesButton.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="m_FetchPostsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 67</value>
-  </data>
-  <data name="m_FetchPostsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 103</value>
-  </data>
-  <data name="m_FetchPostsButton.TabIndex" type="System.Int32, mscorlib">
-    <value>57</value>
-  </data>
-  <data name="m_FetchPostsButton.Text" xml:space="preserve">
-    <value>Fetch Posts</value>
-  </data>
-  <data name="&gt;&gt;m_FetchPostsButton.Name" xml:space="preserve">
-    <value>m_FetchPostsButton</value>
-  </data>
-  <data name="&gt;&gt;m_FetchPostsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchPostsButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchPostsButton.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="m_PostsListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>33</value>
-  </data>
-  <data name="m_PostsListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>621, 67</value>
-  </data>
-  <data name="m_PostsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1502, 103</value>
-  </data>
-  <data name="m_PostsListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>56</value>
-  </data>
-  <data name="&gt;&gt;m_PostsListBox.Name" xml:space="preserve">
-    <value>m_PostsListBox</value>
-  </data>
-  <data name="&gt;&gt;m_PostsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_PostsListBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_PostsListBox.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
   <data name="m_CommonInterestListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>33</value>
+    <value>31</value>
   </data>
   <data name="m_CommonInterestListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>605, 224</value>
+    <value>529, 210</value>
   </data>
   <data name="m_CommonInterestListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1237, 598</value>
+    <value>1083, 531</value>
   </data>
   <data name="m_CommonInterestListBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -955,10 +691,10 @@
     <value>0</value>
   </data>
   <data name="m_FetchCommonInterest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>782, 81</value>
+    <value>684, 76</value>
   </data>
   <data name="m_FetchCommonInterest.Size" type="System.Drawing.Size, System.Drawing">
-    <value>832, 103</value>
+    <value>728, 96</value>
   </data>
   <data name="m_FetchCommonInterest.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -36758,10 +36494,10 @@
 </value>
   </data>
   <data name="m_LikePictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2131, 838</value>
+    <value>1865, 784</value>
   </data>
   <data name="m_LikePictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>377, 252</value>
+    <value>330, 236</value>
   </data>
   <data name="m_LikePictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -36780,6 +36516,54 @@
   </data>
   <data name="&gt;&gt;m_LikePictureBox.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 49</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2207, 1034</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.Text" xml:space="preserve">
+    <value>Mutual Liked Pages</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.Name" xml:space="preserve">
+    <value>m_MutualLikedPagesTab</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.Parent" xml:space="preserve">
+    <value>m_AppTabControl</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_AppTabControl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Miriam, 9.900001pt</value>
+  </data>
+  <data name="m_AppTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 238</value>
+  </data>
+  <data name="m_AppTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2227, 1093</value>
+  </data>
+  <data name="m_AppTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.Name" xml:space="preserve">
+    <value>m_AppTabControl</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -36800,10 +36584,10 @@
     <value>True</value>
   </data>
   <data name="m_HelloUserLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1418, 119</value>
+    <value>1241, 111</value>
   </data>
   <data name="m_HelloUserLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 32</value>
+    <value>143, 29</value>
   </data>
   <data name="m_HelloUserLabel.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
@@ -36821,7 +36605,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;m_HelloUserLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="m_UserProfilePicture.InitialImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -38446,10 +38230,10 @@
 </value>
   </data>
   <data name="m_UserProfilePicture.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1145, 20</value>
+    <value>1002, 19</value>
   </data>
   <data name="m_UserProfilePicture.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 216</value>
+    <value>184, 202</value>
   </data>
   <data name="m_UserProfilePicture.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -38467,7 +38251,34 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;m_UserProfilePicture.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="checkBoxRememberUser.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBoxRememberUser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 107</value>
+  </data>
+  <data name="checkBoxRememberUser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>206, 33</value>
+  </data>
+  <data name="checkBoxRememberUser.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="checkBoxRememberUser.Text" xml:space="preserve">
+    <value>Remember Me</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRememberUser.Name" xml:space="preserve">
+    <value>checkBoxRememberUser</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRememberUser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRememberUser.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxRememberUser.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -38476,19 +38287,19 @@
     <value>49</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>16, 31</value>
+    <value>14, 29</value>
   </data>
   <data name="$this.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>2587, 1441</value>
+    <value>2264, 1348</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>8, 7, 8, 7</value>
+    <value>7, 7, 7, 7</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>2200, 1200</value>
+    <value>1928, 1128</value>
   </data>
   <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
     <value>True</value>

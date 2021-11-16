@@ -60,6 +60,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
+            this.checkBoxRememberUser = new System.Windows.Forms.CheckBox();
             this.m_AppTabControl.SuspendLayout();
             this.m_MainTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_SelectedLikedPagePictureBox)).BeginInit();
@@ -303,10 +304,17 @@
             this.m_UserProfilePicture.Name = "m_UserProfilePicture";
             this.m_UserProfilePicture.TabStop = false;
             // 
+            // checkBoxRememberUser
+            // 
+            resources.ApplyResources(this.checkBoxRememberUser, "checkBoxRememberUser");
+            this.checkBoxRememberUser.Name = "checkBoxRememberUser";
+            this.checkBoxRememberUser.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.checkBoxRememberUser);
             this.Controls.Add(this.m_HelloUserLabel);
             this.Controls.Add(this.m_UserProfilePicture);
             this.Controls.Add(this.m_LogoutButton);
@@ -363,6 +371,7 @@
         private System.Windows.Forms.PictureBox m_LikePictureBox;
         private System.Windows.Forms.ListBox m_CommonInterestListBox;
         private System.Windows.Forms.Button m_FetchCommonInterest;
+        private System.Windows.Forms.CheckBox checkBoxRememberUser;
     }
 }
 
