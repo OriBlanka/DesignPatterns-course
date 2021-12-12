@@ -21,12 +21,22 @@ namespace BasicFacebookFeatures
         }
 
         private readonly AppLogic r_AppLogic;
-
+        AppSettings m_AppSettings;
+        LoginResult m_LoginResult;
         public FormMain()
         {
             InitializeComponent();
             FacebookWrapper.FacebookService.s_CollectionLimit = 100;
             r_AppLogic = new AppLogic();
+            /*m_AppSettings = new AppSettings();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Size = m_AppSettings.LastWindowSize;
+            this.Location = m_AppSettings.LastWindowLocation;
+            this.checkBoxRememberUser.Checked = m_AppSettings.RememberUser;
+            if(m_AppSettings.RememberUser && !string.IsNullOrEmpty(m_AppSettings.LastAccessToken))
+            {
+                m_LoginResult = FacebookService.Connect(m_AppSettings.LastAccessToken);    
+            }*/
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
