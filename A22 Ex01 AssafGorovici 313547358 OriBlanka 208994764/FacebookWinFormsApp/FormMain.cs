@@ -22,15 +22,15 @@ namespace BasicFacebookFeatures
         }
 
         private readonly AppLogic r_AppLogic;
-        private readonly Random r_Random = new Random();
         AppSettings m_AppSettings;
         LoginResult m_LoginResult;
-
+        User m_LoggedInUser;
         public FormMain()
         {
             InitializeComponent();
             FacebookWrapper.FacebookService.s_CollectionLimit = 100;
             r_AppLogic = new AppLogic();
+            m_AppSettings = new AppSettings();
             /*m_AppSettings = new AppSettings();
             this.StartPosition = FormStartPosition.Manual;
             this.Size = m_AppSettings.LastWindowSize;
@@ -42,6 +42,44 @@ namespace BasicFacebookFeatures
             }*/
         }
 
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            m_AppSettings.LastWindowState = this.WindowState;
+            m_AppSettings.LastWindowSize = this.Size;
+            m_AppSettings.LastWindowLocation = this.Location;
+            m_AppSettings.AutoLogin = this.checkBoxRememberUser.Checked;
+            m_AppSettings.Save();
+        }
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            this.Size = m_AppSettings.LastWindowSize;
+            this.WindowState = m_AppSettings.LastWindowState;
+            this.Location = m_AppSettings.LastWindowLocation;
+            this.checkBoxRememberUser.Checked = m_AppSettings.AutoLogin;
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+
+            if (m_AppSettings.AutoLogin)
+            {
+                autoLogin();
+            }
+        }
+
+        private void autoLogin()
+        {
+            LoginResult result = FacebookService.Connect(m_AppSettings.AccessToken);
+            if (string.IsNullOrEmpty(result.ErrorMessage))
+            {
+                m_LoggedInUser = result.LoggedInUser;
+                fetchUserInfo();
+            }
+        }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             Clipboard.SetText("design.patterns20aa"); 
@@ -111,11 +149,11 @@ namespace BasicFacebookFeatures
             switch (m_EventStatusComboBox.SelectedIndex)
             {
                 case (int)eEventStatus.Online:
-                    fetchEvents(ref allEvents, ref sortedEvents, true);
+                    r_AppLogic.FetchEvents(ref allEvents, ref sortedEvents, true);
                     break;
 
                 case (int)eEventStatus.NotOnline:
-                    fetchEvents(ref allEvents, ref sortedEvents, false);
+                    r_AppLogic.FetchEvents(ref allEvents, ref sortedEvents, false);
                     break;
 
                 case (int)eEventStatus.AllEvents:
@@ -172,7 +210,7 @@ namespace BasicFacebookFeatures
         {
             try
             {
-                m_RandomImagePictureBox.Image = getRandomImage();
+                m_RandomImagePictureBox.Image = r_AppLogic.GetRandomImage();
             }
             catch (Exception pictureException)
             {
@@ -231,7 +269,7 @@ namespace BasicFacebookFeatures
         {
             bool isFriendWithCommonInterest = false;
             Dictionary<string, int> friendsCommonPagesLikes = new Dictionary<string, int>();
-            getFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest);
+            r_AppLogic.GetFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest);
 
             foreach (KeyValuePair<string, int> friendInDictionary in friendsCommonPagesLikes)
             {
@@ -273,63 +311,6 @@ namespace BasicFacebookFeatures
             else
             {
                 io_ItemPicture.Image = io_ItemPicture.ErrorImage;
-            }
-        }
-
-        public void fetchEvents(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline)
-        {
-            if (i_IsOnline)
-            {
-                foreach (Event events in i_Events)
-                {
-                    if (events.IsOnline != null && (bool)events.IsOnline)
-                    {
-                        io_sortedEvents.Add(events);
-                    }
-                }
-            }
-            else
-            {
-                foreach (Event events in i_Events)
-                {
-                    if (events.IsOnline != null && (bool)!events.IsOnline)
-                    {
-                        io_sortedEvents.Add(events);
-                    }
-                }
-            }
-        }
-
-        private Image getRandomImage()
-        {
-            FacebookObjectCollection<Photo> taggedPictures = r_AppLogic.LoggedUser.PhotosTaggedIn;
-            if (taggedPictures.Count < 1)
-            {
-                throw new Exception("No Tagged pictures");
-            }
-
-            int randomizedIndex = r_Random.Next(taggedPictures.Count);
-            return taggedPictures[randomizedIndex].ImageAlbum;
-        }
-
-        private void getFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest)
-        {
-            foreach (User friend in r_AppLogic.LoggedUser.Friends)
-            {
-                int friendCommonLikedPages = 0;
-                foreach (Page friendLikedPage in friend.LikedPages)
-                {
-                    if (r_AppLogic.LoggedUser.LikedPages.Contains(friendLikedPage))
-                    {
-                        io_IsFriendWithCommonInterest = true;
-                        friendCommonLikedPages++;
-                    }
-                }
-
-                if (friendCommonLikedPages > 0)
-                {
-                    io_FriendsCommonPagesLikes.Add(friend.Name, friendCommonLikedPages);
-                }
             }
         }
     }
