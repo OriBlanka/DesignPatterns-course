@@ -6,8 +6,6 @@ namespace FacebookWinFormsLogic
 {
     public class AppLogic
     {
-        private readonly Random r_Random = new Random();
-
         public AppLogic()
         {
             

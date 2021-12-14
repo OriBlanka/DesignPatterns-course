@@ -313,5 +313,62 @@ namespace BasicFacebookFeatures
                 io_ItemPicture.Image = io_ItemPicture.ErrorImage;
             }
         }
+
+        private void fetchEvents(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline)
+        {
+            if (i_IsOnline)
+            {
+                foreach (Event events in i_Events)
+                {
+                    if (events.IsOnline != null && (bool)events.IsOnline)
+                    {
+                        io_sortedEvents.Add(events);
+                    }
+                }
+            }
+            else
+            {
+                foreach (Event events in i_Events)
+                {
+                    if (events.IsOnline != null && (bool)!events.IsOnline)
+                    {
+                        io_sortedEvents.Add(events);
+                    }
+                }
+            }
+        }
+
+        private Image getRandomImage()
+        {
+            FacebookObjectCollection<Photo> taggedPictures = r_AppLogic.LoggedUser.PhotosTaggedIn;
+            if (taggedPictures.Count < 1)
+            {
+                throw new Exception("No Tagged pictures");
+            }
+
+            int randomizedIndex = r_Random.Next(taggedPictures.Count);
+            return taggedPictures[randomizedIndex].ImageAlbum;
+        }
+
+        private void getFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest)
+        {
+            foreach (User friend in r_AppLogic.LoggedUser.Friends)
+            {
+                int friendCommonLikedPages = 0;
+                foreach (Page friendLikedPage in friend.LikedPages)
+                {
+                    if (r_AppLogic.LoggedUser.LikedPages.Contains(friendLikedPage))
+                    {
+                        io_IsFriendWithCommonInterest = true;
+                        friendCommonLikedPages++;
+                    }
+                }
+
+                if (friendCommonLikedPages > 0)
+                {
+                    io_FriendsCommonPagesLikes.Add(friend.Name, friendCommonLikedPages);
+                }
+            }
+        }
     }
 }
