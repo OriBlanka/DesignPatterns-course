@@ -23,8 +23,9 @@ namespace BasicFacebookFeatures
 
         private readonly AppLogic r_AppLogic;
         AppSettings m_AppSettings;
-        LoginResult m_LoginResult;
+       // LoginResult m_LoginResult;
         User m_LoggedInUser;
+        private readonly Random r_Random = new Random();
         public FormMain()
         {
             InitializeComponent();
@@ -83,7 +84,7 @@ namespace BasicFacebookFeatures
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             Clipboard.SetText("design.patterns20aa"); 
-            r_AppLogic.LoginAndLoadUserInfo();
+            r_AppLogic.LoginAndLoadUserInfo(ref m_AppSettings);
             displayUserInfoAfterLogin();
         }
 
