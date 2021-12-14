@@ -276,7 +276,7 @@ namespace BasicFacebookFeatures
             }
         }
 
-        public void fetchEvents(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline)
+        private void fetchEvents(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline)
         {
             if (i_IsOnline)
             {
