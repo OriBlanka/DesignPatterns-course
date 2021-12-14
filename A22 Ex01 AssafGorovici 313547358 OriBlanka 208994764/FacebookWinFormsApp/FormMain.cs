@@ -149,11 +149,11 @@ namespace BasicFacebookFeatures
             switch (m_EventStatusComboBox.SelectedIndex)
             {
                 case (int)eEventStatus.Online:
-                    r_AppLogic.FetchEvents(ref allEvents, ref sortedEvents, true);
+                    fetchEvents(ref allEvents, ref sortedEvents, true);
                     break;
 
                 case (int)eEventStatus.NotOnline:
-                    r_AppLogic.FetchEvents(ref allEvents, ref sortedEvents, false);
+                    fetchEvents(ref allEvents, ref sortedEvents, false);
                     break;
 
                 case (int)eEventStatus.AllEvents:
@@ -210,7 +210,7 @@ namespace BasicFacebookFeatures
         {
             try
             {
-                m_RandomImagePictureBox.Image = r_AppLogic.GetRandomImage();
+                m_RandomImagePictureBox.Image =getRandomImage();
             }
             catch (Exception pictureException)
             {
@@ -269,7 +269,7 @@ namespace BasicFacebookFeatures
         {
             bool isFriendWithCommonInterest = false;
             Dictionary<string, int> friendsCommonPagesLikes = new Dictionary<string, int>();
-            r_AppLogic.GetFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest);
+            getFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest);
 
             foreach (KeyValuePair<string, int> friendInDictionary in friendsCommonPagesLikes)
             {
