@@ -32,7 +32,7 @@ namespace BasicFacebookFeatures
         {
             InitializeComponent();
             FacebookWrapper.FacebookService.s_CollectionLimit = 100;
-            r_AppLogic = new AppLogic();
+         
             m_AppSettings = new AppSettings();
             m_AppSettings = AppSettings.FromFileOrDefault();
             this.StartPosition = FormStartPosition.Manual;
