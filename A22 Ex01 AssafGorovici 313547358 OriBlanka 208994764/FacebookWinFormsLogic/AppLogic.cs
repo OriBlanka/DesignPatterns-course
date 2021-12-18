@@ -34,6 +34,15 @@ namespace FacebookWinFormsLogic
             }
         }
 
+        public string AccessToken { get; set; }
+
+        //Todo - need to remove the comment after creating facebook interface
+        public void Connect(string i_AppSettingsLastAccessToken, string i_AppId, ref bool io_IsLoggedIn)
+        {
+            //m_FacebookUser = FacebookConnector.Connect(i_AppSettingsLastAccessToken, i_AppId, ref io_IsLoggedIn);
+        }
+
+
         public User LoggedUser { get; set; }
         AppSettings m_AppSettings;
         public LoginResult LoginResult { get; set; }

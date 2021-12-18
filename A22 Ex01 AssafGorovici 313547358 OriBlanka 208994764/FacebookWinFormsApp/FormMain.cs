@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
@@ -31,7 +32,6 @@ namespace BasicFacebookFeatures
         {
             InitializeComponent();
             FacebookWrapper.FacebookService.s_CollectionLimit = 100;
-            r_AppLogic = new AppLogic();
             m_AppSettings = new AppSettings();
             /*m_AppSettings = new AppSettings();
             this.StartPosition = FormStartPosition.Manual;
@@ -118,29 +118,8 @@ namespace BasicFacebookFeatures
 
         private void buttonFetchPosts_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Post> myPosts = r_AppLogic.LoggedUser.Posts;
-            m_PostsListBox.Items.Clear();
-
-            foreach(Post post in myPosts)
-            {
-                if(post.Message != null)
-                {
-                    m_PostsListBox.Items.Add(post.Message);
-                }
-                else if(post.Caption != null)
-                {
-                    m_PostsListBox.Items.Add(post.Caption);
-                }
-                else
-                {
-                    m_PostsListBox.Items.Add($"[{post.Type}]");
-                }
-            }
-
-            if(m_PostsListBox.Items.Count == 0)
-            {
-                MessageBox.Show("No Posts to retrieve :(");
-            }
+            m_FetchPostsButton.Enabled = false;
+            fetchPost();
         }
 
         private void buttonFetchEvents_Click(object sender, EventArgs e)
@@ -237,7 +216,8 @@ namespace BasicFacebookFeatures
 
         private void buttonCommonInterest_Click(object sender, EventArgs e)
         {
-            fetchFriendsWithCommonInterest();
+
+            new Thread(fetchFriendsWithCommonInterest).Start();
         }
 
         private void displaySelectedAlbum()
@@ -267,6 +247,33 @@ namespace BasicFacebookFeatures
             }
         }
 
+        private void fetchPost()
+        {
+            FacebookObjectCollection<Post> myPosts = r_AppLogic.LoggedUser.Posts;
+            m_PostsListBox.Items.Clear();
+
+            foreach (Post post in myPosts)
+            {
+                if (post.Message != null)
+                {
+                    m_PostsListBox.Items.Add(post.Message);
+                }
+                else if (post.Caption != null)
+                {
+                    m_PostsListBox.Items.Add(post.Caption);
+                }
+                else
+                {
+                    m_PostsListBox.Items.Add($"[{post.Type}]");
+                }
+            }
+
+            if (m_PostsListBox.Items.Count == 0)
+            {
+                MessageBox.Show("No Posts to retrieve :(");
+            }
+        }
+
         private void fetchFriendsWithCommonInterest()
         {
             bool isFriendWithCommonInterest = false;
@@ -275,12 +282,12 @@ namespace BasicFacebookFeatures
 
             foreach (KeyValuePair<string, int> friendInDictionary in friendsCommonPagesLikes)
             {
-                m_CommonInterestListBox.Items.Add($"{friendInDictionary.Key} - {friendInDictionary.Value.ToString()} Pages");
+                m_CommonInterestListBox.Invoke(new Action(() => m_CommonInterestListBox.Items.Add($"{friendInDictionary.Key} - {friendInDictionary.Value.ToString()} Pages")));
             }
 
             if (!isFriendWithCommonInterest)
             {
-                m_CommonInterestListBox.Items.Add("No Friends With Common Liked Pages");
+                m_CommonInterestListBox.Invoke(new Action(() => m_CommonInterestListBox.Items.Add("No Friends With Common Liked Pages")));
             }
         }
 
