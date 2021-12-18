@@ -21,7 +21,8 @@ namespace BasicFacebookFeatures
             AllEvents = 2
         }
 
-        private readonly AppLogic r_AppLogic;
+        private readonly AppLogic r_AppLogic  = AppLogic.Instance;
+
         AppSettings m_AppSettings;
         LoginResult m_LoginResult;
         User m_LoggedInUser;

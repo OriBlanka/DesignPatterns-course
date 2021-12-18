@@ -6,9 +6,32 @@ namespace FacebookWinFormsLogic
 {
     public class AppLogic
     {
-        public AppLogic()
+        private AppLogic()
         {
             
+        }
+
+        private static readonly object sr_LockGetContext = new object();
+        
+        private static AppLogic s_Instance;
+
+        public static AppLogic Instance
+        {
+            get
+            {
+                if(s_Instance == null)
+                {
+                    lock(sr_LockGetContext)
+                    {
+                        if(s_Instance == null)
+                        {
+                            s_Instance = new AppLogic();
+                        }
+                    }
+                }
+
+                return s_Instance;
+            }
         }
 
         public User LoggedUser { get; set; }
