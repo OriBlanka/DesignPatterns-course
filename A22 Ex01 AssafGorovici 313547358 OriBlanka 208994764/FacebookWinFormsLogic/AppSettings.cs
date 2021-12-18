@@ -26,7 +26,8 @@ namespace FacebookWinFormsLogic
             LastWindowSize = new Size(2292, 1427);
             LastWindowLocation = new Point(20, 50);
             AccessToken = null;*/
-            sr_FileName = Application.ExecutablePath + ".settings.xml";
+            sr_FileName = Directory.GetCurrentDirectory() + "\\appsettings.xml";
+            
         }
    
         public void Save()
@@ -62,6 +63,13 @@ namespace FacebookWinFormsLogic
             }
 
             return loadedThis;
+        }
+        public static void DeleteSettingsFile()
+        {
+            if (File.Exists(sr_FileName))
+            {
+                File.Delete(sr_FileName);
+            }
         }
     }
 }

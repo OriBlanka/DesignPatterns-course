@@ -31,17 +31,17 @@ namespace BasicFacebookFeatures
         {
             InitializeComponent();
             FacebookWrapper.FacebookService.s_CollectionLimit = 100;
-            r_AppLogic = new AppLogic();
+            
             m_AppSettings = new AppSettings();
-            /*m_AppSettings = new AppSettings();
+            m_AppSettings = AppSettings.FromFileOrDefault();
             this.StartPosition = FormStartPosition.Manual;
             this.Size = m_AppSettings.LastWindowSize;
             this.Location = m_AppSettings.LastWindowLocation;
-            this.checkBoxRememberUser.Checked = m_AppSettings.RememberUser;
-            if(m_AppSettings.RememberUser && !string.IsNullOrEmpty(m_AppSettings.LastAccessToken))
+            this.checkBoxRememberUser.Checked = false;
+            if (m_AppSettings.AutoLogin && !string.IsNullOrEmpty(m_AppSettings.AccessToken))
             {
-                m_LoginResult = FacebookService.Connect(m_AppSettings.LastAccessToken);    
-            }*/
+             //   m_LoginResult = FacebookService.Connect(m_AppSettings.AccessToken);
+            }
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -51,7 +51,17 @@ namespace BasicFacebookFeatures
             m_AppSettings.LastWindowSize = this.Size;
             m_AppSettings.LastWindowLocation = this.Location;
             m_AppSettings.AutoLogin = this.checkBoxRememberUser.Checked;
-            m_AppSettings.Save();
+            m_AppSettings.AccessToken = this.checkBoxRememberUser.Checked ? m_AppSettings.AccessToken : null;
+            
+
+            if (this.checkBoxRememberUser.Checked)
+            {
+                m_AppSettings.Save();
+            }
+            else
+            {
+                AppSettings.DeleteSettingsFile();
+            }
         }
         protected override void OnLoad(EventArgs e)
         {
@@ -75,16 +85,17 @@ namespace BasicFacebookFeatures
 
         private void autoLogin()
         {
+            //  m_LoginResult = FacebookService.Connect(m_AppSettings.AccessToken);
             m_LoginResult = FacebookService.Connect(m_AppSettings.AccessToken);
-           
-                m_LoggedInUser = m_LoginResult.LoggedInUser;
-                fetchUserInfo();
+            m_LoggedInUser = m_LoginResult.LoggedInUser;
+            fetchUserInfo();
             
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             Clipboard.SetText("design.patterns20aa"); 
             r_AppLogic.LoginAndLoadUserInfo(ref m_AppSettings);
+            m_LoggedInUser = r_AppLogic.LoggedUser;
             displayUserInfoAfterLogin();
         }
 
@@ -102,9 +113,9 @@ namespace BasicFacebookFeatures
 
         private void fetchUserInfo()
         {
-            m_UserProfilePicture.LoadAsync(r_AppLogic.LoggedUser.PictureNormalURL);
-            m_HelloUserLabel.Text = $@"Hi {r_AppLogic.LoggedUser.FirstName}!";
-            m_LoginButton.Text = $@"Logged in as {r_AppLogic.LoggedUser.Name}";
+            m_UserProfilePicture.LoadAsync(m_LoggedInUser.PictureNormalURL);
+            m_HelloUserLabel.Text = $@"Hi {m_LoggedInUser.FirstName}!";
+            m_LoginButton.Text = $@"Logged in as {m_LoggedInUser.Name}";
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
