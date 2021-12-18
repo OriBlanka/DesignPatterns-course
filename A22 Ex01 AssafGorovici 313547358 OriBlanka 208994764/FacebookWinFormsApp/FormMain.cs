@@ -23,7 +23,7 @@ namespace BasicFacebookFeatures
 
         private readonly AppLogic r_AppLogic;
         AppSettings m_AppSettings;
-       // LoginResult m_LoginResult;
+        LoginResult m_LoginResult;
         User m_LoggedInUser;
         private readonly Random r_Random = new Random();
         public FormMain()
@@ -74,12 +74,11 @@ namespace BasicFacebookFeatures
 
         private void autoLogin()
         {
-            LoginResult result = FacebookService.Connect(m_AppSettings.AccessToken);
-            if (string.IsNullOrEmpty(result.ErrorMessage))
-            {
-                m_LoggedInUser = result.LoggedInUser;
+            m_LoginResult = FacebookService.Connect(m_AppSettings.AccessToken);
+           
+                m_LoggedInUser = m_LoginResult.LoggedInUser;
                 fetchUserInfo();
-            }
+            
         }
         private void buttonLogin_Click(object sender, EventArgs e)
         {
