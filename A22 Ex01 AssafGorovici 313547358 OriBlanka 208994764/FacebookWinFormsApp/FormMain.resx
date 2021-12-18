@@ -561,6 +561,30 @@
   <data name="&gt;&gt;m_MainTab.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 246</value>
+  </data>
+  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>733, 314</value>
+  </data>
+  <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;listBox1.Name" xml:space="preserve">
+    <value>listBox1</value>
+  </data>
+  <data name="&gt;&gt;listBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listBox1.Parent" xml:space="preserve">
+    <value>m_FetchEventsTab</value>
+  </data>
+  <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="m_EventStatusComboBox.Items" xml:space="preserve">
     <value>Online envents</value>
   </data>
@@ -589,7 +613,7 @@
     <value>m_FetchEventsTab</value>
   </data>
   <data name="&gt;&gt;m_EventStatusComboBox.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="m_FetchEventButtons.Location" type="System.Drawing.Point, System.Drawing">
     <value>500, 14</value>
@@ -613,16 +637,16 @@
     <value>m_FetchEventsTab</value>
   </data>
   <data name="&gt;&gt;m_FetchEventButtons.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="m_EventGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 77</value>
+    <value>1906, 77</value>
   </data>
   <data name="m_EventGridView.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>102</value>
   </data>
   <data name="m_EventGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2199, 953</value>
+    <value>298, 953</value>
   </data>
   <data name="m_EventGridView.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -637,7 +661,7 @@
     <value>m_FetchEventsTab</value>
   </data>
   <data name="&gt;&gt;m_EventGridView.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="m_FetchEventsTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 49</value>

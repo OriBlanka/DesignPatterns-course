@@ -50,6 +50,7 @@
             this.m_FetchPostsButton = new System.Windows.Forms.Button();
             this.m_PostsListBox = new System.Windows.Forms.ListBox();
             this.m_FetchEventsTab = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.m_EventStatusComboBox = new System.Windows.Forms.ComboBox();
             this.m_FetchEventButtons = new System.Windows.Forms.Button();
             this.m_EventGridView = new System.Windows.Forms.DataGridView();
@@ -228,12 +229,19 @@
             // 
             // m_FetchEventsTab
             // 
+            this.m_FetchEventsTab.Controls.Add(this.listBox1);
             this.m_FetchEventsTab.Controls.Add(this.m_EventStatusComboBox);
             this.m_FetchEventsTab.Controls.Add(this.m_FetchEventButtons);
             this.m_FetchEventsTab.Controls.Add(this.m_EventGridView);
             resources.ApplyResources(this.m_FetchEventsTab, "m_FetchEventsTab");
             this.m_FetchEventsTab.Name = "m_FetchEventsTab";
             this.m_FetchEventsTab.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            resources.ApplyResources(this.listBox1, "listBox1");
+            this.listBox1.Name = "listBox1";
             // 
             // m_EventStatusComboBox
             // 
@@ -372,6 +380,7 @@
         private System.Windows.Forms.ListBox m_CommonInterestListBox;
         private System.Windows.Forms.Button m_FetchCommonInterest;
         private System.Windows.Forms.CheckBox checkBoxRememberUser;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
