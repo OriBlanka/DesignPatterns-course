@@ -47,7 +47,7 @@ namespace FacebookWinFormsLogic
         AppSettings m_AppSettings;
         public LoginResult LoginResult { get; set; }
 
-        public void LoginAndLoadUserInfo(ref AppSettings io_appSetting)
+        public LoginResult LoginAndLoadUserInfo(ref AppSettings io_appSetting)
         {
             LoginResult = FacebookService.Login("4722021931181899", 
 					"email",
@@ -70,6 +70,7 @@ namespace FacebookWinFormsLogic
                 LoggedUser = LoginResult.LoggedInUser;
                 io_appSetting.AccessToken = LoginResult.AccessToken;
             }
+            return LoginResult;
         }
     }
 }
