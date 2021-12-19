@@ -13,6 +13,7 @@ using FacebookWinFormsLogic;
 
 namespace BasicFacebookFeatures
 {
+    //Todo - need to change this class in order to use the relevant methods in the interface and in the proxy class
     public partial class FormMain : Form
     {
         public enum eEventStatus
@@ -23,11 +24,13 @@ namespace BasicFacebookFeatures
         }
 
         private readonly AppLogic r_AppLogic  = AppLogic.Instance;
+        private IFacebookUser LoggedUser { get; }
 
         AppSettings m_AppSettings;
         LoginResult m_LoginResult;
         User m_LoggedInUser;
         private readonly Random r_Random = new Random();
+
         public FormMain()
         {
             InitializeComponent();
@@ -39,10 +42,6 @@ namespace BasicFacebookFeatures
             this.Size = m_AppSettings.LastWindowSize;
             this.Location = m_AppSettings.LastWindowLocation;
             this.checkBoxRememberUser.Checked = false;
-            if (m_AppSettings.AutoLogin && !string.IsNullOrEmpty(m_AppSettings.AccessToken))
-            {
-             //   m_LoginResult = FacebookService.Connect(m_AppSettings.AccessToken);
-            }
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -86,7 +85,6 @@ namespace BasicFacebookFeatures
 
         private void autoLogin()
         {
-            //  m_LoginResult = FacebookService.Connect(m_AppSettings.AccessToken);
             m_LoginResult = FacebookService.Connect(m_AppSettings.AccessToken);
             m_LoggedInUser = m_LoginResult.LoggedInUser;
             fetchUserInfo();
@@ -289,8 +287,9 @@ namespace BasicFacebookFeatures
         {
             bool isFriendWithCommonInterest = false;
             Dictionary<string, int> friendsCommonPagesLikes = new Dictionary<string, int>();
-            getFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest);
 
+            //Todo - Check what we need to do with the NullException that we get
+            LoggedUser.GetFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest);
             foreach (KeyValuePair<string, int> friendInDictionary in friendsCommonPagesLikes)
             {
                 m_CommonInterestListBox.Invoke(new Action(() => m_CommonInterestListBox.Items.Add($"{friendInDictionary.Key} - {friendInDictionary.Value.ToString()} Pages")));
@@ -368,27 +367,6 @@ namespace BasicFacebookFeatures
 
             int randomizedIndex = r_Random.Next(taggedPictures.Count);
             return taggedPictures[randomizedIndex].ImageAlbum;
-        }
-
-        private void getFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest)
-        {
-            foreach (User friend in r_AppLogic.LoggedUser.Friends)
-            {
-                int friendCommonLikedPages = 0;
-                foreach (Page friendLikedPage in friend.LikedPages)
-                {
-                    if (r_AppLogic.LoggedUser.LikedPages.Contains(friendLikedPage))
-                    {
-                        io_IsFriendWithCommonInterest = true;
-                        friendCommonLikedPages++;
-                    }
-                }
-
-                if (friendCommonLikedPages > 0)
-                {
-                    io_FriendsCommonPagesLikes.Add(friend.Name, friendCommonLikedPages);
-                }
-            }
         }
     }
 }

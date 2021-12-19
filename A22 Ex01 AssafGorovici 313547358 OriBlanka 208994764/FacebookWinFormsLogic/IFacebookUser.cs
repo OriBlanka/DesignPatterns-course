@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FacebookWrapper.ObjectModel;
 
+//Todo - need to add more methods according to the features that we have in FormMain
 public interface IFacebookUser
 {
     string GetFirstName();
@@ -14,7 +15,8 @@ public interface IFacebookUser
 
     Image GetImageSmall();
 
-    FacebookObjectCollection<Event> GetEvents();
+    //Todo - adding method to get all events
+    void GetEvents(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline);
 
     FacebookObjectCollection<Page> GetLikedPages();
 
