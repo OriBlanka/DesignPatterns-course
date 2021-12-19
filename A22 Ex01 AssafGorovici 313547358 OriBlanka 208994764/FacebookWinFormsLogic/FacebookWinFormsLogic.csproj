@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="AppLogic.cs" />
     <Compile Include="AppSettings.cs" />
+    <Compile Include="FacebookUserProxy.cs" />
+    <Compile Include="IFacebookUser.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
