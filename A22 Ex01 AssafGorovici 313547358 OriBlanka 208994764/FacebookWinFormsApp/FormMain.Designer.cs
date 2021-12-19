@@ -29,7 +29,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.Windows.Forms.Label attendingCountLabel;
+            System.Windows.Forms.Label declinedCountLabel;
+            System.Windows.Forms.Label descriptionLabel;
+            System.Windows.Forms.Label endTimeLabel;
+            System.Windows.Forms.Label imageNormalLabel;
+            System.Windows.Forms.Label interestedCountLabel;
+            System.Windows.Forms.Label isOnlineLabel;
+            System.Windows.Forms.Label linkToFacebookLabel;
+            System.Windows.Forms.Label startTimeLabel;
             this.m_LoginButton = new System.Windows.Forms.Button();
             this.m_LogoutButton = new System.Windows.Forms.Button();
             this.m_AppTabControl = new System.Windows.Forms.TabControl();
@@ -50,7 +60,7 @@
             this.m_FetchPostsButton = new System.Windows.Forms.Button();
             this.m_PostsListBox = new System.Windows.Forms.ListBox();
             this.m_FetchEventsTab = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.m_FetchEventsListBox = new System.Windows.Forms.ListBox();
             this.m_EventStatusComboBox = new System.Windows.Forms.ComboBox();
             this.m_FetchEventButtons = new System.Windows.Forms.Button();
             this.m_EventGridView = new System.Windows.Forms.DataGridView();
@@ -62,6 +72,39 @@
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
             this.checkBoxRememberUser = new System.Windows.Forms.CheckBox();
+            this.panelEventDetails = new System.Windows.Forms.Panel();
+            this.eventBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eventBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.eventBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.attendingCountLabel1 = new System.Windows.Forms.Label();
+            this.declinedCountLabel1 = new System.Windows.Forms.Label();
+            this.descriptionTextBox = new System.Windows.Forms.TextBox();
+            this.endTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.imageNormalPictureBox = new System.Windows.Forms.PictureBox();
+            this.interestedCountLabel1 = new System.Windows.Forms.Label();
+            this.isOnlineCheckBox = new System.Windows.Forms.CheckBox();
+            this.linkToFacebookLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.startTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            attendingCountLabel = new System.Windows.Forms.Label();
+            declinedCountLabel = new System.Windows.Forms.Label();
+            descriptionLabel = new System.Windows.Forms.Label();
+            endTimeLabel = new System.Windows.Forms.Label();
+            imageNormalLabel = new System.Windows.Forms.Label();
+            interestedCountLabel = new System.Windows.Forms.Label();
+            isOnlineLabel = new System.Windows.Forms.Label();
+            linkToFacebookLabel = new System.Windows.Forms.Label();
+            startTimeLabel = new System.Windows.Forms.Label();
             this.m_AppTabControl.SuspendLayout();
             this.m_MainTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_SelectedLikedPagePictureBox)).BeginInit();
@@ -73,6 +116,11 @@
             this.m_MutualLikedPagesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
+            this.panelEventDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventBindingNavigator)).BeginInit();
+            this.eventBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageNormalPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // m_LoginButton
@@ -229,7 +277,8 @@
             // 
             // m_FetchEventsTab
             // 
-            this.m_FetchEventsTab.Controls.Add(this.listBox1);
+            this.m_FetchEventsTab.Controls.Add(this.panelEventDetails);
+            this.m_FetchEventsTab.Controls.Add(this.m_FetchEventsListBox);
             this.m_FetchEventsTab.Controls.Add(this.m_EventStatusComboBox);
             this.m_FetchEventsTab.Controls.Add(this.m_FetchEventButtons);
             this.m_FetchEventsTab.Controls.Add(this.m_EventGridView);
@@ -237,11 +286,13 @@
             this.m_FetchEventsTab.Name = "m_FetchEventsTab";
             this.m_FetchEventsTab.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // m_FetchEventsListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.Name = "listBox1";
+            this.m_FetchEventsListBox.DataSource = this.eventBindingSource;
+            this.m_FetchEventsListBox.DisplayMember = "Name";
+            this.m_FetchEventsListBox.FormattingEnabled = true;
+            resources.ApplyResources(this.m_FetchEventsListBox, "m_FetchEventsListBox");
+            this.m_FetchEventsListBox.Name = "m_FetchEventsListBox";
             // 
             // m_EventStatusComboBox
             // 
@@ -318,10 +369,237 @@
             this.checkBoxRememberUser.Name = "checkBoxRememberUser";
             this.checkBoxRememberUser.UseVisualStyleBackColor = true;
             // 
+            // panelEventDetails
+            // 
+            this.panelEventDetails.BackColor = System.Drawing.Color.Turquoise;
+            this.panelEventDetails.Controls.Add(attendingCountLabel);
+            this.panelEventDetails.Controls.Add(this.attendingCountLabel1);
+            this.panelEventDetails.Controls.Add(declinedCountLabel);
+            this.panelEventDetails.Controls.Add(this.declinedCountLabel1);
+            this.panelEventDetails.Controls.Add(descriptionLabel);
+            this.panelEventDetails.Controls.Add(this.descriptionTextBox);
+            this.panelEventDetails.Controls.Add(endTimeLabel);
+            this.panelEventDetails.Controls.Add(this.endTimeDateTimePicker);
+            this.panelEventDetails.Controls.Add(imageNormalLabel);
+            this.panelEventDetails.Controls.Add(this.imageNormalPictureBox);
+            this.panelEventDetails.Controls.Add(interestedCountLabel);
+            this.panelEventDetails.Controls.Add(this.interestedCountLabel1);
+            this.panelEventDetails.Controls.Add(isOnlineLabel);
+            this.panelEventDetails.Controls.Add(this.isOnlineCheckBox);
+            this.panelEventDetails.Controls.Add(linkToFacebookLabel);
+            this.panelEventDetails.Controls.Add(this.linkToFacebookLinkLabel);
+            this.panelEventDetails.Controls.Add(startTimeLabel);
+            this.panelEventDetails.Controls.Add(this.startTimeDateTimePicker);
+            this.panelEventDetails.ForeColor = System.Drawing.SystemColors.ControlText;
+            resources.ApplyResources(this.panelEventDetails, "panelEventDetails");
+            this.panelEventDetails.Name = "panelEventDetails";
+            // 
+            // eventBindingSource
+            // 
+            this.eventBindingSource.DataSource = typeof(FacebookWrapper.ObjectModel.Event);
+            // 
+            // eventBindingNavigator
+            // 
+            this.eventBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.eventBindingNavigator.BindingSource = this.eventBindingSource;
+            this.eventBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.eventBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.eventBindingNavigator.ImageScalingSize = new System.Drawing.Size(36, 36);
+            this.eventBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.eventBindingNavigatorSaveItem});
+            resources.ApplyResources(this.eventBindingNavigator, "eventBindingNavigator");
+            this.eventBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.eventBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.eventBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.eventBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.eventBindingNavigator.Name = "eventBindingNavigator";
+            this.eventBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveFirstItem, "bindingNavigatorMoveFirstItem");
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMovePreviousItem, "bindingNavigatorMovePreviousItem");
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            resources.ApplyResources(this.bindingNavigatorSeparator, "bindingNavigatorSeparator");
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            resources.ApplyResources(this.bindingNavigatorPositionItem, "bindingNavigatorPositionItem");
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            resources.ApplyResources(this.bindingNavigatorCountItem, "bindingNavigatorCountItem");
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            resources.ApplyResources(this.bindingNavigatorSeparator1, "bindingNavigatorSeparator1");
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveNextItem, "bindingNavigatorMoveNextItem");
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorMoveLastItem, "bindingNavigatorMoveLastItem");
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            resources.ApplyResources(this.bindingNavigatorSeparator2, "bindingNavigatorSeparator2");
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorAddNewItem, "bindingNavigatorAddNewItem");
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.bindingNavigatorDeleteItem, "bindingNavigatorDeleteItem");
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            // 
+            // eventBindingNavigatorSaveItem
+            // 
+            this.eventBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            resources.ApplyResources(this.eventBindingNavigatorSaveItem, "eventBindingNavigatorSaveItem");
+            this.eventBindingNavigatorSaveItem.Name = "eventBindingNavigatorSaveItem";
+            // 
+            // attendingCountLabel
+            // 
+            resources.ApplyResources(attendingCountLabel, "attendingCountLabel");
+            attendingCountLabel.Name = "attendingCountLabel";
+            // 
+            // attendingCountLabel1
+            // 
+            this.attendingCountLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventBindingSource, "AttendingCount", true));
+            resources.ApplyResources(this.attendingCountLabel1, "attendingCountLabel1");
+            this.attendingCountLabel1.Name = "attendingCountLabel1";
+            // 
+            // declinedCountLabel
+            // 
+            resources.ApplyResources(declinedCountLabel, "declinedCountLabel");
+            declinedCountLabel.Name = "declinedCountLabel";
+            // 
+            // declinedCountLabel1
+            // 
+            this.declinedCountLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventBindingSource, "DeclinedCount", true));
+            resources.ApplyResources(this.declinedCountLabel1, "declinedCountLabel1");
+            this.declinedCountLabel1.Name = "declinedCountLabel1";
+            // 
+            // descriptionLabel
+            // 
+            resources.ApplyResources(descriptionLabel, "descriptionLabel");
+            descriptionLabel.Name = "descriptionLabel";
+            // 
+            // descriptionTextBox
+            // 
+            this.descriptionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventBindingSource, "Description", true));
+            resources.ApplyResources(this.descriptionTextBox, "descriptionTextBox");
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            // 
+            // endTimeLabel
+            // 
+            resources.ApplyResources(endTimeLabel, "endTimeLabel");
+            endTimeLabel.Name = "endTimeLabel";
+            // 
+            // endTimeDateTimePicker
+            // 
+            this.endTimeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.eventBindingSource, "EndTime", true));
+            resources.ApplyResources(this.endTimeDateTimePicker, "endTimeDateTimePicker");
+            this.endTimeDateTimePicker.Name = "endTimeDateTimePicker";
+            // 
+            // imageNormalLabel
+            // 
+            resources.ApplyResources(imageNormalLabel, "imageNormalLabel");
+            imageNormalLabel.Name = "imageNormalLabel";
+            // 
+            // imageNormalPictureBox
+            // 
+            this.imageNormalPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.eventBindingSource, "ImageNormal", true));
+            resources.ApplyResources(this.imageNormalPictureBox, "imageNormalPictureBox");
+            this.imageNormalPictureBox.Name = "imageNormalPictureBox";
+            this.imageNormalPictureBox.TabStop = false;
+            // 
+            // interestedCountLabel
+            // 
+            resources.ApplyResources(interestedCountLabel, "interestedCountLabel");
+            interestedCountLabel.Name = "interestedCountLabel";
+            // 
+            // interestedCountLabel1
+            // 
+            this.interestedCountLabel1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventBindingSource, "InterestedCount", true));
+            resources.ApplyResources(this.interestedCountLabel1, "interestedCountLabel1");
+            this.interestedCountLabel1.Name = "interestedCountLabel1";
+            // 
+            // isOnlineLabel
+            // 
+            resources.ApplyResources(isOnlineLabel, "isOnlineLabel");
+            isOnlineLabel.Name = "isOnlineLabel";
+            // 
+            // isOnlineCheckBox
+            // 
+            this.isOnlineCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.eventBindingSource, "IsOnline", true));
+            resources.ApplyResources(this.isOnlineCheckBox, "isOnlineCheckBox");
+            this.isOnlineCheckBox.Name = "isOnlineCheckBox";
+            this.isOnlineCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // linkToFacebookLabel
+            // 
+            resources.ApplyResources(linkToFacebookLabel, "linkToFacebookLabel");
+            linkToFacebookLabel.Name = "linkToFacebookLabel";
+            // 
+            // linkToFacebookLinkLabel
+            // 
+            this.linkToFacebookLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.eventBindingSource, "LinkToFacebook", true));
+            resources.ApplyResources(this.linkToFacebookLinkLabel, "linkToFacebookLinkLabel");
+            this.linkToFacebookLinkLabel.Name = "linkToFacebookLinkLabel";
+            this.linkToFacebookLinkLabel.TabStop = true;
+            // 
+            // startTimeLabel
+            // 
+            resources.ApplyResources(startTimeLabel, "startTimeLabel");
+            startTimeLabel.Name = "startTimeLabel";
+            // 
+            // startTimeDateTimePicker
+            // 
+            this.startTimeDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.eventBindingSource, "StartTime", true));
+            resources.ApplyResources(this.startTimeDateTimePicker, "startTimeDateTimePicker");
+            this.startTimeDateTimePicker.Name = "startTimeDateTimePicker";
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.eventBindingNavigator);
             this.Controls.Add(this.checkBoxRememberUser);
             this.Controls.Add(this.m_HelloUserLabel);
             this.Controls.Add(this.m_UserProfilePicture);
@@ -342,6 +620,13 @@
             this.m_MutualLikedPagesTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
+            this.panelEventDetails.ResumeLayout(false);
+            this.panelEventDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventBindingNavigator)).EndInit();
+            this.eventBindingNavigator.ResumeLayout(false);
+            this.eventBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageNormalPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -380,7 +665,31 @@
         private System.Windows.Forms.ListBox m_CommonInterestListBox;
         private System.Windows.Forms.Button m_FetchCommonInterest;
         private System.Windows.Forms.CheckBox checkBoxRememberUser;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox m_FetchEventsListBox;
+        private System.Windows.Forms.Panel panelEventDetails;
+        private System.Windows.Forms.Label attendingCountLabel1;
+        private System.Windows.Forms.BindingSource eventBindingSource;
+        private System.Windows.Forms.Label declinedCountLabel1;
+        private System.Windows.Forms.TextBox descriptionTextBox;
+        private System.Windows.Forms.DateTimePicker endTimeDateTimePicker;
+        private System.Windows.Forms.PictureBox imageNormalPictureBox;
+        private System.Windows.Forms.Label interestedCountLabel1;
+        private System.Windows.Forms.CheckBox isOnlineCheckBox;
+        private System.Windows.Forms.LinkLabel linkToFacebookLinkLabel;
+        private System.Windows.Forms.DateTimePicker startTimeDateTimePicker;
+        private System.Windows.Forms.BindingNavigator eventBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
+        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.ToolStripButton eventBindingNavigatorSaveItem;
     }
 }
 

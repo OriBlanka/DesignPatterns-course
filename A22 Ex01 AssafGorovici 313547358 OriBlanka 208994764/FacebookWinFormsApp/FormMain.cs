@@ -150,8 +150,9 @@ namespace BasicFacebookFeatures
                     sortedEvents = allEvents;
                     break;
             }
-
+            //fillListBoxes(sortedEvents, m_FetchEventsListBox);
             m_EventGridView.DataSource = sortedEvents;
+            eventBindingSource.DataSource = sortedEvents;
         }
 
         private void buttonLikedPages_Click(object sender, EventArgs e)
