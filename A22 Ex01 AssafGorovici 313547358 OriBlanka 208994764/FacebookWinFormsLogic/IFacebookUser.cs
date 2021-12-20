@@ -15,8 +15,9 @@ public interface IFacebookUser
 
     Image GetImageSmall();
 
-    //Todo - adding method to get all events
-    void GetEvents(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline);
+    void GetEventsSorted(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline);
+
+    FacebookObjectCollection<Event> GetLEvents();
 
     FacebookObjectCollection<Page> GetLikedPages();
 

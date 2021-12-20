@@ -32,7 +32,12 @@ namespace FacebookWinFormsLogic
             return r_FacebookUser.ImageSmall;
         }
 
-        public void GetEvents(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline)
+        public FacebookObjectCollection<Event> GetLEvents()
+        {
+            return r_FacebookUser.Events;
+        }
+
+        public void GetEventsSorted(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline)
         {
             if (i_IsOnline)
             {

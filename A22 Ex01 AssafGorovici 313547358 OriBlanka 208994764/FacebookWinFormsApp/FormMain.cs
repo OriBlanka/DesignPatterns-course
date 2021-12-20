@@ -14,6 +14,7 @@ using FacebookWinFormsLogic;
 namespace BasicFacebookFeatures
 {
     //Todo - need to change this class in order to use the relevant methods in the interface and in the proxy class
+    //Todo - need to make change in the login (new class was added and it caused to changes in the login process too)
     public partial class FormMain : Form
     {
         public enum eEventStatus
@@ -42,6 +43,7 @@ namespace BasicFacebookFeatures
             this.Size = m_AppSettings.LastWindowSize;
             this.Location = m_AppSettings.LastWindowLocation;
             this.checkBoxRememberUser.Checked = false;
+            LoggedUser = r_AppLogic.GetUser();
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -133,17 +135,17 @@ namespace BasicFacebookFeatures
 
         private void buttonFetchEvents_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Event> allEvents = r_AppLogic.LoggedUser.Events;
+            FacebookObjectCollection<Event> allEvents = LoggedUser.GetLEvents();
             FacebookObjectCollection<Event> sortedEvents = new FacebookObjectCollection<Event>();
 
             switch (m_EventStatusComboBox.SelectedIndex)
             {
                 case (int)eEventStatus.Online:
-                    fetchEvents(ref allEvents, ref sortedEvents, true);
+                    LoggedUser.GetEventsSorted(ref allEvents, ref sortedEvents, true);
                     break;
 
                 case (int)eEventStatus.NotOnline:
-                    fetchEvents(ref allEvents, ref sortedEvents, false);
+                    LoggedUser.GetEventsSorted(ref allEvents, ref sortedEvents, false);
                     break;
 
                 case (int)eEventStatus.AllEvents:
