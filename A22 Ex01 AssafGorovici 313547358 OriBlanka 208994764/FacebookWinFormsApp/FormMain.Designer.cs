@@ -82,7 +82,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
-            this.checkBoxRememberUser = new System.Windows.Forms.CheckBox();
+            this.m_checkBoxRememberUser = new System.Windows.Forms.CheckBox();
             attendingCountLabel = new System.Windows.Forms.Label();
             declinedCountLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
@@ -479,17 +479,17 @@
             this.m_UserProfilePicture.Name = "m_UserProfilePicture";
             this.m_UserProfilePicture.TabStop = false;
             // 
-            // checkBoxRememberUser
+            // m_checkBoxRememberUser
             // 
-            resources.ApplyResources(this.checkBoxRememberUser, "checkBoxRememberUser");
-            this.checkBoxRememberUser.Name = "checkBoxRememberUser";
-            this.checkBoxRememberUser.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.m_checkBoxRememberUser, "m_checkBoxRememberUser");
+            this.m_checkBoxRememberUser.Name = "m_checkBoxRememberUser";
+            this.m_checkBoxRememberUser.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.checkBoxRememberUser);
+            this.Controls.Add(this.m_checkBoxRememberUser);
             this.Controls.Add(this.m_HelloUserLabel);
             this.Controls.Add(this.m_UserProfilePicture);
             this.Controls.Add(this.m_LogoutButton);
@@ -550,7 +550,7 @@
         private System.Windows.Forms.PictureBox m_LikePictureBox;
         private System.Windows.Forms.ListBox m_CommonInterestListBox;
         private System.Windows.Forms.Button m_FetchCommonInterest;
-        private System.Windows.Forms.CheckBox checkBoxRememberUser;
+        private System.Windows.Forms.CheckBox m_checkBoxRememberUser;
         private System.Windows.Forms.ListBox m_FetchEventsListBox;
         private System.Windows.Forms.Panel panelEventDetails;
         private System.Windows.Forms.Label attendingCountLabel1;

@@ -12,7 +12,7 @@ namespace FacebookWinFormsLogic
         public static IFacebookUser Connect(string i_Token, string i_AppId, ref bool io_IsLoggedIn)
         {
             LoginResult loginResult;
-            if(string.IsNullOrEmpty(i_Token))
+            if(string.IsNullOrEmpty(i_Token)) //The user didn't click on the remember me checkBox
             {
                 loginResult = FacebookService.Login(i_AppId,
                     "email",
@@ -29,13 +29,18 @@ namespace FacebookWinFormsLogic
                     "user_photos",
                     "user_posts",
                     "user_videos");
-                if(loginResult.FacebookOAuthResult.IsSuccess)
+
+                if (!string.IsNullOrEmpty(loginResult.AccessToken))
                 {
                     AppLogic.Instance.AccessToken = loginResult.AccessToken;
                     io_IsLoggedIn = true;
                 }
+                else
+                {
+                    throw new Exception();
+                }
             }
-            else
+            else //The user clicked on the remember me checkBox so we have his Token
             {
                 loginResult = FacebookService.Connect(i_Token);
                 io_IsLoggedIn = true;

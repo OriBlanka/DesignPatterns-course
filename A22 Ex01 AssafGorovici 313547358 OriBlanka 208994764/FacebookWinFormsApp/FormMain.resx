@@ -38883,34 +38883,34 @@
   <data name="&gt;&gt;m_UserProfilePicture.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="checkBoxRememberUser.AutoSize" type="System.Boolean, mscorlib">
+  <data name="m_checkBoxRememberUser.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="checkBoxRememberUser.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="m_checkBoxRememberUser.Location" type="System.Drawing.Point, System.Drawing">
     <value>32, 114</value>
   </data>
-  <data name="checkBoxRememberUser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="m_checkBoxRememberUser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="checkBoxRememberUser.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="m_checkBoxRememberUser.Size" type="System.Drawing.Size, System.Drawing">
     <value>238, 36</value>
   </data>
-  <data name="checkBoxRememberUser.TabIndex" type="System.Int32, mscorlib">
+  <data name="m_checkBoxRememberUser.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
   </data>
-  <data name="checkBoxRememberUser.Text" xml:space="preserve">
+  <data name="m_checkBoxRememberUser.Text" xml:space="preserve">
     <value>Remember Me</value>
   </data>
-  <data name="&gt;&gt;checkBoxRememberUser.Name" xml:space="preserve">
-    <value>checkBoxRememberUser</value>
+  <data name="&gt;&gt;m_checkBoxRememberUser.Name" xml:space="preserve">
+    <value>m_checkBoxRememberUser</value>
   </data>
-  <data name="&gt;&gt;checkBoxRememberUser.Type" xml:space="preserve">
+  <data name="&gt;&gt;m_checkBoxRememberUser.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;checkBoxRememberUser.Parent" xml:space="preserve">
+  <data name="&gt;&gt;m_checkBoxRememberUser.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;checkBoxRememberUser.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;m_checkBoxRememberUser.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
