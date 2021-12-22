@@ -32,7 +32,27 @@ namespace FacebookWinFormsLogic
             return r_FacebookUser.ImageSmall;
         }
 
-        public FacebookObjectCollection<Event> GetLEvents()
+        public FacebookObjectCollection<Post> GetPosts()
+        {
+            return r_FacebookUser.Posts;
+        }
+
+        public FacebookObjectCollection<Album> GetAlbums()
+        {
+            return r_FacebookUser.Albums;
+        }
+
+        public FacebookObjectCollection<Group> GetFavoriteTeams()
+        {
+            return r_FacebookUser.Groups;
+        }
+
+        public FacebookObjectCollection<Photo> GetPhotosTaggedIn()
+        {
+            return r_FacebookUser.PhotosTaggedIn;
+        }
+
+        public FacebookObjectCollection<Event> GetAllEvents()
         {
             return r_FacebookUser.Events;
         }

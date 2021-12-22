@@ -13,8 +13,7 @@ using FacebookWinFormsLogic;
 
 namespace BasicFacebookFeatures
 {
-    //Todo - need to change this class in order to use the relevant methods in the interface and in the proxy class
-    //Todo - need to make change in the login (new class was added and it caused to changes in the login process too)
+    //Todo - need to continue to implement multi-threading
     public partial class FormMain : Form
     {
         public enum eEventStatus
@@ -24,16 +23,15 @@ namespace BasicFacebookFeatures
             AllEvents = 2
         }
 
-        private readonly AppLogic r_AppLogic  = AppLogic.Instance;
+        private bool m_LoggedIn;
+        private const string k_AppId = "4722021931181899";
+        private readonly AppSettings r_AppSettings;
+        private readonly Random r_Random = new Random();
+        private readonly AppLogic r_AppLogic = AppLogic.Instance;
+
         private IFacebookUser LoggedUser { get; set; }
 
         public bool IsLoggedIn { get; set; }
-
-        private readonly AppSettings r_AppSettings;
-        LoginResult m_LoginResult;
-        private const string k_AppId = "4722021931181899";
-        private readonly Random r_Random = new Random();
-        private bool loggedIn;
 
         public FormMain()
         {
@@ -65,6 +63,7 @@ namespace BasicFacebookFeatures
                 AppSettings.DeleteSettingsFile();
             }
         }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -77,8 +76,7 @@ namespace BasicFacebookFeatures
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
-
-            if (r_AppSettings.AutoLogin)
+            if(r_AppSettings.AutoLogin)
             {
                 autoLogin();
             }
@@ -86,27 +84,26 @@ namespace BasicFacebookFeatures
 
         private void autoLogin()
         {
-            loggedIn = true;
-            r_AppLogic.Connect(r_AppSettings.AccessToken, k_AppId, ref loggedIn);
-            //r_AppLogic.Connect("EABDGp2fUZA0sBAAKoVjWA0tgCNhqW8cctAKfRLrPMs7MwHqDDNTZCoOLYMeVf7wOcxCZAHoLrJoyPpMToHjd8iiB72hdJm4LnveIFXmd1V2CxLWO7pnjRIbmKiezdevZATfw3iZBQe9sN4r2n3gXkuwI0lF2BGjwrkHjC6nQCHQZDZD", k_AppId, ref loggedIn);
+            m_LoggedIn = true;
+            r_AppLogic.Connect(r_AppSettings.AccessToken, k_AppId, ref m_LoggedIn);
             LoggedUser = r_AppLogic.GetUser();
-            //m_LoginResult = FacebookService.Connect(r_AppSettings.AccessToken);
             fetchUserInfo();
-            
         }
+
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             try
             {
-                loggedIn = false;
-                r_AppLogic.Connect(r_AppSettings.AccessToken, k_AppId, ref loggedIn);
+                m_LoggedIn = false;
+                r_AppLogic.Connect(r_AppSettings.AccessToken, k_AppId, ref m_LoggedIn);
                 LoggedUser = r_AppLogic.GetUser();
-                IsLoggedIn = loggedIn;
+                IsLoggedIn = m_LoggedIn;
                 displayUserInfoAfterLogin();
             }
-            catch (Exception)
+            catch(Exception)
             {
-                MessageBox.Show(@"Error occurred!
+                MessageBox.Show(
+                    @"Error occurred!
 Try again please :)");
             }
         }
@@ -141,12 +138,12 @@ Try again please :)");
         private void buttonFetchPosts_Click(object sender, EventArgs e)
         {
             m_FetchPostsButton.Enabled = false;
-            fetchPost();
+            new Thread(fetchPost).Start();
         }
 
         private void buttonFetchEvents_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Event> allEvents = LoggedUser.GetLEvents();
+            FacebookObjectCollection<Event> allEvents = LoggedUser.GetAllEvents();
             FacebookObjectCollection<Event> sortedEvents = new FacebookObjectCollection<Event>();
 
             switch (m_EventStatusComboBox.SelectedIndex)
@@ -163,30 +160,37 @@ Try again please :)");
                     sortedEvents = allEvents;
                     break;
             }
+
+            if(sortedEvents.Count == 0)
+            {
+                MessageBox.Show("No events to retrieve :(");
+            }
             //fillListBoxes(sortedEvents, m_FetchEventsListBox);
-            m_EventGridView.DataSource = sortedEvents;
-            eventBindingSource.DataSource = sortedEvents;
+            //m_EventGridView.DataSource = sortedSEvents;
+            //eventBindingSource.DataSource = sortedEvents;
         }
 
         private void buttonLikedPages_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Page> likedPages = r_AppLogic.LoggedUser.LikedPages;
-            m_LikedPagesListBox.Items.Clear();
+            m_LikedPagesButton.Enabled = false;
+            FacebookObjectCollection<Page> likedPages = LoggedUser.GetLikedPages();
             m_LikedPagesListBox.DisplayMember = "Name";
             fillListBoxes(likedPages, m_LikedPagesListBox);
         }
 
         private void buttonFetchAlbums_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Album> albums = r_AppLogic.LoggedUser.Albums;
+            m_FetchAlbumsButton.Enabled = false;
+            FacebookObjectCollection<Album> albums = LoggedUser.GetAlbums();
             m_AlbumsListBox.Items.Clear();
             fillListBoxes(albums, m_AlbumsListBox);
         }
 
         private void buttonFetchUpcomingBirthdays_Click(object sender, EventArgs e)
         {
+            m_FetchUpcomingBirthdayButton.Enabled = false;
             bool areFriendsBDaysThisMonth = false;
-            foreach(User friend in r_AppLogic.LoggedUser.Friends)
+            foreach(User friend in LoggedUser.GetFriends())
 
             {
                 DateTime friendBirthday = DateTime.Parse(friend.Birthday);
@@ -204,8 +208,9 @@ Try again please :)");
         }
 
         private void buttonFetchGroups_Click(object sender, EventArgs e)
-        { 
-            FacebookObjectCollection<Group> favoriteTeams = r_AppLogic.LoggedUser.Groups;
+        {
+            m_FetchGroupsButton.Enabled = false;
+            FacebookObjectCollection<Group> favoriteTeams = LoggedUser.GetFavoriteTeams();
             m_GroupsListBox.Items.Clear();
             fillListBoxes(favoriteTeams, m_GroupsListBox);
         }
@@ -214,7 +219,7 @@ Try again please :)");
         {
             try
             {
-                m_RandomImagePictureBox.Image =getRandomImage();
+                m_RandomImagePictureBox.Image = getRandomImage();
             }
             catch (Exception pictureException)
             {
@@ -239,7 +244,6 @@ Try again please :)");
 
         private void buttonCommonInterest_Click(object sender, EventArgs e)
         {
-
             new Thread(fetchFriendsWithCommonInterest).Start();
         }
 
@@ -272,22 +276,21 @@ Try again please :)");
 
         private void fetchPost()
         {
-            FacebookObjectCollection<Post> myPosts = r_AppLogic.LoggedUser.Posts;
-            m_PostsListBox.Items.Clear();
+            FacebookObjectCollection<Post> myPosts = LoggedUser.GetPosts();
 
             foreach (Post post in myPosts)
             {
                 if (post.Message != null)
                 {
-                    m_PostsListBox.Items.Add(post.Message);
+                    m_PostsListBox.Invoke(new Action(() => m_PostsListBox.Items.Add(post.Message)));
                 }
                 else if (post.Caption != null)
                 {
-                    m_PostsListBox.Items.Add(post.Caption);
+                    m_PostsListBox.Invoke(new Action(() => m_PostsListBox.Items.Add(post.Caption)));
                 }
                 else
                 {
-                    m_PostsListBox.Items.Add($"[{post.Type}]");
+                    m_PostsListBox.Invoke(new Action(() => m_PostsListBox.Items.Add($"[{post.Type}]")));
                 }
             }
 
@@ -301,8 +304,7 @@ Try again please :)");
         {
             bool isFriendWithCommonInterest = false;
             Dictionary<string, int> friendsCommonPagesLikes = new Dictionary<string, int>();
-
-            //Todo - Check what we need to do with the NullException that we get
+            
             LoggedUser.GetFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest);
             foreach (KeyValuePair<string, int> friendInDictionary in friendsCommonPagesLikes)
             {
@@ -373,7 +375,7 @@ Try again please :)");
 
         private Image getRandomImage()
         {
-            FacebookObjectCollection<Photo> taggedPictures = r_AppLogic.LoggedUser.PhotosTaggedIn;
+            FacebookObjectCollection<Photo> taggedPictures = LoggedUser.GetPhotosTaggedIn();
             if (taggedPictures.Count < 1)
             {
                 throw new Exception("No Tagged pictures");

@@ -17,11 +17,19 @@ public interface IFacebookUser
 
     void GetEventsSorted(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline);
 
-    FacebookObjectCollection<Event> GetLEvents();
+    FacebookObjectCollection<Event> GetAllEvents();
 
     FacebookObjectCollection<Page> GetLikedPages();
 
     FacebookObjectCollection<User> GetFriends();
+
+    FacebookObjectCollection<Post> GetPosts();
+
+    FacebookObjectCollection<Album> GetAlbums();
+
+    FacebookObjectCollection<Group> GetFavoriteTeams();
+
+    FacebookObjectCollection<Photo> GetPhotosTaggedIn();
 
     void GetFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest);
 
