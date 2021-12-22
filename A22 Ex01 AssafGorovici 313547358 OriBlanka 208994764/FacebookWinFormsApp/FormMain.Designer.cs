@@ -80,6 +80,9 @@
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
             this.m_checkBoxRememberUser = new System.Windows.Forms.CheckBox();
+            this.m_MutualCelebrityBirthdaysTab = new System.Windows.Forms.TabPage();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             declinedCountLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             endTimeLabel = new System.Windows.Forms.Label();
@@ -100,6 +103,7 @@
             this.m_MutualLikedPagesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
+            this.m_MutualCelebrityBirthdaysTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // declinedCountLabel
@@ -132,6 +136,11 @@
             resources.ApplyResources(startTimeLabel, "startTimeLabel");
             startTimeLabel.Name = "startTimeLabel";
             // 
+            // attendingCountLabel
+            // 
+            resources.ApplyResources(attendingCountLabel, "attendingCountLabel");
+            attendingCountLabel.Name = "attendingCountLabel";
+            // 
             // m_LoginButton
             // 
             resources.ApplyResources(this.m_LoginButton, "m_LoginButton");
@@ -151,6 +160,7 @@
             this.m_AppTabControl.Controls.Add(this.m_MainTab);
             this.m_AppTabControl.Controls.Add(this.m_FetchEventsTab);
             this.m_AppTabControl.Controls.Add(this.m_MutualLikedPagesTab);
+            this.m_AppTabControl.Controls.Add(this.m_MutualCelebrityBirthdaysTab);
             resources.ApplyResources(this.m_AppTabControl, "m_AppTabControl");
             this.m_AppTabControl.Name = "m_AppTabControl";
             this.m_AppTabControl.SelectedIndex = 0;
@@ -454,10 +464,25 @@
             this.m_checkBoxRememberUser.Name = "m_checkBoxRememberUser";
             this.m_checkBoxRememberUser.UseVisualStyleBackColor = true;
             // 
-            // attendingCountLabel
+            // m_MutualCelebrityBirthdaysTab
             // 
-            resources.ApplyResources(attendingCountLabel, "attendingCountLabel");
-            attendingCountLabel.Name = "attendingCountLabel";
+            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.button1);
+            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.listBox1);
+            resources.ApplyResources(this.m_MutualCelebrityBirthdaysTab, "m_MutualCelebrityBirthdaysTab");
+            this.m_MutualCelebrityBirthdaysTab.Name = "m_MutualCelebrityBirthdaysTab";
+            this.m_MutualCelebrityBirthdaysTab.UseVisualStyleBackColor = true;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            resources.ApplyResources(this.listBox1, "listBox1");
+            this.listBox1.Name = "listBox1";
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -486,6 +511,7 @@
             this.m_MutualLikedPagesTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
+            this.m_MutualCelebrityBirthdaysTab.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -535,6 +561,9 @@
         private System.Windows.Forms.CheckBox isOnlineCheckBox;
         private System.Windows.Forms.LinkLabel linkToFacebookLinkLabel;
         private System.Windows.Forms.DateTimePicker startTimeDateTimePicker;
+        private System.Windows.Forms.TabPage m_MutualCelebrityBirthdaysTab;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
