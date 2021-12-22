@@ -30,16 +30,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label attendingCountLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.Label declinedCountLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.Label descriptionLabel;
             System.Windows.Forms.Label endTimeLabel;
-            System.Windows.Forms.Label imageNormalLabel;
             System.Windows.Forms.Label interestedCountLabel;
-            System.Windows.Forms.Label isOnlineLabel;
             System.Windows.Forms.Label linkToFacebookLabel;
             System.Windows.Forms.Label startTimeLabel;
+            System.Windows.Forms.Label attendingCountLabel;
             this.m_LoginButton = new System.Windows.Forms.Button();
             this.m_LogoutButton = new System.Windows.Forms.Button();
             this.m_AppTabControl = new System.Windows.Forms.TabControl();
@@ -74,7 +72,6 @@
             this.m_FetchEventsListBox = new System.Windows.Forms.ListBox();
             this.m_EventStatusComboBox = new System.Windows.Forms.ComboBox();
             this.m_FetchEventButtons = new System.Windows.Forms.Button();
-            this.m_EventGridView = new System.Windows.Forms.DataGridView();
             this.m_MutualLikedPagesTab = new System.Windows.Forms.TabPage();
             this.m_CommonInterestListBox = new System.Windows.Forms.ListBox();
             this.m_FetchCommonInterest = new System.Windows.Forms.Button();
@@ -83,15 +80,13 @@
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
             this.m_checkBoxRememberUser = new System.Windows.Forms.CheckBox();
-            attendingCountLabel = new System.Windows.Forms.Label();
             declinedCountLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             endTimeLabel = new System.Windows.Forms.Label();
-            imageNormalLabel = new System.Windows.Forms.Label();
             interestedCountLabel = new System.Windows.Forms.Label();
-            isOnlineLabel = new System.Windows.Forms.Label();
             linkToFacebookLabel = new System.Windows.Forms.Label();
             startTimeLabel = new System.Windows.Forms.Label();
+            attendingCountLabel = new System.Windows.Forms.Label();
             this.m_AppTabControl.SuspendLayout();
             this.m_MainTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_SelectedLikedPagePictureBox)).BeginInit();
@@ -102,16 +97,10 @@
             this.panelEventDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageNormalPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_EventGridView)).BeginInit();
             this.m_MutualLikedPagesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
             this.SuspendLayout();
-            // 
-            // attendingCountLabel
-            // 
-            resources.ApplyResources(attendingCountLabel, "attendingCountLabel");
-            attendingCountLabel.Name = "attendingCountLabel";
             // 
             // declinedCountLabel
             // 
@@ -128,20 +117,10 @@
             resources.ApplyResources(endTimeLabel, "endTimeLabel");
             endTimeLabel.Name = "endTimeLabel";
             // 
-            // imageNormalLabel
-            // 
-            resources.ApplyResources(imageNormalLabel, "imageNormalLabel");
-            imageNormalLabel.Name = "imageNormalLabel";
-            // 
             // interestedCountLabel
             // 
             resources.ApplyResources(interestedCountLabel, "interestedCountLabel");
             interestedCountLabel.Name = "interestedCountLabel";
-            // 
-            // isOnlineLabel
-            // 
-            resources.ApplyResources(isOnlineLabel, "isOnlineLabel");
-            isOnlineLabel.Name = "isOnlineLabel";
             // 
             // linkToFacebookLabel
             // 
@@ -311,7 +290,6 @@
             this.m_FetchEventsTab.Controls.Add(this.m_FetchEventsListBox);
             this.m_FetchEventsTab.Controls.Add(this.m_EventStatusComboBox);
             this.m_FetchEventsTab.Controls.Add(this.m_FetchEventButtons);
-            this.m_FetchEventsTab.Controls.Add(this.m_EventGridView);
             resources.ApplyResources(this.m_FetchEventsTab, "m_FetchEventsTab");
             this.m_FetchEventsTab.Name = "m_FetchEventsTab";
             this.m_FetchEventsTab.UseVisualStyleBackColor = true;
@@ -327,11 +305,9 @@
             this.panelEventDetails.Controls.Add(this.descriptionTextBox);
             this.panelEventDetails.Controls.Add(endTimeLabel);
             this.panelEventDetails.Controls.Add(this.endTimeDateTimePicker);
-            this.panelEventDetails.Controls.Add(imageNormalLabel);
             this.panelEventDetails.Controls.Add(this.imageNormalPictureBox);
             this.panelEventDetails.Controls.Add(interestedCountLabel);
             this.panelEventDetails.Controls.Add(this.interestedCountLabel1);
-            this.panelEventDetails.Controls.Add(isOnlineLabel);
             this.panelEventDetails.Controls.Add(this.isOnlineCheckBox);
             this.panelEventDetails.Controls.Add(linkToFacebookLabel);
             this.panelEventDetails.Controls.Add(this.linkToFacebookLinkLabel);
@@ -427,13 +403,6 @@
             this.m_FetchEventButtons.UseVisualStyleBackColor = true;
             this.m_FetchEventButtons.Click += new System.EventHandler(this.buttonFetchEvents_Click);
             // 
-            // m_EventGridView
-            // 
-            this.m_EventGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.m_EventGridView, "m_EventGridView");
-            this.m_EventGridView.Name = "m_EventGridView";
-            this.m_EventGridView.RowTemplate.Height = 40;
-            // 
             // m_MutualLikedPagesTab
             // 
             this.m_MutualLikedPagesTab.Controls.Add(this.m_CommonInterestListBox);
@@ -485,6 +454,11 @@
             this.m_checkBoxRememberUser.Name = "m_checkBoxRememberUser";
             this.m_checkBoxRememberUser.UseVisualStyleBackColor = true;
             // 
+            // attendingCountLabel
+            // 
+            resources.ApplyResources(attendingCountLabel, "attendingCountLabel");
+            attendingCountLabel.Name = "attendingCountLabel";
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -509,7 +483,6 @@
             this.panelEventDetails.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageNormalPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_EventGridView)).EndInit();
             this.m_MutualLikedPagesTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
@@ -543,7 +516,6 @@
         private System.Windows.Forms.Label m_HelloUserLabel;
         private System.Windows.Forms.PictureBox m_RandomImagePictureBox;
         private System.Windows.Forms.Button m_FetchRandomPictureButton;
-        private System.Windows.Forms.DataGridView m_EventGridView;
         private System.Windows.Forms.Button m_FetchEventButtons;
         private System.Windows.Forms.ComboBox m_EventStatusComboBox;
         private System.Windows.Forms.PictureBox m_SelectedLikedPagePictureBox;

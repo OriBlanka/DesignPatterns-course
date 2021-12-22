@@ -98,25 +98,13 @@ namespace BasicFacebookFeatures
                 r_AppLogic.Connect(r_AppSettings.AccessToken, k_AppId, ref m_LoggedIn);
                 LoggedUser = r_AppLogic.GetUser();
                 IsLoggedIn = m_LoggedIn;
-                displayUserInfoAfterLogin();
+                fetchUserInfo();
             }
             catch(Exception)
             {
                 MessageBox.Show(
                     @"Error occurred!
 Try again please :)");
-            }
-        }
-
-        private void displayUserInfoAfterLogin()
-        {
-            if(!string.IsNullOrEmpty(r_AppLogic.AccessToken))
-            {
-                fetchUserInfo();
-            }
-            else
-            {
-                MessageBox.Show(r_AppLogic.LoginResult.ErrorMessage, "Login Failed");
             }
         }
 
@@ -165,9 +153,10 @@ Try again please :)");
             {
                 MessageBox.Show("No events to retrieve :(");
             }
+
             //fillListBoxes(sortedEvents, m_FetchEventsListBox);
             //m_EventGridView.DataSource = sortedSEvents;
-            //eventBindingSource.DataSource = sortedEvents;
+            eventBindingSource.DataSource = sortedEvents;
         }
 
         private void buttonLikedPages_Click(object sender, EventArgs e)
@@ -182,7 +171,6 @@ Try again please :)");
         {
             m_FetchAlbumsButton.Enabled = false;
             FacebookObjectCollection<Album> albums = LoggedUser.GetAlbums();
-            m_AlbumsListBox.Items.Clear();
             fillListBoxes(albums, m_AlbumsListBox);
         }
 
@@ -211,7 +199,6 @@ Try again please :)");
         {
             m_FetchGroupsButton.Enabled = false;
             FacebookObjectCollection<Group> favoriteTeams = LoggedUser.GetFavoriteTeams();
-            m_GroupsListBox.Items.Clear();
             fillListBoxes(favoriteTeams, m_GroupsListBox);
         }
 

@@ -117,44 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="attendingCountLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="attendingCountLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="attendingCountLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 41</value>
-  </data>
-  <data name="attendingCountLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 35</value>
-  </data>
-  <data name="attendingCountLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="attendingCountLabel.Text" xml:space="preserve">
-    <value>Attending Count:</value>
-  </data>
-  <data name="&gt;&gt;attendingCountLabel.Name" xml:space="preserve">
-    <value>attendingCountLabel</value>
-  </data>
-  <data name="&gt;&gt;attendingCountLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;attendingCountLabel.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;attendingCountLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="declinedCountLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="declinedCountLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="declinedCountLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>34, 179</value>
   </data>
@@ -239,36 +209,6 @@
   <data name="&gt;&gt;endTimeLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <metadata name="imageNormalLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <data name="imageNormalLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="imageNormalLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>639, 4</value>
-  </data>
-  <data name="imageNormalLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 35</value>
-  </data>
-  <data name="imageNormalLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="imageNormalLabel.Text" xml:space="preserve">
-    <value>Image Normal:</value>
-  </data>
-  <data name="&gt;&gt;imageNormalLabel.Name" xml:space="preserve">
-    <value>imageNormalLabel</value>
-  </data>
-  <data name="&gt;&gt;imageNormalLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imageNormalLabel.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;imageNormalLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <metadata name="interestedCountLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
@@ -297,37 +237,7 @@
     <value>panelEventDetails</value>
   </data>
   <data name="&gt;&gt;interestedCountLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <metadata name="isOnlineLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <data name="isOnlineLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="isOnlineLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>47, 492</value>
-  </data>
-  <data name="isOnlineLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 35</value>
-  </data>
-  <data name="isOnlineLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="isOnlineLabel.Text" xml:space="preserve">
-    <value>Is Online:</value>
-  </data>
-  <data name="&gt;&gt;isOnlineLabel.Name" xml:space="preserve">
-    <value>isOnlineLabel</value>
-  </data>
-  <data name="&gt;&gt;isOnlineLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;isOnlineLabel.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;isOnlineLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>9</value>
   </data>
   <metadata name="linkToFacebookLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -357,7 +267,7 @@
     <value>panelEventDetails</value>
   </data>
   <data name="&gt;&gt;linkToFacebookLabel.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <metadata name="startTimeLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -387,7 +297,7 @@
     <value>panelEventDetails</value>
   </data>
   <data name="&gt;&gt;startTimeLabel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>14</value>
   </data>
   <data name="m_LoginButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 17</value>
@@ -643,7 +553,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="m_GroupsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 70</value>
+    <value>690, 103</value>
   </data>
   <data name="m_GroupsListBox.TabIndex" type="System.Int32, mscorlib">
     <value>63</value>
@@ -670,7 +580,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="m_AlbumsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 70</value>
+    <value>690, 103</value>
   </data>
   <data name="m_AlbumsListBox.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -697,7 +607,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="m_UpcomingBirthdayListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 70</value>
+    <value>690, 103</value>
   </data>
   <data name="m_UpcomingBirthdayListBox.TabIndex" type="System.Int32, mscorlib">
     <value>61</value>
@@ -751,7 +661,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="m_LikedPagesListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 70</value>
+    <value>690, 103</value>
   </data>
   <data name="m_LikedPagesListBox.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -832,7 +742,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="m_PostsListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1502, 70</value>
+    <value>1502, 103</value>
   </data>
   <data name="m_PostsListBox.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
@@ -877,6 +787,39 @@
     <value>m_AppTabControl</value>
   </data>
   <data name="&gt;&gt;m_MainTab.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="attendingCountLabel.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="attendingCountLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="attendingCountLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="attendingCountLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 41</value>
+  </data>
+  <data name="attendingCountLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 35</value>
+  </data>
+  <data name="attendingCountLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="attendingCountLabel.Text" xml:space="preserve">
+    <value>Attending Count:</value>
+  </data>
+  <data name="&gt;&gt;attendingCountLabel.Name" xml:space="preserve">
+    <value>attendingCountLabel</value>
+  </data>
+  <data name="&gt;&gt;attendingCountLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;attendingCountLabel.Parent" xml:space="preserve">
+    <value>panelEventDetails</value>
+  </data>
+  <data name="&gt;&gt;attendingCountLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="eventBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -985,10 +928,10 @@
     <value>NoControl</value>
   </data>
   <data name="imageNormalPictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>546, 41</value>
+    <value>821, 26</value>
   </data>
   <data name="imageNormalPictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>441, 162</value>
+    <value>179, 162</value>
   </data>
   <data name="imageNormalPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -1006,7 +949,7 @@
     <value>panelEventDetails</value>
   </data>
   <data name="&gt;&gt;imageNormalPictureBox.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="interestedCountLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1033,7 +976,7 @@
     <value>panelEventDetails</value>
   </data>
   <data name="&gt;&gt;interestedCountLabel1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="isOnlineCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1048,7 +991,7 @@
     <value>13</value>
   </data>
   <data name="isOnlineCheckBox.Text" xml:space="preserve">
-    <value>checkBox1</value>
+    <value>Is online:</value>
   </data>
   <data name="&gt;&gt;isOnlineCheckBox.Name" xml:space="preserve">
     <value>isOnlineCheckBox</value>
@@ -1060,7 +1003,7 @@
     <value>panelEventDetails</value>
   </data>
   <data name="&gt;&gt;isOnlineCheckBox.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="linkToFacebookLinkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1087,7 +1030,7 @@
     <value>panelEventDetails</value>
   </data>
   <data name="&gt;&gt;linkToFacebookLinkLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>13</value>
   </data>
   <data name="startTimeDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
     <value>501, 471</value>
@@ -1108,13 +1051,13 @@
     <value>panelEventDetails</value>
   </data>
   <data name="&gt;&gt;startTimeDateTimePicker.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="panelEventDetails.Location" type="System.Drawing.Point, System.Drawing">
     <value>985, 169</value>
   </data>
   <data name="panelEventDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1023, 755</value>
+    <value>1054, 757</value>
   </data>
   <data name="panelEventDetails.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1217,33 +1160,6 @@
   </data>
   <data name="&gt;&gt;m_FetchEventButtons.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="m_EventGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2072, 55</value>
-  </data>
-  <data name="m_EventGridView.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="m_EventGridView.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>102</value>
-  </data>
-  <data name="m_EventGridView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>399, 1019</value>
-  </data>
-  <data name="m_EventGridView.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.Name" xml:space="preserve">
-    <value>m_EventGridView</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_EventGridView.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <data name="m_FetchEventsTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 51</value>

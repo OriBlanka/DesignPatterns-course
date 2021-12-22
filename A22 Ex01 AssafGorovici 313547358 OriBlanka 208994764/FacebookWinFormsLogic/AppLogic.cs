@@ -36,11 +36,6 @@ namespace FacebookWinFormsLogic
 
         public string AccessToken { get; set; }
 
-        //Todo - need to remove after making all changes in FormMain class
-        public User LoggedUser { get; set; }
-
-        public LoginResult LoginResult { get; set; }
-
         private IFacebookUser m_FacebookUser;
 
         public IFacebookUser GetUser()
