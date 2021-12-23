@@ -76,13 +76,13 @@
             this.m_CommonInterestListBox = new System.Windows.Forms.ListBox();
             this.m_FetchCommonInterest = new System.Windows.Forms.Button();
             this.m_LikePictureBox = new System.Windows.Forms.PictureBox();
+            this.m_MutualCelebrityBirthdaysTab = new System.Windows.Forms.TabPage();
+            this.m_CelebrityNamesButton = new System.Windows.Forms.Button();
+            this.m_CelebrityNamesListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
             this.m_checkBoxRememberUser = new System.Windows.Forms.CheckBox();
-            this.m_MutualCelebrityBirthdaysTab = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
             declinedCountLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             endTimeLabel = new System.Windows.Forms.Label();
@@ -102,8 +102,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageNormalPictureBox)).BeginInit();
             this.m_MutualLikedPagesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
             this.m_MutualCelebrityBirthdaysTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // declinedCountLabel
@@ -441,6 +441,27 @@
             this.m_LikePictureBox.Name = "m_LikePictureBox";
             this.m_LikePictureBox.TabStop = false;
             // 
+            // m_MutualCelebrityBirthdaysTab
+            // 
+            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_CelebrityNamesButton);
+            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_CelebrityNamesListBox);
+            resources.ApplyResources(this.m_MutualCelebrityBirthdaysTab, "m_MutualCelebrityBirthdaysTab");
+            this.m_MutualCelebrityBirthdaysTab.Name = "m_MutualCelebrityBirthdaysTab";
+            this.m_MutualCelebrityBirthdaysTab.UseVisualStyleBackColor = true;
+            // 
+            // m_CelebrityNamesButton
+            // 
+            resources.ApplyResources(this.m_CelebrityNamesButton, "m_CelebrityNamesButton");
+            this.m_CelebrityNamesButton.Name = "m_CelebrityNamesButton";
+            this.m_CelebrityNamesButton.UseVisualStyleBackColor = true;
+            this.m_CelebrityNamesButton.Click += new System.EventHandler(this.m_CelebrityNamesButton_Click);
+            // 
+            // m_CelebrityNamesListBox
+            // 
+            this.m_CelebrityNamesListBox.FormattingEnabled = true;
+            resources.ApplyResources(this.m_CelebrityNamesListBox, "m_CelebrityNamesListBox");
+            this.m_CelebrityNamesListBox.Name = "m_CelebrityNamesListBox";
+            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
@@ -463,26 +484,6 @@
             resources.ApplyResources(this.m_checkBoxRememberUser, "m_checkBoxRememberUser");
             this.m_checkBoxRememberUser.Name = "m_checkBoxRememberUser";
             this.m_checkBoxRememberUser.UseVisualStyleBackColor = true;
-            // 
-            // m_MutualCelebrityBirthdaysTab
-            // 
-            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.button1);
-            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.listBox1);
-            resources.ApplyResources(this.m_MutualCelebrityBirthdaysTab, "m_MutualCelebrityBirthdaysTab");
-            this.m_MutualCelebrityBirthdaysTab.Name = "m_MutualCelebrityBirthdaysTab";
-            this.m_MutualCelebrityBirthdaysTab.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            resources.ApplyResources(this.listBox1, "listBox1");
-            this.listBox1.Name = "listBox1";
-            // 
-            // button1
-            // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -510,8 +511,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageNormalPictureBox)).EndInit();
             this.m_MutualLikedPagesTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
             this.m_MutualCelebrityBirthdaysTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -562,8 +563,8 @@
         private System.Windows.Forms.LinkLabel linkToFacebookLinkLabel;
         private System.Windows.Forms.DateTimePicker startTimeDateTimePicker;
         private System.Windows.Forms.TabPage m_MutualCelebrityBirthdaysTab;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox m_CelebrityNamesListBox;
+        private System.Windows.Forms.Button m_CelebrityNamesButton;
     }
 }
 

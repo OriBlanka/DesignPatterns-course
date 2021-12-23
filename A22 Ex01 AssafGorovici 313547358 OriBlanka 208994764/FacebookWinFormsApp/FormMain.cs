@@ -28,6 +28,7 @@ namespace BasicFacebookFeatures
         private readonly AppSettings r_AppSettings;
         private readonly Random r_Random = new Random();
         private readonly AppLogic r_AppLogic = AppLogic.Instance;
+        private readonly CelebrityBirthdayFacade r_CelebrityBirthdayFacade = new CelebrityBirthdayFacade();
 
         private IFacebookUser LoggedUser { get; set; }
 
@@ -370,6 +371,34 @@ Try again please :)");
 
             int randomizedIndex = r_Random.Next(taggedPictures.Count);
             return taggedPictures[randomizedIndex].ImageAlbum;
+        }
+
+        private void m_CelebrityNamesButton_Click(object sender, EventArgs e)
+        {
+            fetchCelebrityList();
+
+        }
+
+        private async void fetchCelebrityList()
+        {
+            List<string> celebrityNames = new List<string>();
+            celebrityNames = await r_CelebrityBirthdayFacade.GetCelebrityList(LoggedUser);
+            try
+            {
+                foreach (string item in celebrityNames)
+                {
+                    m_CelebrityNamesListBox.Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            if (m_CelebrityNamesListBox.Items.Count == 0)
+            {
+                m_CelebrityNamesListBox.Items.Add("No liked pages to retrieve :(");
+            }
         }
     }
 }
