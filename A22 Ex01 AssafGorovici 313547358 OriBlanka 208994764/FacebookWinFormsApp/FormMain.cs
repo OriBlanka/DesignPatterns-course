@@ -381,13 +381,11 @@ Try again please :)");
         {
             string response = r_NasaFacade.GetNasaPicOfTheDay();
             response.Replace("url", "");
+            //Todo - need to make changes in the names of the variable and think 
             string[] subs = response.Split(',');
             int lastcell = subs.Length - 1;
             subs[lastcell] = subs[lastcell].Substring(7);
             subs[lastcell] = subs[lastcell].Remove(subs[lastcell].Length - 3);
-            
-          
-
             showCurrentItemPicture(m_NasaPicByTodaypictureBox, $"{subs[lastcell]}");
         }
 
@@ -395,12 +393,8 @@ Try again please :)");
         {
             DateTime date = m_NasaDateTimePicker.Value;
             
-            string dateString = date.ToString("d",
-                  CultureInfo.CreateSpecificCulture("ja-JP"));
+            string dateString = date.ToString("d", CultureInfo.CreateSpecificCulture("ja-JP"));
             dateString = dateString.Replace('/', '-');
-
-         
-
             string response = r_NasaFacade.GetNasaPicBYDate(dateString);
             response.Replace("url", "");
             string[] subs = response.Split(',');

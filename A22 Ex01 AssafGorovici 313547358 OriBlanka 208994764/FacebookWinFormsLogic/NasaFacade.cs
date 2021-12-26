@@ -11,7 +11,6 @@ namespace FacebookWinFormsLogic
         private readonly NasaApi r_NasaAPI = new NasaApi();
         public string GetNasaPicOfTheDay()
         {
-            
             string pictureURL = r_NasaAPI.GetNasaPictureByDate("");
             return pictureURL;
         }

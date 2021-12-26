@@ -18,15 +18,13 @@ namespace FacebookWinFormsLogic
         
         public string GetNasaPictureByDate(string i_Date)
         {
-            String urlWithDate = String.Format("{0}{1}&date={2}", k_RequestBaseUri, k_ApiKey, i_Date);
-            var url = urlWithDate;
+            string urlWithDate = $"{k_RequestBaseUri}{k_ApiKey}&date={i_Date}";
+            HttpWebRequest httpRequest = (HttpWebRequest)WebRequest.Create(urlWithDate);
+            HttpWebResponse httpResponse = (HttpWebResponse)httpRequest.GetResponse();
 
-            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-
-            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            using(StreamReader streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
-                var result = streamReader.ReadToEnd();
+                string result = streamReader.ReadToEnd();
                 return result;
             }
         }
