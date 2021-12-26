@@ -410,15 +410,17 @@ Try again please :)");
             response.Replace("url", "");
             string[] subs = response.Split(',');
             int lastcell = subs.Length - 1;
+            subs[lastcell] = subs[lastcell].Substring(7);
+            subs[lastcell] = subs[lastcell].Remove(subs[lastcell].Length - 3);
             /*string start = "url:";
             string end = "";*/
             //string url = stringBetween(response, start, end);
-            
+
 
             m_APIlistBox.Items.Add(subs[lastcell]);
 
             //instead of the link bellow we need to parse the response in subs[lastcell]
-            showCurrentItemPicture(m_APIpictureBox, "https://apod.nasa.gov/apod/image/2112/JwstLaunch_Arianespace_1080.jpg");
+            showCurrentItemPicture(m_APIpictureBox, $"{subs[lastcell]}");
         }
 
         public static string stringBetween(string Source, string Start, string End)
