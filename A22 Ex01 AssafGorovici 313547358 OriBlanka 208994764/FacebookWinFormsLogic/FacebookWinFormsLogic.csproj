@@ -56,8 +56,6 @@
   <ItemGroup>
     <Compile Include="AppLogic.cs" />
     <Compile Include="AppSettings.cs" />
-    <Compile Include="CelebrityBirthdayAPI.cs" />
-    <Compile Include="CelebrityBirthdayFacade.cs" />
     <Compile Include="NasaApi.cs" />
     <Compile Include="FacebookConnector.cs" />
     <Compile Include="FacebookUserProxy.cs" />

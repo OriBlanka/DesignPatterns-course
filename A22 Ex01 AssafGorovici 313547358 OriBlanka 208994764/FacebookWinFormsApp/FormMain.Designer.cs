@@ -83,8 +83,6 @@
             this.m_NasaPicByTodaypictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.m_getNasaPicTodayButton = new System.Windows.Forms.Button();
-            this.m_CelebrityNamesButton = new System.Windows.Forms.Button();
-            this.m_CelebrityNamesListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
@@ -458,8 +456,6 @@
             this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_NasaPicByTodaypictureBox);
             this.m_NasaPictureOfTheDayTab.Controls.Add(this.pictureBox1);
             this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_getNasaPicTodayButton);
-            this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_CelebrityNamesButton);
-            this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_CelebrityNamesListBox);
             resources.ApplyResources(this.m_NasaPictureOfTheDayTab, "m_NasaPictureOfTheDayTab");
             this.m_NasaPictureOfTheDayTab.Name = "m_NasaPictureOfTheDayTab";
             this.m_NasaPictureOfTheDayTab.UseVisualStyleBackColor = true;
@@ -503,19 +499,6 @@
             this.m_getNasaPicTodayButton.Name = "m_getNasaPicTodayButton";
             this.m_getNasaPicTodayButton.UseVisualStyleBackColor = true;
             this.m_getNasaPicTodayButton.Click += new System.EventHandler(this.m_getNasaPicTodayButton_Click);
-            // 
-            // m_CelebrityNamesButton
-            // 
-            resources.ApplyResources(this.m_CelebrityNamesButton, "m_CelebrityNamesButton");
-            this.m_CelebrityNamesButton.Name = "m_CelebrityNamesButton";
-            this.m_CelebrityNamesButton.UseVisualStyleBackColor = true;
-            this.m_CelebrityNamesButton.Click += new System.EventHandler(this.m_CelebrityNamesButton_Click);
-            // 
-            // m_CelebrityNamesListBox
-            // 
-            this.m_CelebrityNamesListBox.FormattingEnabled = true;
-            resources.ApplyResources(this.m_CelebrityNamesListBox, "m_CelebrityNamesListBox");
-            this.m_CelebrityNamesListBox.Name = "m_CelebrityNamesListBox";
             // 
             // label1
             // 
@@ -621,8 +604,6 @@
         private System.Windows.Forms.LinkLabel linkToFacebookLinkLabel;
         private System.Windows.Forms.DateTimePicker startTimeDateTimePicker;
         private System.Windows.Forms.TabPage m_NasaPictureOfTheDayTab;
-        private System.Windows.Forms.ListBox m_CelebrityNamesListBox;
-        private System.Windows.Forms.Button m_CelebrityNamesButton;
         private System.Windows.Forms.Button m_getNasaPicTodayButton;
         private System.Windows.Forms.PictureBox m_NasaPicByTodaypictureBox;
         private System.Windows.Forms.PictureBox pictureBox1;

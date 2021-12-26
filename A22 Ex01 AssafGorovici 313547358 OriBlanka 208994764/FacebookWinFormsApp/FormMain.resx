@@ -387,606 +387,6 @@
   <data name="&gt;&gt;m_LogoutButton.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;m_SelectedLikedPagePictureBox.Name" xml:space="preserve">
-    <value>m_SelectedLikedPagePictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedLikedPagePictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedLikedPagePictureBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedLikedPagePictureBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_RandomImagePictureBox.Name" xml:space="preserve">
-    <value>m_RandomImagePictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_RandomImagePictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_RandomImagePictureBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_RandomImagePictureBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;m_FetchRandomPictureButton.Name" xml:space="preserve">
-    <value>m_FetchRandomPictureButton</value>
-  </data>
-  <data name="&gt;&gt;m_FetchRandomPictureButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchRandomPictureButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchRandomPictureButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedGroupPictureBox.Name" xml:space="preserve">
-    <value>m_SelectedGroupPictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedGroupPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedGroupPictureBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedGroupPictureBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedAlbumPictureBox.Name" xml:space="preserve">
-    <value>m_SelectedAlbumPictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedAlbumPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedAlbumPictureBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_SelectedAlbumPictureBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;m_FetchGroupsButton.Name" xml:space="preserve">
-    <value>m_FetchGroupsButton</value>
-  </data>
-  <data name="&gt;&gt;m_FetchGroupsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchGroupsButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchGroupsButton.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;m_FetchAlbumsButton.Name" xml:space="preserve">
-    <value>m_FetchAlbumsButton</value>
-  </data>
-  <data name="&gt;&gt;m_FetchAlbumsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchAlbumsButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchAlbumsButton.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;m_GroupsListBox.Name" xml:space="preserve">
-    <value>m_GroupsListBox</value>
-  </data>
-  <data name="&gt;&gt;m_GroupsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_GroupsListBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_GroupsListBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;m_AlbumsListBox.Name" xml:space="preserve">
-    <value>m_AlbumsListBox</value>
-  </data>
-  <data name="&gt;&gt;m_AlbumsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_AlbumsListBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_AlbumsListBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;m_UpcomingBirthdayListBox.Name" xml:space="preserve">
-    <value>m_UpcomingBirthdayListBox</value>
-  </data>
-  <data name="&gt;&gt;m_UpcomingBirthdayListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_UpcomingBirthdayListBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_UpcomingBirthdayListBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;m_FetchUpcomingBirthdayButton.Name" xml:space="preserve">
-    <value>m_FetchUpcomingBirthdayButton</value>
-  </data>
-  <data name="&gt;&gt;m_FetchUpcomingBirthdayButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchUpcomingBirthdayButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchUpcomingBirthdayButton.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesListBox.Name" xml:space="preserve">
-    <value>m_LikedPagesListBox</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesListBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesListBox.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesButton.Name" xml:space="preserve">
-    <value>m_LikedPagesButton</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_LikedPagesButton.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;m_FetchPostsButton.Name" xml:space="preserve">
-    <value>m_FetchPostsButton</value>
-  </data>
-  <data name="&gt;&gt;m_FetchPostsButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchPostsButton.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchPostsButton.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;m_PostsListBox.Name" xml:space="preserve">
-    <value>m_PostsListBox</value>
-  </data>
-  <data name="&gt;&gt;m_PostsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_PostsListBox.Parent" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_PostsListBox.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="m_MainTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 49</value>
-  </data>
-  <data name="m_MainTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="m_MainTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="m_MainTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2206, 1034</value>
-  </data>
-  <data name="m_MainTab.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="m_MainTab.Text" xml:space="preserve">
-    <value>Main</value>
-  </data>
-  <data name="&gt;&gt;m_MainTab.Name" xml:space="preserve">
-    <value>m_MainTab</value>
-  </data>
-  <data name="&gt;&gt;m_MainTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_MainTab.Parent" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_MainTab.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;panelEventDetails.Name" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;panelEventDetails.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelEventDetails.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;panelEventDetails.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsListBox.Name" xml:space="preserve">
-    <value>m_FetchEventsListBox</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsListBox.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsListBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.Name" xml:space="preserve">
-    <value>m_EventStatusComboBox</value>
-  </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_EventStatusComboBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.Name" xml:space="preserve">
-    <value>m_FetchEventButtons</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventButtons.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="m_FetchEventsTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 49</value>
-  </data>
-  <data name="m_FetchEventsTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="m_FetchEventsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="m_FetchEventsTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2206, 1034</value>
-  </data>
-  <data name="m_FetchEventsTab.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="m_FetchEventsTab.Text" xml:space="preserve">
-    <value>My Events</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.Name" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.Parent" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_FetchEventsTab.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.Name" xml:space="preserve">
-    <value>m_CommonInterestListBox</value>
-  </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.Parent" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_CommonInterestListBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.Name" xml:space="preserve">
-    <value>m_FetchCommonInterest</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.Parent" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_FetchCommonInterest.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.Name" xml:space="preserve">
-    <value>m_LikePictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.Parent" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_LikePictureBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 49</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2206, 1034</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="m_MutualLikedPagesTab.Text" xml:space="preserve">
-    <value>Mutual Liked Pages</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Name" xml:space="preserve">
-    <value>m_MutualLikedPagesTab</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.Parent" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_MutualLikedPagesTab.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="m_NasaPicByDatepictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="m_NasaPicByDatepictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>645, 525</value>
-  </data>
-  <data name="m_NasaPicByDatepictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1168, 487</value>
-  </data>
-  <data name="m_NasaPicByDatepictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="m_NasaPicByDatepictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPicByDatepictureBox.Name" xml:space="preserve">
-    <value>m_NasaPicByDatepictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPicByDatepictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPicByDatepictureBox.Parent" xml:space="preserve">
-    <value>m_NasaPictureOfTheDayTab</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPicByDatepictureBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="m_GetNasaPictureByDatebutton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="m_GetNasaPictureByDatebutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 505</value>
-  </data>
-  <data name="m_GetNasaPictureByDatebutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 266</value>
-  </data>
-  <data name="m_GetNasaPictureByDatebutton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="m_GetNasaPictureByDatebutton.Text" xml:space="preserve">
-    <value>Get Nasa's picture of the Day by date</value>
-  </data>
-  <data name="&gt;&gt;m_GetNasaPictureByDatebutton.Name" xml:space="preserve">
-    <value>m_GetNasaPictureByDatebutton</value>
-  </data>
-  <data name="&gt;&gt;m_GetNasaPictureByDatebutton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_GetNasaPictureByDatebutton.Parent" xml:space="preserve">
-    <value>m_NasaPictureOfTheDayTab</value>
-  </data>
-  <data name="&gt;&gt;m_GetNasaPictureByDatebutton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="m_NasaDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
-    <value>66, 821</value>
-  </data>
-  <data name="m_NasaDateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
-    <value>541, 38</value>
-  </data>
-  <data name="m_NasaDateTimePicker.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;m_NasaDateTimePicker.Name" xml:space="preserve">
-    <value>m_NasaDateTimePicker</value>
-  </data>
-  <data name="&gt;&gt;m_NasaDateTimePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_NasaDateTimePicker.Parent" xml:space="preserve">
-    <value>m_NasaPictureOfTheDayTab</value>
-  </data>
-  <data name="&gt;&gt;m_NasaDateTimePicker.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="m_NasaPicByTodaypictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>722, 29</value>
-  </data>
-  <data name="m_NasaPicByTodaypictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1011, 490</value>
-  </data>
-  <data name="m_NasaPicByTodaypictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="m_NasaPicByTodaypictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPicByTodaypictureBox.Name" xml:space="preserve">
-    <value>m_NasaPicByTodaypictureBox</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPicByTodaypictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPicByTodaypictureBox.Parent" xml:space="preserve">
-    <value>m_NasaPictureOfTheDayTab</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPicByTodaypictureBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 50</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>m_NasaPictureOfTheDayTab</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="m_getNasaPicTodayButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="m_getNasaPicTodayButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>192, 83</value>
-  </data>
-  <data name="m_getNasaPicTodayButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 287</value>
-  </data>
-  <data name="m_getNasaPicTodayButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="m_getNasaPicTodayButton.Text" xml:space="preserve">
-    <value>Get Today's Nasa Picture of the Day</value>
-  </data>
-  <data name="&gt;&gt;m_getNasaPicTodayButton.Name" xml:space="preserve">
-    <value>m_getNasaPicTodayButton</value>
-  </data>
-  <data name="&gt;&gt;m_getNasaPicTodayButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_getNasaPicTodayButton.Parent" xml:space="preserve">
-    <value>m_NasaPictureOfTheDayTab</value>
-  </data>
-  <data name="&gt;&gt;m_getNasaPicTodayButton.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="m_CelebrityNamesButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1882, 315</value>
-  </data>
-  <data name="m_CelebrityNamesButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 204</value>
-  </data>
-  <data name="m_CelebrityNamesButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="m_CelebrityNamesButton.Text" xml:space="preserve">
-    <value>Get Celebritys with same Birth Month</value>
-  </data>
-  <data name="&gt;&gt;m_CelebrityNamesButton.Name" xml:space="preserve">
-    <value>m_CelebrityNamesButton</value>
-  </data>
-  <data name="&gt;&gt;m_CelebrityNamesButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_CelebrityNamesButton.Parent" xml:space="preserve">
-    <value>m_NasaPictureOfTheDayTab</value>
-  </data>
-  <data name="&gt;&gt;m_CelebrityNamesButton.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="m_CelebrityNamesListBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="m_CelebrityNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1874, 567</value>
-  </data>
-  <data name="m_CelebrityNamesListBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 283</value>
-  </data>
-  <data name="m_CelebrityNamesListBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;m_CelebrityNamesListBox.Name" xml:space="preserve">
-    <value>m_CelebrityNamesListBox</value>
-  </data>
-  <data name="&gt;&gt;m_CelebrityNamesListBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_CelebrityNamesListBox.Parent" xml:space="preserve">
-    <value>m_NasaPictureOfTheDayTab</value>
-  </data>
-  <data name="&gt;&gt;m_CelebrityNamesListBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="m_NasaPictureOfTheDayTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 49</value>
-  </data>
-  <data name="m_NasaPictureOfTheDayTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="m_NasaPictureOfTheDayTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2206, 1034</value>
-  </data>
-  <data name="m_NasaPictureOfTheDayTab.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="m_NasaPictureOfTheDayTab.Text" xml:space="preserve">
-    <value>Get Nasa's Picture Of the Day</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPictureOfTheDayTab.Name" xml:space="preserve">
-    <value>m_NasaPictureOfTheDayTab</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPictureOfTheDayTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPictureOfTheDayTab.Parent" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_NasaPictureOfTheDayTab.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="m_AppTabControl.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Miriam, 9.900001pt</value>
-  </data>
-  <data name="m_AppTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 239</value>
-  </data>
-  <data name="m_AppTabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="m_AppTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2226, 1093</value>
-  </data>
-  <data name="m_AppTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>53</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.Name" xml:space="preserve">
-    <value>m_AppTabControl</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;m_AppTabControl.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="m_SelectedLikedPagePictureBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>420, 319</value>
   </data>
@@ -1392,133 +792,34 @@
   <data name="&gt;&gt;m_PostsListBox.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;attendingCountLabel1.Name" xml:space="preserve">
-    <value>attendingCountLabel1</value>
+  <data name="m_MainTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 49</value>
   </data>
-  <data name="&gt;&gt;attendingCountLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="m_MainTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
-  <data name="&gt;&gt;attendingCountLabel1.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
+  <data name="m_MainTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
-  <data name="&gt;&gt;attendingCountLabel1.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="m_MainTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2206, 1034</value>
   </data>
-  <data name="&gt;&gt;declinedCountLabel1.Name" xml:space="preserve">
-    <value>declinedCountLabel1</value>
+  <data name="m_MainTab.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;declinedCountLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="m_MainTab.Text" xml:space="preserve">
+    <value>Main</value>
   </data>
-  <data name="&gt;&gt;declinedCountLabel1.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
+  <data name="&gt;&gt;m_MainTab.Name" xml:space="preserve">
+    <value>m_MainTab</value>
   </data>
-  <data name="&gt;&gt;declinedCountLabel1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;m_MainTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;descriptionTextBox.Name" xml:space="preserve">
-    <value>descriptionTextBox</value>
+  <data name="&gt;&gt;m_MainTab.Parent" xml:space="preserve">
+    <value>m_AppTabControl</value>
   </data>
-  <data name="&gt;&gt;descriptionTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;descriptionTextBox.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;descriptionTextBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;endTimeDateTimePicker.Name" xml:space="preserve">
-    <value>endTimeDateTimePicker</value>
-  </data>
-  <data name="&gt;&gt;endTimeDateTimePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;endTimeDateTimePicker.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;endTimeDateTimePicker.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;imageNormalPictureBox.Name" xml:space="preserve">
-    <value>imageNormalPictureBox</value>
-  </data>
-  <data name="&gt;&gt;imageNormalPictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imageNormalPictureBox.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;imageNormalPictureBox.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;interestedCountLabel1.Name" xml:space="preserve">
-    <value>interestedCountLabel1</value>
-  </data>
-  <data name="&gt;&gt;interestedCountLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;interestedCountLabel1.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;interestedCountLabel1.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;isOnlineCheckBox.Name" xml:space="preserve">
-    <value>isOnlineCheckBox</value>
-  </data>
-  <data name="&gt;&gt;isOnlineCheckBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;isOnlineCheckBox.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;isOnlineCheckBox.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;linkToFacebookLinkLabel.Name" xml:space="preserve">
-    <value>linkToFacebookLinkLabel</value>
-  </data>
-  <data name="&gt;&gt;linkToFacebookLinkLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;linkToFacebookLinkLabel.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;linkToFacebookLinkLabel.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;startTimeDateTimePicker.Name" xml:space="preserve">
-    <value>startTimeDateTimePicker</value>
-  </data>
-  <data name="&gt;&gt;startTimeDateTimePicker.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;startTimeDateTimePicker.Parent" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;startTimeDateTimePicker.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="panelEventDetails.Location" type="System.Drawing.Point, System.Drawing">
-    <value>862, 158</value>
-  </data>
-  <data name="panelEventDetails.Size" type="System.Drawing.Size, System.Drawing">
-    <value>922, 708</value>
-  </data>
-  <data name="panelEventDetails.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;panelEventDetails.Name" xml:space="preserve">
-    <value>panelEventDetails</value>
-  </data>
-  <data name="&gt;&gt;panelEventDetails.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelEventDetails.Parent" xml:space="preserve">
-    <value>m_FetchEventsTab</value>
-  </data>
-  <data name="&gt;&gt;panelEventDetails.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;m_MainTab.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="eventBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -1551,9 +852,6 @@
   <data name="&gt;&gt;attendingCountLabel1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="eventBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="declinedCountLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1755,6 +1053,27 @@
   <data name="&gt;&gt;startTimeDateTimePicker.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
+  <data name="panelEventDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>862, 158</value>
+  </data>
+  <data name="panelEventDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>922, 708</value>
+  </data>
+  <data name="panelEventDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panelEventDetails.Name" xml:space="preserve">
+    <value>panelEventDetails</value>
+  </data>
+  <data name="&gt;&gt;panelEventDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelEventDetails.Parent" xml:space="preserve">
+    <value>m_FetchEventsTab</value>
+  </data>
+  <data name="&gt;&gt;panelEventDetails.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="m_FetchEventsListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
@@ -1841,6 +1160,36 @@
   </data>
   <data name="&gt;&gt;m_FetchEventButtons.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="m_FetchEventsTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 49</value>
+  </data>
+  <data name="m_FetchEventsTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="m_FetchEventsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="m_FetchEventsTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2206, 1034</value>
+  </data>
+  <data name="m_FetchEventsTab.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="m_FetchEventsTab.Text" xml:space="preserve">
+    <value>My Events</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventsTab.Name" xml:space="preserve">
+    <value>m_FetchEventsTab</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventsTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventsTab.Parent" xml:space="preserve">
+    <value>m_AppTabControl</value>
+  </data>
+  <data name="&gt;&gt;m_FetchEventsTab.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="m_CommonInterestListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>31</value>
@@ -37701,6 +37050,234 @@
   </data>
   <data name="&gt;&gt;m_LikePictureBox.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 49</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2206, 1034</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="m_MutualLikedPagesTab.Text" xml:space="preserve">
+    <value>Mutual Liked Pages</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.Name" xml:space="preserve">
+    <value>m_MutualLikedPagesTab</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.Parent" xml:space="preserve">
+    <value>m_AppTabControl</value>
+  </data>
+  <data name="&gt;&gt;m_MutualLikedPagesTab.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_NasaPicByDatepictureBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_NasaPicByDatepictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1057, 343</value>
+  </data>
+  <data name="m_NasaPicByDatepictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1168, 701</value>
+  </data>
+  <data name="m_NasaPicByDatepictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="m_NasaPicByDatepictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPicByDatepictureBox.Name" xml:space="preserve">
+    <value>m_NasaPicByDatepictureBox</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPicByDatepictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPicByDatepictureBox.Parent" xml:space="preserve">
+    <value>m_NasaPictureOfTheDayTab</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPicByDatepictureBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="m_GetNasaPictureByDatebutton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_GetNasaPictureByDatebutton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1460, 73</value>
+  </data>
+  <data name="m_GetNasaPictureByDatebutton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>530, 153</value>
+  </data>
+  <data name="m_GetNasaPictureByDatebutton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="m_GetNasaPictureByDatebutton.Text" xml:space="preserve">
+    <value>Get Nasa's picture of the Day by date</value>
+  </data>
+  <data name="&gt;&gt;m_GetNasaPictureByDatebutton.Name" xml:space="preserve">
+    <value>m_GetNasaPictureByDatebutton</value>
+  </data>
+  <data name="&gt;&gt;m_GetNasaPictureByDatebutton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_GetNasaPictureByDatebutton.Parent" xml:space="preserve">
+    <value>m_NasaPictureOfTheDayTab</value>
+  </data>
+  <data name="&gt;&gt;m_GetNasaPictureByDatebutton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="m_NasaDateTimePicker.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1460, 258</value>
+  </data>
+  <data name="m_NasaDateTimePicker.Size" type="System.Drawing.Size, System.Drawing">
+    <value>541, 38</value>
+  </data>
+  <data name="m_NasaDateTimePicker.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;m_NasaDateTimePicker.Name" xml:space="preserve">
+    <value>m_NasaDateTimePicker</value>
+  </data>
+  <data name="&gt;&gt;m_NasaDateTimePicker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_NasaDateTimePicker.Parent" xml:space="preserve">
+    <value>m_NasaPictureOfTheDayTab</value>
+  </data>
+  <data name="&gt;&gt;m_NasaDateTimePicker.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_NasaPicByTodaypictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 343</value>
+  </data>
+  <data name="m_NasaPicByTodaypictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1051, 711</value>
+  </data>
+  <data name="m_NasaPicByTodaypictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="m_NasaPicByTodaypictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPicByTodaypictureBox.Name" xml:space="preserve">
+    <value>m_NasaPicByTodaypictureBox</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPicByTodaypictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPicByTodaypictureBox.Parent" xml:space="preserve">
+    <value>m_NasaPictureOfTheDayTab</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPicByTodaypictureBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 50</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>m_NasaPictureOfTheDayTab</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="m_getNasaPicTodayButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_getNasaPicTodayButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 73</value>
+  </data>
+  <data name="m_getNasaPicTodayButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>556, 176</value>
+  </data>
+  <data name="m_getNasaPicTodayButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="m_getNasaPicTodayButton.Text" xml:space="preserve">
+    <value>Get Today's Nasa Picture of the Day</value>
+  </data>
+  <data name="&gt;&gt;m_getNasaPicTodayButton.Name" xml:space="preserve">
+    <value>m_getNasaPicTodayButton</value>
+  </data>
+  <data name="&gt;&gt;m_getNasaPicTodayButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_getNasaPicTodayButton.Parent" xml:space="preserve">
+    <value>m_NasaPictureOfTheDayTab</value>
+  </data>
+  <data name="&gt;&gt;m_getNasaPicTodayButton.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="m_NasaPictureOfTheDayTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 49</value>
+  </data>
+  <data name="m_NasaPictureOfTheDayTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="m_NasaPictureOfTheDayTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2206, 1034</value>
+  </data>
+  <data name="m_NasaPictureOfTheDayTab.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="m_NasaPictureOfTheDayTab.Text" xml:space="preserve">
+    <value>Get Nasa's Picture Of the Day</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPictureOfTheDayTab.Name" xml:space="preserve">
+    <value>m_NasaPictureOfTheDayTab</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPictureOfTheDayTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPictureOfTheDayTab.Parent" xml:space="preserve">
+    <value>m_AppTabControl</value>
+  </data>
+  <data name="&gt;&gt;m_NasaPictureOfTheDayTab.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="m_AppTabControl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Miriam, 9.900001pt</value>
+  </data>
+  <data name="m_AppTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 239</value>
+  </data>
+  <data name="m_AppTabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="m_AppTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2226, 1093</value>
+  </data>
+  <data name="m_AppTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.Name" xml:space="preserve">
+    <value>m_AppTabControl</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;m_AppTabControl.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
