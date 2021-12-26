@@ -37,7 +37,7 @@ namespace FacebookWinFormsLogic
             {*/
                 XDocument celebrityListXML =
                     await r_CelebrityBirthdayAPI.ApiTest();
-                List<string> celebrityList = r_CelebrityBirthdayAPI.FilterCelebrityName(celebrityListXML);
+                List<string> celebrityList = r_CelebrityBirthdayAPI.FilterCelebrityName(celebrityListXML,12);
 
             /*celebrityDictionary.Add(favoriteArtist, userSimilarArtistsList);*/
             //}

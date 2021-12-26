@@ -38,12 +38,21 @@ namespace FacebookWinFormsLogic
         }
 
         // Todo Get function to parse document
-        public List<string> FilterCelebrityName(XDocument i_XDocument)
+        public List<string> FilterCelebrityName(XDocument i_XDocument, int i_UserBirthMonth)
         {
             List<string> celebrityNames = new List<string>();
             foreach (XElement element in i_XDocument.Descendants().Where(i_XElement => i_XElement.HasElements == false))
             {
-                string keyName = element.Name.LocalName; //?
+                string keyName = element.Name.LocalName;
+                
+                XAttribute att = element.Attribute("dob");
+                string dobMonth = "-" + i_UserBirthMonth + "-";
+                Console.WriteLine(dobMonth);
+                if (keyName == "dob")
+                {
+                    
+                    Console.WriteLine(element.Value);
+                }    
                 //string keyDob = element.Name.LocalName; //?
                 /*if (keyDob == "dob")
                 {
