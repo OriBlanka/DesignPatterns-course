@@ -31,7 +31,7 @@ namespace BasicFacebookFeatures
         private readonly Random r_Random = new Random();
         private readonly AppLogic r_AppLogic = AppLogic.Instance;
         private readonly CelebrityBirthdayFacade r_CelebrityBirthdayFacade = new CelebrityBirthdayFacade();
-
+        private readonly NasaFacade r_NasaFacade = new NasaFacade();
         private IFacebookUser LoggedUser { get; set; }
 
         public bool IsLoggedIn { get; set; }
@@ -405,36 +405,16 @@ Try again please :)");
 
         private void m_getApiDataButton_Click(object sender, EventArgs e)
         {
-            NasaApi nasaApi = new NasaApi();
-            string response = nasaApi.ApiTestNasa();
+            string response = r_NasaFacade.GetNasaPicOfTheDay();
             response.Replace("url", "");
             string[] subs = response.Split(',');
             int lastcell = subs.Length - 1;
             subs[lastcell] = subs[lastcell].Substring(7);
             subs[lastcell] = subs[lastcell].Remove(subs[lastcell].Length - 3);
-            /*string start = "url:";
-            string end = "";*/
-            //string url = stringBetween(response, start, end);
-
-
+            
             m_APIlistBox.Items.Add(subs[lastcell]);
 
-            //instead of the link bellow we need to parse the response in subs[lastcell]
             showCurrentItemPicture(m_APIpictureBox, $"{subs[lastcell]}");
-        }
-
-        public static string stringBetween(string Source, string Start, string End)
-        {
-            string result = "";
-            if (Source.Contains(Start) && Source.Contains(End))
-            {
-                int StartIndex = Source.IndexOf(Start, 0) + Start.Length;
-                int EndIndex = Source.IndexOf(End, StartIndex);
-                result = Source.Substring(StartIndex, EndIndex - StartIndex);
-                return result;
-            }
-
-            return result;
         }
     }
 }

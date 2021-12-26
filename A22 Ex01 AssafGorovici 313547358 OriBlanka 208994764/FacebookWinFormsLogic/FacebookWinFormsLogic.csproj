@@ -62,6 +62,7 @@
     <Compile Include="FacebookConnector.cs" />
     <Compile Include="FacebookUserProxy.cs" />
     <Compile Include="IFacebookUser.cs" />
+    <Compile Include="NasaFacade.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
