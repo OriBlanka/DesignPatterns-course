@@ -40,19 +40,19 @@ namespace FacebookWinFormsLogic
         }
 
         // Todo Get function to parse document
-<<<<<<< HEAD
+
         public List<string> FilterCelebrityName(XDocument i_XDocument, int i_UserBirthMonth)
-=======
+
         //Todo - Filter the Celebrity name by month number
         public List<string> FilterCelebrityName(XDocument i_XDocument)
->>>>>>> f9199d5788325a8a0b9b5cdf1c07b7b4e55a63a9
+
         {
             List<string> celebrityNames = new List<string>();
             foreach (XElement element in i_XDocument.Descendants().Where(i_XElement => i_XElement.HasElements == false))
             {
-<<<<<<< HEAD
+
                 string keyName = element.Name.LocalName;
-                
+               /* 
                 XAttribute att = element.Attribute("dob");
                 string dobMonth = "-" + i_UserBirthMonth + "-";
                 Console.WriteLine(dobMonth);
@@ -61,19 +61,11 @@ namespace FacebookWinFormsLogic
                     
                     Console.WriteLine(element.Value);
                 }    
-                //string keyDob = element.Name.LocalName; //?
-                /*if (keyDob == "dob")
-                {
-                    string[] dateOfBirth = element.Value.Split('-');*/
-                    //int celebBirthMonth = (int) dateOfBirth[1]; //can't convert string to int
-=======
-                string keyName = element.Name.LocalName; 
-                //string keyDob = element.Name.LocalName; 
-                //if (keyDob == "dob")
-                //{
-                    //string[] dateOfBirth = element.Value.Split('-');
-                    //int celebBirthMonth = int.Parse(dateOfBirth[1]); 
->>>>>>> f9199d5788325a8a0b9b5cdf1c07b7b4e55a63a9
+                */
+
+           
+                
+
                     if(keyName == "name")
                     {
                         celebrityNames.Add(element.Value);
