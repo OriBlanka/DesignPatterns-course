@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
 using FacebookWinFormsLogic;
+using System.Net;
+using System.IO;
 
 namespace BasicFacebookFeatures
 {
@@ -77,7 +79,7 @@ namespace BasicFacebookFeatures
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
-            if(r_AppSettings.AutoLogin)
+            if (r_AppSettings.AutoLogin)
             {
                 autoLogin();
             }
@@ -101,7 +103,7 @@ namespace BasicFacebookFeatures
                 IsLoggedIn = m_LoggedIn;
                 fetchUserInfo();
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show(
                     @"Error occurred!
@@ -150,7 +152,7 @@ Try again please :)");
                     break;
             }
 
-            if(sortedEvents.Count == 0)
+            if (sortedEvents.Count == 0)
             {
                 MessageBox.Show("No events to retrieve :(");
             }
@@ -179,18 +181,18 @@ Try again please :)");
         {
             m_FetchUpcomingBirthdayButton.Enabled = false;
             bool areFriendsBDaysThisMonth = false;
-            foreach(User friend in LoggedUser.GetFriends())
+            foreach (User friend in LoggedUser.GetFriends())
 
             {
                 DateTime friendBirthday = DateTime.Parse(friend.Birthday);
-                if(friendBirthday.Month == DateTime.Now.Month)
+                if (friendBirthday.Month == DateTime.Now.Month)
                 {
                     areFriendsBDaysThisMonth = true;
                     m_UpcomingBirthdayListBox.Items.Add($"{friend.Name} - {friend.Birthday} ");
                 }
             }
 
-            if(!areFriendsBDaysThisMonth)
+            if (!areFriendsBDaysThisMonth)
             {
                 m_UpcomingBirthdayListBox.Items.Add($"No friends birthdays on {DateTime.Now:M}");
             }
@@ -292,7 +294,7 @@ Try again please :)");
         {
             bool isFriendWithCommonInterest = false;
             Dictionary<string, int> friendsCommonPagesLikes = new Dictionary<string, int>();
-            
+
             LoggedUser.GetFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest);
             foreach (KeyValuePair<string, int> friendInDictionary in friendsCommonPagesLikes)
             {
@@ -309,7 +311,7 @@ Try again please :)");
         {
             try
             {
-                foreach(T item in i_FacebookItemsCollection)
+                foreach (T item in i_FacebookItemsCollection)
                 {
                     io_FacebookItemsList.Items.Add(item);
                 }
@@ -318,8 +320,8 @@ Try again please :)");
             {
                 MessageBox.Show(ex.Message);
             }
-            
-            if(io_FacebookItemsList.Items.Count == 0)
+
+            if (io_FacebookItemsList.Items.Count == 0)
             {
                 io_FacebookItemsList.Items.Add("No liked pages to retrieve :(");
             }
@@ -399,6 +401,38 @@ Try again please :)");
             {
                 m_CelebrityNamesListBox.Items.Add("No liked pages to retrieve :(");
             }
+        }
+
+        private void m_getApiDataButton_Click(object sender, EventArgs e)
+        {
+            NasaApi nasaApi = new NasaApi();
+            string response = nasaApi.ApiTestNasa();
+            response.Replace("url", "");
+            string[] subs = response.Split(',');
+            int lastcell = subs.Length - 1;
+            /*string start = "url:";
+            string end = "";*/
+            //string url = stringBetween(response, start, end);
+            
+
+            m_APIlistBox.Items.Add(subs[lastcell]);
+
+            //instead of the link bellow we need to parse the response in subs[lastcell]
+            showCurrentItemPicture(m_APIpictureBox, "https://apod.nasa.gov/apod/image/2112/JwstLaunch_Arianespace_1080.jpg");
+        }
+
+        public static string stringBetween(string Source, string Start, string End)
+        {
+            string result = "";
+            if (Source.Contains(Start) && Source.Contains(End))
+            {
+                int StartIndex = Source.IndexOf(Start, 0) + Start.Length;
+                int EndIndex = Source.IndexOf(End, StartIndex);
+                result = Source.Substring(StartIndex, EndIndex - StartIndex);
+                return result;
+            }
+
+            return result;
         }
     }
 }

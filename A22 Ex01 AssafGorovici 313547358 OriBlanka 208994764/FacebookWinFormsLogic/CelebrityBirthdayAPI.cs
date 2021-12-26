@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Xml.Linq;
 
+
 namespace FacebookWinFormsLogic
 {
     // Todo check if api works
@@ -41,36 +42,22 @@ namespace FacebookWinFormsLogic
 
         // Todo Get function to parse document
 
-        public List<string> FilterCelebrityName(XDocument i_XDocument, int i_UserBirthMonth)
+       
 
         //Todo - Filter the Celebrity name by month number
         public List<string> FilterCelebrityName(XDocument i_XDocument)
-
         {
             List<string> celebrityNames = new List<string>();
             foreach (XElement element in i_XDocument.Descendants().Where(i_XElement => i_XElement.HasElements == false))
             {
 
                 string keyName = element.Name.LocalName;
-               /* 
-                XAttribute att = element.Attribute("dob");
-                string dobMonth = "-" + i_UserBirthMonth + "-";
-                Console.WriteLine(dobMonth);
-                if (keyName == "dob")
+               
+                if(keyName == "name")
                 {
-                    
-                    Console.WriteLine(element.Value);
-                }    
-                */
-
-           
-                
-
-                    if(keyName == "name")
-                    {
                         celebrityNames.Add(element.Value);
-                    }
-                //}
+                }
+               
                 
             }
 

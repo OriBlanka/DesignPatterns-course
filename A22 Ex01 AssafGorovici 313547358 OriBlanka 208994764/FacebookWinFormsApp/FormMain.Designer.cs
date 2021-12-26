@@ -83,6 +83,10 @@
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
             this.m_checkBoxRememberUser = new System.Windows.Forms.CheckBox();
+            this.m_APIlistBox = new System.Windows.Forms.ListBox();
+            this.m_getApiDataButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.m_APIpictureBox = new System.Windows.Forms.PictureBox();
             declinedCountLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             endTimeLabel = new System.Windows.Forms.Label();
@@ -104,6 +108,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).BeginInit();
             this.m_MutualCelebrityBirthdaysTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_APIpictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // declinedCountLabel
@@ -443,6 +449,10 @@
             // 
             // m_MutualCelebrityBirthdaysTab
             // 
+            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_APIpictureBox);
+            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.pictureBox1);
+            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_getApiDataButton);
+            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_APIlistBox);
             this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_CelebrityNamesButton);
             this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_CelebrityNamesListBox);
             resources.ApplyResources(this.m_MutualCelebrityBirthdaysTab, "m_MutualCelebrityBirthdaysTab");
@@ -485,6 +495,31 @@
             this.m_checkBoxRememberUser.Name = "m_checkBoxRememberUser";
             this.m_checkBoxRememberUser.UseVisualStyleBackColor = true;
             // 
+            // m_APIlistBox
+            // 
+            this.m_APIlistBox.FormattingEnabled = true;
+            resources.ApplyResources(this.m_APIlistBox, "m_APIlistBox");
+            this.m_APIlistBox.Name = "m_APIlistBox";
+            // 
+            // m_getApiDataButton
+            // 
+            resources.ApplyResources(this.m_getApiDataButton, "m_getApiDataButton");
+            this.m_getApiDataButton.Name = "m_getApiDataButton";
+            this.m_getApiDataButton.UseVisualStyleBackColor = true;
+            this.m_getApiDataButton.Click += new System.EventHandler(this.m_getApiDataButton_Click);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // m_APIpictureBox
+            // 
+            resources.ApplyResources(this.m_APIpictureBox, "m_APIpictureBox");
+            this.m_APIpictureBox.Name = "m_APIpictureBox";
+            this.m_APIpictureBox.TabStop = false;
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -513,6 +548,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).EndInit();
             this.m_MutualCelebrityBirthdaysTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_APIpictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -565,6 +602,10 @@
         private System.Windows.Forms.TabPage m_MutualCelebrityBirthdaysTab;
         private System.Windows.Forms.ListBox m_CelebrityNamesListBox;
         private System.Windows.Forms.Button m_CelebrityNamesButton;
+        private System.Windows.Forms.Button m_getApiDataButton;
+        private System.Windows.Forms.ListBox m_APIlistBox;
+        private System.Windows.Forms.PictureBox m_APIpictureBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

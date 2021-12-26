@@ -738,8 +738,104 @@
   <data name="&gt;&gt;m_MutualLikedPagesTab.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="m_APIpictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>626, 340</value>
+  </data>
+  <data name="m_APIpictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>425, 283</value>
+  </data>
+  <data name="m_APIpictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="m_APIpictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;m_APIpictureBox.Name" xml:space="preserve">
+    <value>m_APIpictureBox</value>
+  </data>
+  <data name="&gt;&gt;m_APIpictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_APIpictureBox.Parent" xml:space="preserve">
+    <value>m_MutualCelebrityBirthdaysTab</value>
+  </data>
+  <data name="&gt;&gt;m_APIpictureBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 50</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>m_MutualCelebrityBirthdaysTab</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="m_getApiDataButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="m_getApiDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 340</value>
+  </data>
+  <data name="m_getApiDataButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 204</value>
+  </data>
+  <data name="m_getApiDataButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="m_getApiDataButton.Text" xml:space="preserve">
+    <value>Get API data</value>
+  </data>
+  <data name="&gt;&gt;m_getApiDataButton.Name" xml:space="preserve">
+    <value>m_getApiDataButton</value>
+  </data>
+  <data name="&gt;&gt;m_getApiDataButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_getApiDataButton.Parent" xml:space="preserve">
+    <value>m_MutualCelebrityBirthdaysTab</value>
+  </data>
+  <data name="&gt;&gt;m_getApiDataButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="m_APIlistBox.ItemHeight" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="m_APIlistBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>202, 135</value>
+  </data>
+  <data name="m_APIlistBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1959, 159</value>
+  </data>
+  <data name="m_APIlistBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;m_APIlistBox.Name" xml:space="preserve">
+    <value>m_APIlistBox</value>
+  </data>
+  <data name="&gt;&gt;m_APIlistBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;m_APIlistBox.Parent" xml:space="preserve">
+    <value>m_MutualCelebrityBirthdaysTab</value>
+  </data>
+  <data name="&gt;&gt;m_APIlistBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="m_CelebrityNamesButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1375, 174</value>
+    <value>1748, 465</value>
   </data>
   <data name="m_CelebrityNamesButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>300, 204</value>
@@ -760,13 +856,13 @@
     <value>m_MutualCelebrityBirthdaysTab</value>
   </data>
   <data name="&gt;&gt;m_CelebrityNamesButton.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="m_CelebrityNamesListBox.ItemHeight" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
   <data name="m_CelebrityNamesListBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>867, 135</value>
+    <value>1298, 386</value>
   </data>
   <data name="m_CelebrityNamesListBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>391, 283</value>
@@ -784,7 +880,7 @@
     <value>m_MutualCelebrityBirthdaysTab</value>
   </data>
   <data name="&gt;&gt;m_CelebrityNamesListBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="m_MutualCelebrityBirthdaysTab.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 49</value>
