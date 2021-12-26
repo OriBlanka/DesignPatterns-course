@@ -12,6 +12,7 @@ using FacebookWrapper;
 using FacebookWinFormsLogic;
 using System.Net;
 using System.IO;
+using System.Globalization;
 
 namespace BasicFacebookFeatures
 {
@@ -403,7 +404,7 @@ Try again please :)");
             }
         }
 
-        private void m_getApiDataButton_Click(object sender, EventArgs e)
+        private void m_getNasaPicTodayButton_Click(object sender, EventArgs e)
         {
             string response = r_NasaFacade.GetNasaPicOfTheDay();
             response.Replace("url", "");
@@ -412,9 +413,29 @@ Try again please :)");
             subs[lastcell] = subs[lastcell].Substring(7);
             subs[lastcell] = subs[lastcell].Remove(subs[lastcell].Length - 3);
             
-            m_APIlistBox.Items.Add(subs[lastcell]);
+          
 
-            showCurrentItemPicture(m_APIpictureBox, $"{subs[lastcell]}");
+            showCurrentItemPicture(m_NasaPicByTodaypictureBox, $"{subs[lastcell]}");
+        }
+
+        private void m_GetNasaPictureByDatebutton_Click(object sender, EventArgs e)
+        {
+            DateTime date = m_NasaDateTimePicker.Value;
+            
+            string dateString = date.ToString("d",
+                  CultureInfo.CreateSpecificCulture("ja-JP"));
+            dateString = dateString.Replace('/', '-');
+
+         
+
+            string response = r_NasaFacade.GetNasaPicBYDate(dateString);
+            response.Replace("url", "");
+            string[] subs = response.Split(',');
+            int lastcell = subs.Length - 1;
+            subs[lastcell] = subs[lastcell].Substring(7);
+            subs[lastcell] = subs[lastcell].Remove(subs[lastcell].Length - 3);
+            showCurrentItemPicture(m_NasaPicByDatepictureBox, $"{subs[lastcell]}");
+            
         }
     }
 }

@@ -14,16 +14,14 @@ namespace FacebookWinFormsLogic
     internal class NasaApi
     {
         private const string k_ApiKey = "i6RsCaoahoOhjhcMaexa7wdSjyzwsDoL7Mzrhb7D";
-        private const string k_RequestBaseUri = "https://api.nasa.gov/planetary/apod?api_key=i6RsCaoahoOhjhcMaexa7wdSjyzwsDoL7Mzrhb7D";
-
-       // private static readonly HttpClient sr_HttpClient = new HttpClient();
-
-        public string ApiTestNasa()
+        private const string k_RequestBaseUri = "https://api.nasa.gov/planetary/apod?api_key=";
+        
+        public string GetNasaPictureByDate(string i_Date)
         {
-            var url = "https://api.nasa.gov/planetary/apod?api_key=i6RsCaoahoOhjhcMaexa7wdSjyzwsDoL7Mzrhb7D";
+            String urlWithDate = String.Format("{0}{1}&date={2}", k_RequestBaseUri, k_ApiKey, i_Date);
+            var url = urlWithDate;
 
             var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-            
 
             var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
@@ -31,10 +29,7 @@ namespace FacebookWinFormsLogic
                 var result = streamReader.ReadToEnd();
                 return result;
             }
-
-            
         }
-
     }
 }
 

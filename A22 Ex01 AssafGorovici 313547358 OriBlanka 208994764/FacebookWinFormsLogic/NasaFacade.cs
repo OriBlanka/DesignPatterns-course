@@ -12,7 +12,13 @@ namespace FacebookWinFormsLogic
         public string GetNasaPicOfTheDay()
         {
             
-            string pictureURL = r_NasaAPI.ApiTestNasa();
+            string pictureURL = r_NasaAPI.GetNasaPictureByDate("");
+            return pictureURL;
+        }
+
+        public string GetNasaPicBYDate(string i_Date)
+        {
+            string pictureURL = r_NasaAPI.GetNasaPictureByDate(i_Date);
             return pictureURL;
         }
     }

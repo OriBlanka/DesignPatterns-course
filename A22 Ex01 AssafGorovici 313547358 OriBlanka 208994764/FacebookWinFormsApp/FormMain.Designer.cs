@@ -76,17 +76,19 @@
             this.m_CommonInterestListBox = new System.Windows.Forms.ListBox();
             this.m_FetchCommonInterest = new System.Windows.Forms.Button();
             this.m_LikePictureBox = new System.Windows.Forms.PictureBox();
-            this.m_MutualCelebrityBirthdaysTab = new System.Windows.Forms.TabPage();
+            this.m_NasaPictureOfTheDayTab = new System.Windows.Forms.TabPage();
+            this.m_NasaPicByDatepictureBox = new System.Windows.Forms.PictureBox();
+            this.m_GetNasaPictureByDatebutton = new System.Windows.Forms.Button();
+            this.m_NasaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.m_NasaPicByTodaypictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.m_getNasaPicTodayButton = new System.Windows.Forms.Button();
             this.m_CelebrityNamesButton = new System.Windows.Forms.Button();
             this.m_CelebrityNamesListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
             this.m_checkBoxRememberUser = new System.Windows.Forms.CheckBox();
-            this.m_APIlistBox = new System.Windows.Forms.ListBox();
-            this.m_getApiDataButton = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.m_APIpictureBox = new System.Windows.Forms.PictureBox();
             declinedCountLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             endTimeLabel = new System.Windows.Forms.Label();
@@ -106,10 +108,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageNormalPictureBox)).BeginInit();
             this.m_MutualLikedPagesTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).BeginInit();
-            this.m_MutualCelebrityBirthdaysTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
+            this.m_NasaPictureOfTheDayTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByDatepictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByTodaypictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_APIpictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // declinedCountLabel
@@ -166,7 +169,7 @@
             this.m_AppTabControl.Controls.Add(this.m_MainTab);
             this.m_AppTabControl.Controls.Add(this.m_FetchEventsTab);
             this.m_AppTabControl.Controls.Add(this.m_MutualLikedPagesTab);
-            this.m_AppTabControl.Controls.Add(this.m_MutualCelebrityBirthdaysTab);
+            this.m_AppTabControl.Controls.Add(this.m_NasaPictureOfTheDayTab);
             resources.ApplyResources(this.m_AppTabControl, "m_AppTabControl");
             this.m_AppTabControl.Name = "m_AppTabControl";
             this.m_AppTabControl.SelectedIndex = 0;
@@ -447,17 +450,59 @@
             this.m_LikePictureBox.Name = "m_LikePictureBox";
             this.m_LikePictureBox.TabStop = false;
             // 
-            // m_MutualCelebrityBirthdaysTab
+            // m_NasaPictureOfTheDayTab
             // 
-            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_APIpictureBox);
-            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.pictureBox1);
-            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_getApiDataButton);
-            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_APIlistBox);
-            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_CelebrityNamesButton);
-            this.m_MutualCelebrityBirthdaysTab.Controls.Add(this.m_CelebrityNamesListBox);
-            resources.ApplyResources(this.m_MutualCelebrityBirthdaysTab, "m_MutualCelebrityBirthdaysTab");
-            this.m_MutualCelebrityBirthdaysTab.Name = "m_MutualCelebrityBirthdaysTab";
-            this.m_MutualCelebrityBirthdaysTab.UseVisualStyleBackColor = true;
+            this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_NasaPicByDatepictureBox);
+            this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_GetNasaPictureByDatebutton);
+            this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_NasaDateTimePicker);
+            this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_NasaPicByTodaypictureBox);
+            this.m_NasaPictureOfTheDayTab.Controls.Add(this.pictureBox1);
+            this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_getNasaPicTodayButton);
+            this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_CelebrityNamesButton);
+            this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_CelebrityNamesListBox);
+            resources.ApplyResources(this.m_NasaPictureOfTheDayTab, "m_NasaPictureOfTheDayTab");
+            this.m_NasaPictureOfTheDayTab.Name = "m_NasaPictureOfTheDayTab";
+            this.m_NasaPictureOfTheDayTab.UseVisualStyleBackColor = true;
+            // 
+            // m_NasaPicByDatepictureBox
+            // 
+            resources.ApplyResources(this.m_NasaPicByDatepictureBox, "m_NasaPicByDatepictureBox");
+            this.m_NasaPicByDatepictureBox.Name = "m_NasaPicByDatepictureBox";
+            this.m_NasaPicByDatepictureBox.TabStop = false;
+            // 
+            // m_GetNasaPictureByDatebutton
+            // 
+            resources.ApplyResources(this.m_GetNasaPictureByDatebutton, "m_GetNasaPictureByDatebutton");
+            this.m_GetNasaPictureByDatebutton.Name = "m_GetNasaPictureByDatebutton";
+            this.m_GetNasaPictureByDatebutton.UseVisualStyleBackColor = true;
+            this.m_GetNasaPictureByDatebutton.Click += new System.EventHandler(this.m_GetNasaPictureByDatebutton_Click);
+            // 
+            // m_NasaDateTimePicker
+            // 
+            resources.ApplyResources(this.m_NasaDateTimePicker, "m_NasaDateTimePicker");
+            this.m_NasaDateTimePicker.MaxDate = new System.DateTime(2021, 12, 26, 0, 0, 0, 0);
+            this.m_NasaDateTimePicker.MinDate = new System.DateTime(1995, 6, 16, 0, 0, 0, 0);
+            this.m_NasaDateTimePicker.Name = "m_NasaDateTimePicker";
+            this.m_NasaDateTimePicker.Value = new System.DateTime(2021, 12, 26, 0, 0, 0, 0);
+            // 
+            // m_NasaPicByTodaypictureBox
+            // 
+            resources.ApplyResources(this.m_NasaPicByTodaypictureBox, "m_NasaPicByTodaypictureBox");
+            this.m_NasaPicByTodaypictureBox.Name = "m_NasaPicByTodaypictureBox";
+            this.m_NasaPicByTodaypictureBox.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // m_getNasaPicTodayButton
+            // 
+            resources.ApplyResources(this.m_getNasaPicTodayButton, "m_getNasaPicTodayButton");
+            this.m_getNasaPicTodayButton.Name = "m_getNasaPicTodayButton";
+            this.m_getNasaPicTodayButton.UseVisualStyleBackColor = true;
+            this.m_getNasaPicTodayButton.Click += new System.EventHandler(this.m_getNasaPicTodayButton_Click);
             // 
             // m_CelebrityNamesButton
             // 
@@ -495,31 +540,6 @@
             this.m_checkBoxRememberUser.Name = "m_checkBoxRememberUser";
             this.m_checkBoxRememberUser.UseVisualStyleBackColor = true;
             // 
-            // m_APIlistBox
-            // 
-            this.m_APIlistBox.FormattingEnabled = true;
-            resources.ApplyResources(this.m_APIlistBox, "m_APIlistBox");
-            this.m_APIlistBox.Name = "m_APIlistBox";
-            // 
-            // m_getApiDataButton
-            // 
-            resources.ApplyResources(this.m_getApiDataButton, "m_getApiDataButton");
-            this.m_getApiDataButton.Name = "m_getApiDataButton";
-            this.m_getApiDataButton.UseVisualStyleBackColor = true;
-            this.m_getApiDataButton.Click += new System.EventHandler(this.m_getApiDataButton_Click);
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
-            // 
-            // m_APIpictureBox
-            // 
-            resources.ApplyResources(this.m_APIpictureBox, "m_APIpictureBox");
-            this.m_APIpictureBox.Name = "m_APIpictureBox";
-            this.m_APIpictureBox.TabStop = false;
-            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -546,10 +566,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageNormalPictureBox)).EndInit();
             this.m_MutualLikedPagesTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_LikePictureBox)).EndInit();
-            this.m_MutualCelebrityBirthdaysTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
+            this.m_NasaPictureOfTheDayTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByDatepictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByTodaypictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_APIpictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -599,13 +620,15 @@
         private System.Windows.Forms.CheckBox isOnlineCheckBox;
         private System.Windows.Forms.LinkLabel linkToFacebookLinkLabel;
         private System.Windows.Forms.DateTimePicker startTimeDateTimePicker;
-        private System.Windows.Forms.TabPage m_MutualCelebrityBirthdaysTab;
+        private System.Windows.Forms.TabPage m_NasaPictureOfTheDayTab;
         private System.Windows.Forms.ListBox m_CelebrityNamesListBox;
         private System.Windows.Forms.Button m_CelebrityNamesButton;
-        private System.Windows.Forms.Button m_getApiDataButton;
-        private System.Windows.Forms.ListBox m_APIlistBox;
-        private System.Windows.Forms.PictureBox m_APIpictureBox;
+        private System.Windows.Forms.Button m_getNasaPicTodayButton;
+        private System.Windows.Forms.PictureBox m_NasaPicByTodaypictureBox;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker m_NasaDateTimePicker;
+        private System.Windows.Forms.Button m_GetNasaPictureByDatebutton;
+        private System.Windows.Forms.PictureBox m_NasaPicByDatepictureBox;
     }
 }
 
