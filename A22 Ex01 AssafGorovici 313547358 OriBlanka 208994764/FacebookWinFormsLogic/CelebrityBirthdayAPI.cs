@@ -12,22 +12,24 @@ namespace FacebookWinFormsLogic
     internal class CelebrityBirthdayAPI
     {
         private const string k_ApiKey = "371d19e25cmsh2efefec9d8503bcp1c6603jsn55c3cb22f273";
-        /*private static readonly HttpClient sr_HttpClient = new HttpClient();
-        HttpRequestMessage request = new HttpRequestMessage*/
+        private const string k_RequestBaseUri = "https://celebrity-bucks.p.rapidapi.com/birthdays/XML";
+        private const string k_ApiHost = "celebrity-bucks.p.rapidapi.com";
+        private static readonly HttpClient sr_HttpClient = new HttpClient();
+        
         public async Task<XDocument> ApiTest()
         {
-            HttpClient client = new HttpClient();
+           
             HttpRequestMessage request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri("https://celebrity-bucks.p.rapidapi.com/birthdays/XML"),
+                RequestUri = new Uri($"{k_RequestBaseUri}"),
                 Headers =
                     {
-                        { "x-rapidapi-host", "celebrity-bucks.p.rapidapi.com" },
+                        { "x-rapidapi-host", $"{k_ApiHost}" },
                         { "x-rapidapi-key", $"{k_ApiKey}" },
                     }
             };
-            using(HttpResponseMessage response = await client.SendAsync(request))
+            using(HttpResponseMessage response = await sr_HttpClient.SendAsync(request))
             {
                 response.EnsureSuccessStatusCode();
                 string body = await response.Content.ReadAsStringAsync();
@@ -45,16 +47,16 @@ namespace FacebookWinFormsLogic
             foreach (XElement element in i_XDocument.Descendants().Where(i_XElement => i_XElement.HasElements == false))
             {
                 string keyName = element.Name.LocalName; 
-                string keyDob = element.Name.LocalName; 
-                if (keyDob == "dob")
-                {
-                    string[] dateOfBirth = element.Value.Split('-');
-                    int celebBirthMonth = int.Parse(dateOfBirth[1]); 
+                //string keyDob = element.Name.LocalName; 
+                //if (keyDob == "dob")
+                //{
+                    //string[] dateOfBirth = element.Value.Split('-');
+                    //int celebBirthMonth = int.Parse(dateOfBirth[1]); 
                     if(keyName == "name")
                     {
                         celebrityNames.Add(element.Value);
                     }
-                }
+                //}
                 
             }
 
