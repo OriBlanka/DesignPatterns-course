@@ -135,37 +135,17 @@ Try again please :)");
 
         private void buttonFetchEvents_Click(object sender, EventArgs e)
         {
-            FacebookObjectCollection<Event> allEvents = LoggedUser.GetAllEvents();
-            FacebookObjectCollection<Event> sortedEvents = new FacebookObjectCollection<Event>();
-
-            switch (m_EventStatusComboBox.SelectedIndex)
-            {
-                case (int)eEventStatus.Online:
-                    LoggedUser.GetEventsSorted(ref allEvents, ref sortedEvents, true);
-                    break;
-
-                case (int)eEventStatus.NotOnline:
-                    LoggedUser.GetEventsSorted(ref allEvents, ref sortedEvents, false);
-                    break;
-
-                case (int)eEventStatus.AllEvents:
-                    sortedEvents = allEvents;
-                    break;
-            }
-
-            if (sortedEvents.Count == 0)
-            {
-                MessageBox.Show("No events to retrieve :(");
-            }
-
-            //fillListBoxes(sortedEvents, m_FetchEventsListBox);
-            //m_EventGridView.DataSource = sortedSEvents;
-            eventBindingSource.DataSource = sortedEvents;
+            new Thread(fetchEvents).Start();
         }
 
         private void buttonLikedPages_Click(object sender, EventArgs e)
         {
             m_LikedPagesButton.Enabled = false;
+            new Thread(fetchLikedPages).Start();
+        }
+
+        private void fetchLikedPages()
+        {
             FacebookObjectCollection<Page> likedPages = LoggedUser.GetLikedPages();
             m_LikedPagesListBox.DisplayMember = "Name";
             fillListBoxes(likedPages, m_LikedPagesListBox);
@@ -308,6 +288,34 @@ Try again please :)");
             }
         }
 
+        private void fetchEvents()
+        {
+            FacebookObjectCollection<Event> allEvents = LoggedUser.GetAllEvents();
+            FacebookObjectCollection<Event> sortedEvents = new FacebookObjectCollection<Event>();
+
+            switch (m_EventStatusComboBox.SelectedIndex)
+            {
+                case (int)eEventStatus.Online:
+                    LoggedUser.GetEventsSorted(ref allEvents, ref sortedEvents, true);
+                    break;
+
+                case (int)eEventStatus.NotOnline:
+                    LoggedUser.GetEventsSorted(ref allEvents, ref sortedEvents, false);
+                    break;
+
+                case (int)eEventStatus.AllEvents:
+                    sortedEvents = allEvents;
+                    break;
+            }
+
+            if (sortedEvents.Count == 0)
+            {
+                MessageBox.Show("No events to retrieve :(");
+            }
+
+            eventBindingSource.DataSource = sortedEvents;
+        }
+
         private void fillListBoxes<T>(FacebookObjectCollection<T> i_FacebookItemsCollection, ListBox io_FacebookItemsList)
         {
             try
@@ -339,31 +347,7 @@ Try again please :)");
                 io_ItemPicture.Image = io_ItemPicture.ErrorImage;
             }
         }
-
-        private void fetchEvents(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline)
-        {
-            if (i_IsOnline)
-            {
-                foreach (Event events in i_Events)
-                {
-                    if (events.IsOnline != null && (bool)events.IsOnline)
-                    {
-                        io_sortedEvents.Add(events);
-                    }
-                }
-            }
-            else
-            {
-                foreach (Event events in i_Events)
-                {
-                    if (events.IsOnline != null && (bool)!events.IsOnline)
-                    {
-                        io_sortedEvents.Add(events);
-                    }
-                }
-            }
-        }
-
+        
         private Image getRandomImage()
         {
             FacebookObjectCollection<Photo> taggedPictures = LoggedUser.GetPhotosTaggedIn();

@@ -81,7 +81,6 @@
             this.m_GetNasaPictureByDatebutton = new System.Windows.Forms.Button();
             this.m_NasaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.m_NasaPicByTodaypictureBox = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.m_getNasaPicTodayButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
@@ -109,7 +108,6 @@
             this.m_NasaPictureOfTheDayTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByDatepictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByTodaypictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -454,7 +452,6 @@
             this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_GetNasaPictureByDatebutton);
             this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_NasaDateTimePicker);
             this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_NasaPicByTodaypictureBox);
-            this.m_NasaPictureOfTheDayTab.Controls.Add(this.pictureBox1);
             this.m_NasaPictureOfTheDayTab.Controls.Add(this.m_getNasaPicTodayButton);
             resources.ApplyResources(this.m_NasaPictureOfTheDayTab, "m_NasaPictureOfTheDayTab");
             this.m_NasaPictureOfTheDayTab.Name = "m_NasaPictureOfTheDayTab";
@@ -486,12 +483,6 @@
             resources.ApplyResources(this.m_NasaPicByTodaypictureBox, "m_NasaPicByTodaypictureBox");
             this.m_NasaPicByTodaypictureBox.Name = "m_NasaPicByTodaypictureBox";
             this.m_NasaPicByTodaypictureBox.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // m_getNasaPicTodayButton
             // 
@@ -552,7 +543,6 @@
             this.m_NasaPictureOfTheDayTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByDatepictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByTodaypictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -606,7 +596,6 @@
         private System.Windows.Forms.TabPage m_NasaPictureOfTheDayTab;
         private System.Windows.Forms.Button m_getNasaPicTodayButton;
         private System.Windows.Forms.PictureBox m_NasaPicByTodaypictureBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DateTimePicker m_NasaDateTimePicker;
         private System.Windows.Forms.Button m_GetNasaPictureByDatebutton;
         private System.Windows.Forms.PictureBox m_NasaPicByDatepictureBox;
