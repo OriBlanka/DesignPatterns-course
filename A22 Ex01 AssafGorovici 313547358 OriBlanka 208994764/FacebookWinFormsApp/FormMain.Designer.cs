@@ -468,12 +468,12 @@
             resources.ApplyResources(this.m_GetNasaPictureByDatebutton, "m_GetNasaPictureByDatebutton");
             this.m_GetNasaPictureByDatebutton.Name = "m_GetNasaPictureByDatebutton";
             this.m_GetNasaPictureByDatebutton.UseVisualStyleBackColor = true;
-            this.m_GetNasaPictureByDatebutton.Click += new System.EventHandler(this.m_GetNasaPictureByDatebutton_Click);
+            this.m_GetNasaPictureByDatebutton.Click += new System.EventHandler(this.m_GetNasaPictureByDateButton_Click);
             // 
             // m_NasaDateTimePicker
             // 
             resources.ApplyResources(this.m_NasaDateTimePicker, "m_NasaDateTimePicker");
-            this.m_NasaDateTimePicker.MaxDate = new System.DateTime(2021, 12, 26, 0, 0, 0, 0);
+            this.m_NasaDateTimePicker.MaxDate = new System.DateTime(2021, 12, 29, 0, 0, 0, 0);
             this.m_NasaDateTimePicker.MinDate = new System.DateTime(1995, 6, 16, 0, 0, 0, 0);
             this.m_NasaDateTimePicker.Name = "m_NasaDateTimePicker";
             this.m_NasaDateTimePicker.Value = new System.DateTime(2021, 12, 26, 0, 0, 0, 0);

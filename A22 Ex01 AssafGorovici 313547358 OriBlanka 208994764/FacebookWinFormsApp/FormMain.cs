@@ -1,22 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
 using FacebookWinFormsLogic;
-using System.Net;
-using System.IO;
 using System.Globalization;
 
 namespace BasicFacebookFeatures
 {
-    //Todo - need to continue to implement multi-threading
     public partial class FormMain : Form
     {
         public enum eEventStatus
@@ -41,6 +35,7 @@ namespace BasicFacebookFeatures
         public FormMain()
         {
             InitializeComponent();
+            m_NasaDateTimePicker.MaxDate = DateTime.Today;
             FacebookService.s_CollectionLimit = 100;
             r_AppSettings = AppSettings.FromFileOrDefault();
             this.StartPosition = FormStartPosition.Manual;
@@ -174,6 +169,17 @@ Try again please :)");
         {
             new Thread(fetchFriendsWithCommonInterest).Start();
         }
+
+        private void m_getNasaPicTodayButton_Click(object sender, EventArgs e)
+        {
+            new Thread(fetchNasaPicToday).Start();
+        }
+
+        private void m_GetNasaPictureByDateButton_Click(object sender, EventArgs e)
+        {
+            new Thread(fetchNasaPictureByDate).Start();
+        }
+
 
         private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -346,6 +352,21 @@ Try again please :)");
             }
         }
 
+        private void fetchNasaPictureByDate()
+        {
+            DateTime date = m_NasaDateTimePicker.Value;
+            string dateString = date.ToString("d", CultureInfo.CreateSpecificCulture("ja-JP"));
+            dateString = dateString.Replace('/', '-');
+            string response = r_NasaFacade.GetNasaPicBYDate(dateString);
+            fetchNasaPicUrlAndShowPic(response, m_NasaPicByDatepictureBox);
+        }
+
+        private void fetchNasaPicToday()
+        {
+            string response = r_NasaFacade.GetNasaPicOfTheDay();
+            fetchNasaPicUrlAndShowPic(response, m_NasaPicByTodaypictureBox);
+        }
+
         private void fillListBoxes<T>(FacebookObjectCollection<T> i_FacebookItemsCollection, ListBox io_FacebookItemsList)
         {
             try
@@ -390,32 +411,13 @@ Try again please :)");
             return taggedPictures[randomizedIndex].ImageAlbum;
         }
 
-        
-        private void m_getNasaPicTodayButton_Click(object sender, EventArgs e)
+        private void fetchNasaPicUrlAndShowPic(string i_Response, PictureBox io_ItemNasaPicture)
         {
-            string response = r_NasaFacade.GetNasaPicOfTheDay();
-            response.Replace("url", "");
-            //Todo - need to make changes in the names of the variable and think 
-            string[] subs = response.Split(',');
-            int lastcell = subs.Length - 1;
-            subs[lastcell] = subs[lastcell].Substring(7);
-            subs[lastcell] = subs[lastcell].Remove(subs[lastcell].Length - 3);
-            showCurrentItemPicture(m_NasaPicByTodaypictureBox, $"{subs[lastcell]}");
-        }
-
-        private void m_GetNasaPictureByDatebutton_Click(object sender, EventArgs e)
-        {
-            DateTime date = m_NasaDateTimePicker.Value;
-            string dateString = date.ToString("d", CultureInfo.CreateSpecificCulture("ja-JP"));
-            dateString = dateString.Replace('/', '-');
-            string response = r_NasaFacade.GetNasaPicBYDate(dateString);
-            response.Replace("url", "");
-            string[] subs = response.Split(',');
-            int lastcell = subs.Length - 1;
-            subs[lastcell] = subs[lastcell].Substring(7);
-            subs[lastcell] = subs[lastcell].Remove(subs[lastcell].Length - 3);
-            showCurrentItemPicture(m_NasaPicByDatepictureBox, $"{subs[lastcell]}");
-            
+            string[] responseParts = i_Response.Split(',');
+            int urlIndex = responseParts.Length - 1;
+            responseParts[urlIndex] = responseParts[urlIndex].Substring(7);
+            responseParts[urlIndex] = responseParts[urlIndex].Remove(responseParts[urlIndex].Length - 3);
+            showCurrentItemPicture(io_ItemNasaPicture, $"{responseParts[urlIndex]}");
         }
     }
 }
