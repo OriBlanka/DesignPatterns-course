@@ -25,7 +25,6 @@ namespace BasicFacebookFeatures
         private readonly AppSettings r_AppSettings;
         private readonly Random r_Random = new Random();
         private readonly AppLogic r_AppLogic = AppLogic.Instance;
-  
         private readonly NasaFacade r_NasaFacade = new NasaFacade();
 
         private IFacebookUser LoggedUser { get; set; }
@@ -144,7 +143,6 @@ Try again please :)");
         {
             m_FetchAlbumsButton.Enabled = false;
             new Thread(fetchAlbums).Start();
-            
         }
 
         private void buttonFetchUpcomingBirthdays_Click(object sender, EventArgs e)
@@ -179,7 +177,6 @@ Try again please :)");
         {
             new Thread(fetchNasaPictureByDate).Start();
         }
-
 
         private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)
         {

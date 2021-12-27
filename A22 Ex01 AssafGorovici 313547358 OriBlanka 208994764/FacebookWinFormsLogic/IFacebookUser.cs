@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FacebookWrapper.ObjectModel;
 
-//Todo - need to add more methods according to the features that we have in FormMain
 public interface IFacebookUser
 {
     string GetFirstName();

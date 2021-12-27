@@ -1,8 +1,4 @@
-﻿using System;
-using FacebookWrapper.ObjectModel;
-using FacebookWrapper;
-
-namespace FacebookWinFormsLogic
+﻿namespace FacebookWinFormsLogic
 {
     public class AppLogic
     {
