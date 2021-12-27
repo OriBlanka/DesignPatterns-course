@@ -33,6 +33,7 @@ namespace BasicFacebookFeatures
         private readonly AppLogic r_AppLogic = AppLogic.Instance;
   
         private readonly NasaFacade r_NasaFacade = new NasaFacade();
+
         private IFacebookUser LoggedUser { get; set; }
 
         public bool IsLoggedIn { get; set; }
@@ -144,58 +145,34 @@ Try again please :)");
             new Thread(fetchLikedPages).Start();
         }
 
-        private void fetchLikedPages()
-        {
-            FacebookObjectCollection<Page> likedPages = LoggedUser.GetLikedPages();
-            m_LikedPagesListBox.DisplayMember = "Name";
-            fillListBoxes(likedPages, m_LikedPagesListBox);
-        }
-
         private void buttonFetchAlbums_Click(object sender, EventArgs e)
         {
             m_FetchAlbumsButton.Enabled = false;
-            FacebookObjectCollection<Album> albums = LoggedUser.GetAlbums();
-            fillListBoxes(albums, m_AlbumsListBox);
+            new Thread(fetchAlbums).Start();
+            
         }
 
         private void buttonFetchUpcomingBirthdays_Click(object sender, EventArgs e)
         {
             m_FetchUpcomingBirthdayButton.Enabled = false;
-            bool areFriendsBDaysThisMonth = false;
-            foreach (User friend in LoggedUser.GetFriends())
-
-            {
-                DateTime friendBirthday = DateTime.Parse(friend.Birthday);
-                if (friendBirthday.Month == DateTime.Now.Month)
-                {
-                    areFriendsBDaysThisMonth = true;
-                    m_UpcomingBirthdayListBox.Items.Add($"{friend.Name} - {friend.Birthday} ");
-                }
-            }
-
-            if (!areFriendsBDaysThisMonth)
-            {
-                m_UpcomingBirthdayListBox.Items.Add($"No friends birthdays on {DateTime.Now:M}");
-            }
+            new Thread(fetchUpcomingBirthday).Start();
         }
 
         private void buttonFetchGroups_Click(object sender, EventArgs e)
         {
             m_FetchGroupsButton.Enabled = false;
-            FacebookObjectCollection<Group> favoriteTeams = LoggedUser.GetFavoriteTeams();
-            fillListBoxes(favoriteTeams, m_GroupsListBox);
+            new Thread(fetchGroups).Start();
+            
         }
 
         private void buttonFetchRandomPicture_Click(object sender, EventArgs e)
         {
-            try
-            {
-                m_RandomImagePictureBox.Image = getRandomImage();
-            }
-            catch (Exception pictureException)
-            {
-                MessageBox.Show($@"An error occurred with the facebook API: {Environment.NewLine} {pictureException.Message}");
-            }
+            new Thread(fetchRandomPicture).Start();
+        }
+
+        private void buttonCommonInterest_Click(object sender, EventArgs e)
+        {
+            new Thread(fetchFriendsWithCommonInterest).Start();
         }
 
         private void listBoxAlbums_SelectedIndexChanged(object sender, EventArgs e)
@@ -211,11 +188,6 @@ Try again please :)");
         private void listBoxGroups_SelectedIndexChanged(object sender, EventArgs e)
         {
             displaySelectedGroup();
-        }
-
-        private void buttonCommonInterest_Click(object sender, EventArgs e)
-        {
-            new Thread(fetchFriendsWithCommonInterest).Start();
         }
 
         private void displaySelectedAlbum()
@@ -292,8 +264,13 @@ Try again please :)");
         {
             FacebookObjectCollection<Event> allEvents = LoggedUser.GetAllEvents();
             FacebookObjectCollection<Event> sortedEvents = new FacebookObjectCollection<Event>();
+            object comboBoxSelectedIndex =
+                m_EventStatusComboBox.Invoke(new Action(() => 
+                    {
+                        comboBoxSelectedIndex = m_EventStatusComboBox.SelectedIndex;
+                    }));
 
-            switch (m_EventStatusComboBox.SelectedIndex)
+            switch(comboBoxSelectedIndex)
             {
                 case (int)eEventStatus.Online:
                     LoggedUser.GetEventsSorted(ref allEvents, ref sortedEvents, true);
@@ -316,13 +293,66 @@ Try again please :)");
             eventBindingSource.DataSource = sortedEvents;
         }
 
+        private void fetchLikedPages()
+        {
+            FacebookObjectCollection<Page> likedPages = LoggedUser.GetLikedPages();
+            m_LikedPagesListBox.DisplayMember = "Name";
+            fillListBoxes(likedPages, m_LikedPagesListBox);
+        }
+
+        private void fetchAlbums()
+        {
+            FacebookObjectCollection<Album> albums = LoggedUser.GetAlbums();
+            m_AlbumsListBox.DisplayMember = "Name";
+            fillListBoxes(albums, m_AlbumsListBox);
+        }
+
+        private void fetchUpcomingBirthday()
+        {
+            bool areFriendsBDaysThisMonth = false;
+            foreach (User friend in LoggedUser.GetFriends())
+
+            {
+                DateTime friendBirthday = DateTime.Parse(friend.Birthday);
+                if (friendBirthday.Month == DateTime.Now.Month)
+                {
+                    areFriendsBDaysThisMonth = true;
+                    m_UpcomingBirthdayListBox.Invoke(new Action(() => m_UpcomingBirthdayListBox.Items.Add($"{friend.Name} - {friend.Birthday} ")));
+                }
+            }
+
+            if (!areFriendsBDaysThisMonth)
+            {
+                m_UpcomingBirthdayListBox.Invoke(new Action(() => m_UpcomingBirthdayListBox.Items.Add($"No friends birthdays on {DateTime.Now:M}")));
+            }
+        }
+
+        private void fetchGroups()
+        {
+            m_GroupsListBox.DisplayMember = "Name";
+            FacebookObjectCollection<Group> favoriteTeams = LoggedUser.GetFavoriteTeams();
+            fillListBoxes(favoriteTeams, m_GroupsListBox);
+        }
+
+        private void fetchRandomPicture()
+        {
+            try
+            {
+                m_RandomImagePictureBox.Image = getRandomImage();
+            }
+            catch (Exception pictureException)
+            {
+                MessageBox.Show($@"An error occurred with the facebook API: {Environment.NewLine} {pictureException.Message}");
+            }
+        }
+
         private void fillListBoxes<T>(FacebookObjectCollection<T> i_FacebookItemsCollection, ListBox io_FacebookItemsList)
         {
             try
             {
                 foreach (T item in i_FacebookItemsCollection)
                 {
-                    io_FacebookItemsList.Items.Add(item);
+                    io_FacebookItemsList.Invoke(new Action(() => io_FacebookItemsList.Items.Add(item)));
                 }
             }
             catch (Exception ex)
@@ -332,7 +362,7 @@ Try again please :)");
 
             if (io_FacebookItemsList.Items.Count == 0)
             {
-                io_FacebookItemsList.Items.Add("No liked pages to retrieve :(");
+                io_FacebookItemsList.Invoke(new Action(() => io_FacebookItemsList.Items.Add("No liked pages to retrieve :(")));
             }
         }
 
@@ -376,7 +406,6 @@ Try again please :)");
         private void m_GetNasaPictureByDatebutton_Click(object sender, EventArgs e)
         {
             DateTime date = m_NasaDateTimePicker.Value;
-            
             string dateString = date.ToString("d", CultureInfo.CreateSpecificCulture("ja-JP"));
             dateString = dateString.Replace('/', '-');
             string response = r_NasaFacade.GetNasaPicBYDate(dateString);
