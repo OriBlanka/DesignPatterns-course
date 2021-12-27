@@ -357,14 +357,14 @@ Try again please :)");
             DateTime date = m_NasaDateTimePicker.Value;
             string dateString = date.ToString("d", CultureInfo.CreateSpecificCulture("ja-JP"));
             dateString = dateString.Replace('/', '-');
-            string response = r_NasaFacade.GetNasaPicBYDate(dateString);
-            fetchNasaPicUrlAndShowPic(response, m_NasaPicByDatepictureBox);
+            string picUrl = r_NasaFacade.GetNasaPicBYDate(dateString);
+            showCurrentItemPicture(m_NasaPicByDatepictureBox, $"{picUrl}");
         }
 
         private void fetchNasaPicToday()
         {
-            string response = r_NasaFacade.GetNasaPicOfTheDay();
-            fetchNasaPicUrlAndShowPic(response, m_NasaPicByTodaypictureBox);
+            string picUrl = r_NasaFacade.GetNasaPicOfTheDay();
+            showCurrentItemPicture(m_NasaPicByTodaypictureBox, $"{picUrl}");
         }
 
         private void fillListBoxes<T>(FacebookObjectCollection<T> i_FacebookItemsCollection, ListBox io_FacebookItemsList)
@@ -409,15 +409,6 @@ Try again please :)");
 
             int randomizedIndex = r_Random.Next(taggedPictures.Count);
             return taggedPictures[randomizedIndex].ImageAlbum;
-        }
-
-        private void fetchNasaPicUrlAndShowPic(string i_Response, PictureBox io_ItemNasaPicture)
-        {
-            string[] responseParts = i_Response.Split(',');
-            int urlIndex = responseParts.Length - 1;
-            responseParts[urlIndex] = responseParts[urlIndex].Substring(7);
-            responseParts[urlIndex] = responseParts[urlIndex].Remove(responseParts[urlIndex].Length - 3);
-            showCurrentItemPicture(io_ItemNasaPicture, $"{responseParts[urlIndex]}");
         }
     }
 }

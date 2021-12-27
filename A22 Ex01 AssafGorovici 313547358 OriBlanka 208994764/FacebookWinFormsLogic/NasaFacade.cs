@@ -11,14 +11,25 @@ namespace FacebookWinFormsLogic
         private readonly NasaApi r_NasaAPI = new NasaApi();
         public string GetNasaPicOfTheDay()
         {
-            string pictureURL = r_NasaAPI.GetNasaPictureByDate("");
-            return pictureURL;
+            string response = r_NasaAPI.GetNasaPictureByDate("");
+            string pictureUrl = fetchPicUrl(response);
+            return pictureUrl;
         }
 
         public string GetNasaPicBYDate(string i_Date)
         {
-            string pictureURL = r_NasaAPI.GetNasaPictureByDate(i_Date);
-            return pictureURL;
+            string response = r_NasaAPI.GetNasaPictureByDate(i_Date);
+            string pictureUrl = fetchPicUrl(response);
+            return pictureUrl;
+        }
+
+        private static string fetchPicUrl(string i_Response)
+        {
+            string[] responseParts = i_Response.Split(',');
+            int urlIndex = responseParts.Length - 1;
+            responseParts[urlIndex] = responseParts[urlIndex].Substring(7);
+            responseParts[urlIndex] = responseParts[urlIndex].Remove(responseParts[urlIndex].Length - 3);
+            return responseParts[urlIndex];
         }
     }
 }
