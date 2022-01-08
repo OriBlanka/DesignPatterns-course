@@ -26,6 +26,7 @@ namespace BasicFacebookFeatures
         private readonly Random r_Random = new Random();
         private readonly AppLogic r_AppLogic = AppLogic.Instance;
         private readonly NasaFacade r_NasaFacade = new NasaFacade();
+        private List<IObserver> observers = new List<IObserver>();
 
         private IFacebookUser LoggedUser { get; set; }
 
@@ -42,6 +43,8 @@ namespace BasicFacebookFeatures
             this.Location = r_AppSettings.LastWindowLocation;
             this.m_checkBoxRememberUser.Checked = false;
             LoggedUser = r_AppLogic.GetUser();
+            ColorObserver colorChosenObserver = new ColorObserver(this);
+            Attach(colorChosenObserver);
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -407,5 +410,47 @@ Try again please :)");
             int randomizedIndex = r_Random.Next(taggedPictures.Count);
             return taggedPictures[randomizedIndex].ImageAlbum;
         }
+
+        public void Attach(IObserver observer)
+        {
+            observers.Add(observer);
+        }
+
+        public void Detach(IObserver observer)
+        {
+            observers.Remove(observer);
+
+        }
+
+        // Trigger an update in each subscriber.
+        public void Notify()
+        {
+            foreach (var observer in observers)
+            {
+                observer.Update();
+            }
+        }
+
+        private void m_ShowChosenColorButton_Click(object sender, EventArgs e)
+        {
+            Notify();
+        }
+        public string GetSelectedFavoriteColor()
+        {
+            return m_ChoseColorComboBox.Text;
+        }
+
+        public void SetNotifiedColor(string i_Color)
+        {
+            if (i_Color == "Red")
+            {
+                m_ChoseColorPictureBox.Image = Properties.Resources.red;
+            }
+            else if (i_Color == "Blue")
+            {
+                m_ChoseColorPictureBox.Image = Properties.Resources.blue;
+            }
+        }
+
     }
 }

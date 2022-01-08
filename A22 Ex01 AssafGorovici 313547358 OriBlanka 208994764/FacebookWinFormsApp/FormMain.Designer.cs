@@ -82,6 +82,11 @@
             this.m_NasaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.m_NasaPicByTodaypictureBox = new System.Windows.Forms.PictureBox();
             this.m_getNasaPicTodayButton = new System.Windows.Forms.Button();
+            this.m_ChoseColorTabPage = new System.Windows.Forms.TabPage();
+            this.m_ShowChosenColorButton = new System.Windows.Forms.Button();
+            this.m_ChoseColorComboBox = new System.Windows.Forms.ComboBox();
+            this.m_ChoseColorLabel = new System.Windows.Forms.Label();
+            this.m_ChoseColorPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
@@ -108,6 +113,8 @@
             this.m_NasaPictureOfTheDayTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByDatepictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByTodaypictureBox)).BeginInit();
+            this.m_ChoseColorTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_ChoseColorPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,6 +173,7 @@
             this.m_AppTabControl.Controls.Add(this.m_FetchEventsTab);
             this.m_AppTabControl.Controls.Add(this.m_MutualLikedPagesTab);
             this.m_AppTabControl.Controls.Add(this.m_NasaPictureOfTheDayTab);
+            this.m_AppTabControl.Controls.Add(this.m_ChoseColorTabPage);
             resources.ApplyResources(this.m_AppTabControl, "m_AppTabControl");
             this.m_AppTabControl.Name = "m_AppTabControl";
             this.m_AppTabControl.SelectedIndex = 0;
@@ -491,6 +499,46 @@
             this.m_getNasaPicTodayButton.UseVisualStyleBackColor = true;
             this.m_getNasaPicTodayButton.Click += new System.EventHandler(this.m_getNasaPicTodayButton_Click);
             // 
+            // m_ChoseColorTabPage
+            // 
+            this.m_ChoseColorTabPage.Controls.Add(this.m_ShowChosenColorButton);
+            this.m_ChoseColorTabPage.Controls.Add(this.m_ChoseColorComboBox);
+            this.m_ChoseColorTabPage.Controls.Add(this.m_ChoseColorLabel);
+            this.m_ChoseColorTabPage.Controls.Add(this.m_ChoseColorPictureBox);
+            resources.ApplyResources(this.m_ChoseColorTabPage, "m_ChoseColorTabPage");
+            this.m_ChoseColorTabPage.Name = "m_ChoseColorTabPage";
+            this.m_ChoseColorTabPage.UseVisualStyleBackColor = true;
+            // 
+            // m_ShowChosenColorButton
+            // 
+            resources.ApplyResources(this.m_ShowChosenColorButton, "m_ShowChosenColorButton");
+            this.m_ShowChosenColorButton.Name = "m_ShowChosenColorButton";
+            this.m_ShowChosenColorButton.UseVisualStyleBackColor = true;
+            this.m_ShowChosenColorButton.Click += new System.EventHandler(this.m_ShowChosenColorButton_Click);
+            // 
+            // m_ChoseColorComboBox
+            // 
+            this.m_ChoseColorComboBox.FormattingEnabled = true;
+            this.m_ChoseColorComboBox.Items.AddRange(new object[] {
+            resources.GetString("m_ChoseColorComboBox.Items"),
+            resources.GetString("m_ChoseColorComboBox.Items1")});
+            resources.ApplyResources(this.m_ChoseColorComboBox, "m_ChoseColorComboBox");
+            this.m_ChoseColorComboBox.Name = "m_ChoseColorComboBox";
+            // 
+            // m_ChoseColorLabel
+            // 
+            resources.ApplyResources(this.m_ChoseColorLabel, "m_ChoseColorLabel");
+            this.m_ChoseColorLabel.Name = "m_ChoseColorLabel";
+            // 
+            // m_ChoseColorPictureBox
+            // 
+            this.m_ChoseColorPictureBox.ErrorImage = global::BasicFacebookFeatures.Properties.Resources.choseColor;
+            this.m_ChoseColorPictureBox.Image = global::BasicFacebookFeatures.Properties.Resources.choseColor;
+            this.m_ChoseColorPictureBox.InitialImage = global::BasicFacebookFeatures.Properties.Resources.choseColor;
+            resources.ApplyResources(this.m_ChoseColorPictureBox, "m_ChoseColorPictureBox");
+            this.m_ChoseColorPictureBox.Name = "m_ChoseColorPictureBox";
+            this.m_ChoseColorPictureBox.TabStop = false;
+            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
@@ -543,6 +591,9 @@
             this.m_NasaPictureOfTheDayTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByDatepictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_NasaPicByTodaypictureBox)).EndInit();
+            this.m_ChoseColorTabPage.ResumeLayout(false);
+            this.m_ChoseColorTabPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.m_ChoseColorPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_UserProfilePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -599,6 +650,11 @@
         private System.Windows.Forms.DateTimePicker m_NasaDateTimePicker;
         private System.Windows.Forms.Button m_GetNasaPictureByDatebutton;
         private System.Windows.Forms.PictureBox m_NasaPicByDatepictureBox;
+        private System.Windows.Forms.TabPage m_ChoseColorTabPage;
+        private System.Windows.Forms.PictureBox m_ChoseColorPictureBox;
+        private System.Windows.Forms.Button m_ShowChosenColorButton;
+        private System.Windows.Forms.ComboBox m_ChoseColorComboBox;
+        private System.Windows.Forms.Label m_ChoseColorLabel;
     }
 }
 
