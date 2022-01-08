@@ -57,11 +57,14 @@
     <Compile Include="AppLogic.cs" />
     <Compile Include="AppSettings.cs" />
     <Compile Include="IObserver.cs" />
+    <Compile Include="ISortListOfFriendsStrategy.cs" />
     <Compile Include="NasaApi.cs" />
     <Compile Include="FacebookConnector.cs" />
     <Compile Include="FacebookUserProxy.cs" />
     <Compile Include="IFacebookUser.cs" />
     <Compile Include="NasaFacade.cs" />
+    <Compile Include="SortListOfFriendsByAscendingStrategy.cs" />
+    <Compile Include="SortListOfFriendsByDescendingStrategy.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
