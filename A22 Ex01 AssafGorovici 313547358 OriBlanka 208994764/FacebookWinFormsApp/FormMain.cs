@@ -55,7 +55,6 @@ namespace BasicFacebookFeatures
             r_AppSettings.LastWindowLocation = this.Location;
             r_AppSettings.AutoLogin = this.m_checkBoxRememberUser.Checked;
             r_AppSettings.AccessToken = m_checkBoxRememberUser.Checked ? r_AppLogic.AccessToken : null;
-            r_AppSettings.AppBackgroundColor = this.BackColor;
 
             if (this.m_checkBoxRememberUser.Checked)
             {
@@ -89,6 +88,7 @@ namespace BasicFacebookFeatures
         public void Update()
         {
             this.BackColor = m_ColorPickerForm.ChosenColor;
+            r_AppSettings.AppBackgroundColor = this.BackColor;
         }
 
         private void autoLogin()
