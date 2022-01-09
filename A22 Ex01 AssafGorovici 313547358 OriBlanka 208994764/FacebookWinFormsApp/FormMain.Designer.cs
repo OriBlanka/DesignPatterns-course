@@ -92,6 +92,7 @@
             this.m_HelloUserLabel = new System.Windows.Forms.Label();
             this.m_UserProfilePicture = new System.Windows.Forms.PictureBox();
             this.m_checkBoxRememberUser = new System.Windows.Forms.CheckBox();
+            this.m_ChoseColorButton = new System.Windows.Forms.Button();
             declinedCountLabel = new System.Windows.Forms.Label();
             descriptionLabel = new System.Windows.Forms.Label();
             endTimeLabel = new System.Windows.Forms.Label();
@@ -573,10 +574,18 @@
             this.m_checkBoxRememberUser.Name = "m_checkBoxRememberUser";
             this.m_checkBoxRememberUser.UseVisualStyleBackColor = true;
             // 
+            // m_ChoseColorButton
+            // 
+            resources.ApplyResources(this.m_ChoseColorButton, "m_ChoseColorButton");
+            this.m_ChoseColorButton.Name = "m_ChoseColorButton";
+            this.m_ChoseColorButton.UseVisualStyleBackColor = true;
+            this.m_ChoseColorButton.Click += new System.EventHandler(this.m_ChoseColorButton_Click);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.m_ChoseColorButton);
             this.Controls.Add(this.m_checkBoxRememberUser);
             this.Controls.Add(this.m_HelloUserLabel);
             this.Controls.Add(this.m_UserProfilePicture);
@@ -667,6 +676,7 @@
         private System.Windows.Forms.ComboBox m_ChoseColorComboBox;
         private System.Windows.Forms.Label m_ChoseColorLabel;
         private System.Windows.Forms.ComboBox m_SortSelectionComboBox;
+        private System.Windows.Forms.Button m_ChoseColorButton;
     }
 }
 

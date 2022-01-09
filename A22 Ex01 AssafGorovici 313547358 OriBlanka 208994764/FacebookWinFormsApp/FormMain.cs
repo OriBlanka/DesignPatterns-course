@@ -445,5 +445,9 @@ Try again please :)");
             }
         }
 
+        private void m_ChoseColorButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

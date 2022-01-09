@@ -15,6 +15,7 @@ namespace FacebookWinFormsLogic
 
         private static readonly string sr_FileName;
 
+
         static AppSettings()
         {
             sr_FileName = Directory.GetCurrentDirectory() + "\\appsettings.xml";
