@@ -26,7 +26,7 @@ public interface IFacebookUser
 
     FacebookObjectCollection<Photo> GetPhotosTaggedIn();
 
-    void GetFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest);
+    void GetFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest, string i_SortBy);
 
 }
 

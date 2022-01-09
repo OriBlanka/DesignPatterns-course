@@ -8,9 +8,10 @@ namespace FacebookWinFormsLogic
 {
     class SortListOfFriendsByDescendingStrategy : ISortListOfFriendsStrategy
     {
-        public void Sort(List<string> friendsList)
+        public void Sort(Dictionary<string, int> friendsList)
         {
-            friendsList.Sort((a, b) => b.CompareTo(a));
+            friendsList = (Dictionary<string, int>)from friend in friendsList orderby friend.Value descending select friend;
+            //friendsList.Sort((a, b) => b.CompareTo(a));
         }
     }
 }

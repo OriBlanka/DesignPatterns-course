@@ -8,6 +8,6 @@ namespace FacebookWinFormsLogic
 {
     public interface ISortListOfFriendsStrategy
     {
-        void Sort(List<string> friendsList);
+        void Sort(Dictionary<string, int> friendsList);
     }
 }

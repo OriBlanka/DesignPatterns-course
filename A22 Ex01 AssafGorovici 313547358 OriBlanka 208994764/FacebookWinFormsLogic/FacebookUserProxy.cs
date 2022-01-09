@@ -7,6 +7,7 @@ namespace FacebookWinFormsLogic
     public class FacebookUserProxy : IFacebookUser
     {
         private readonly User r_FacebookUser;
+        private ISortListOfFriendsStrategy m_SortListOfFriendsStrategy;
 
         public FacebookUserProxy(User i_User)
         {
@@ -87,7 +88,7 @@ namespace FacebookWinFormsLogic
             return r_FacebookUser.Friends;
         }
 
-        public void GetFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest)
+        public void GetFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest, string i_SortBy)
         {
             foreach (User friend in r_FacebookUser.Friends)
             {
@@ -105,6 +106,26 @@ namespace FacebookWinFormsLogic
                 {
                     io_FriendsCommonPagesLikes.Add(friend.Name, friendCommonLikedPages);
                 }
+            }
+
+            setSortStrategy(i_SortBy);
+            m_SortListOfFriendsStrategy.Sort(io_FriendsCommonPagesLikes);
+
+        }
+
+        private void setSortStrategy(string i_SortBy)
+        {
+            switch (i_SortBy)
+            {
+                case "Ascending":
+                    m_SortListOfFriendsStrategy = new SortListOfFriendsByAscendingStrategy();
+                    break;
+                case "Descending":
+                    m_SortListOfFriendsStrategy = new SortListOfFriendsByDescendingStrategy();
+                    break;
+                default:
+                    m_SortListOfFriendsStrategy = new SortListOfFriendsByAscendingStrategy();
+                    break;
             }
         }
     }

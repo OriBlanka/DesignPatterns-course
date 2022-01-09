@@ -73,6 +73,7 @@
             this.m_EventStatusComboBox = new System.Windows.Forms.ComboBox();
             this.m_FetchEventButtons = new System.Windows.Forms.Button();
             this.m_MutualLikedPagesTab = new System.Windows.Forms.TabPage();
+            this.m_SortSelectionComboBox = new System.Windows.Forms.ComboBox();
             this.m_CommonInterestListBox = new System.Windows.Forms.ListBox();
             this.m_FetchCommonInterest = new System.Windows.Forms.Button();
             this.m_LikePictureBox = new System.Windows.Forms.PictureBox();
@@ -428,12 +429,22 @@
             // 
             // m_MutualLikedPagesTab
             // 
+            this.m_MutualLikedPagesTab.Controls.Add(this.m_SortSelectionComboBox);
             this.m_MutualLikedPagesTab.Controls.Add(this.m_CommonInterestListBox);
             this.m_MutualLikedPagesTab.Controls.Add(this.m_FetchCommonInterest);
             this.m_MutualLikedPagesTab.Controls.Add(this.m_LikePictureBox);
             resources.ApplyResources(this.m_MutualLikedPagesTab, "m_MutualLikedPagesTab");
             this.m_MutualLikedPagesTab.Name = "m_MutualLikedPagesTab";
             this.m_MutualLikedPagesTab.UseVisualStyleBackColor = true;
+            // 
+            // m_SortSelectionComboBox
+            // 
+            this.m_SortSelectionComboBox.FormattingEnabled = true;
+            this.m_SortSelectionComboBox.Items.AddRange(new object[] {
+            resources.GetString("m_SortSelectionComboBox.Items"),
+            resources.GetString("m_SortSelectionComboBox.Items1")});
+            resources.ApplyResources(this.m_SortSelectionComboBox, "m_SortSelectionComboBox");
+            this.m_SortSelectionComboBox.Name = "m_SortSelectionComboBox";
             // 
             // m_CommonInterestListBox
             // 
@@ -655,6 +666,7 @@
         private System.Windows.Forms.Button m_ShowChosenColorButton;
         private System.Windows.Forms.ComboBox m_ChoseColorComboBox;
         private System.Windows.Forms.Label m_ChoseColorLabel;
+        private System.Windows.Forms.ComboBox m_SortSelectionComboBox;
     }
 }
 
