@@ -13,6 +13,8 @@ namespace FacebookWinFormsLogic
         public Point LastWindowLocation { get; set; }
         public string AccessToken { get; set; }
 
+        public Color AppBackgroundColor { get; set; }
+
         private static readonly string sr_FileName;
 
 

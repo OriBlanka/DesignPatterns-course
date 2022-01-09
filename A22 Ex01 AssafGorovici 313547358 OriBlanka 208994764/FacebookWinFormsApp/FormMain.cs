@@ -8,10 +8,11 @@ using FacebookWrapper.ObjectModel;
 using FacebookWrapper;
 using FacebookWinFormsLogic;
 using System.Globalization;
+using BasicFacebookFeatures.Properties;
 
 namespace BasicFacebookFeatures
 {
-    public partial class FormMain : Form
+    public partial class FormMain : Form, IObserver
     {
         public enum eEventStatus
         {
@@ -23,11 +24,10 @@ namespace BasicFacebookFeatures
         private bool m_LoggedIn;
         private const string k_AppId = "4722021931181899";
         private readonly AppSettings r_AppSettings;
-        private readonly Random r_Random = new Random();
         private readonly AppLogic r_AppLogic = AppLogic.Instance;
         private readonly NasaFacade r_NasaFacade = new NasaFacade();
-        private List<IObserver> observers = new List<IObserver>();
-       
+        private ColorPickerForm m_ColorPickerForm = new ColorPickerForm();
+
 
         private IFacebookUser LoggedUser { get; set; }
 
@@ -43,9 +43,8 @@ namespace BasicFacebookFeatures
             this.Size = r_AppSettings.LastWindowSize;
             this.Location = r_AppSettings.LastWindowLocation;
             this.m_checkBoxRememberUser.Checked = false;
+            
             LoggedUser = r_AppLogic.GetUser();
-            ColorObserver colorChosenObserver = new ColorObserver(this);
-            Attach(colorChosenObserver);
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -56,6 +55,7 @@ namespace BasicFacebookFeatures
             r_AppSettings.LastWindowLocation = this.Location;
             r_AppSettings.AutoLogin = this.m_checkBoxRememberUser.Checked;
             r_AppSettings.AccessToken = m_checkBoxRememberUser.Checked ? r_AppLogic.AccessToken : null;
+            r_AppSettings.AppBackgroundColor = this.BackColor;
 
             if (this.m_checkBoxRememberUser.Checked)
             {
@@ -74,6 +74,7 @@ namespace BasicFacebookFeatures
             this.WindowState = r_AppSettings.LastWindowState;
             this.Location = r_AppSettings.LastWindowLocation;
             this.m_checkBoxRememberUser.Checked = r_AppSettings.AutoLogin;
+            this.BackColor = r_AppSettings.AppBackgroundColor;
         }
 
         protected override void OnShown(EventArgs e)
@@ -83,6 +84,11 @@ namespace BasicFacebookFeatures
             {
                 autoLogin();
             }
+        }
+
+        public void Update()
+        {
+            this.BackColor = m_ColorPickerForm.ChosenColor;
         }
 
         private void autoLogin()
@@ -116,6 +122,14 @@ Try again please :)");
             m_UserProfilePicture.Image = LoggedUser.GetImageSmall();
             m_HelloUserLabel.Text = $@"Hi {LoggedUser.GetFirstName()}!";
             m_LoginButton.Text = $@"Logged in as {LoggedUser.GetFirstName()} {LoggedUser.GetLastName()}";
+            this.BackColor = r_AppSettings.AppBackgroundColor;
+        }
+        private void m_ChoseColorButton_Click(object sender, EventArgs e)
+        {
+            AppSettings appSettings = r_AppSettings;
+            m_ColorPickerForm = new ColorPickerForm();
+            m_ColorPickerForm.Attach(Update);
+            m_ColorPickerForm.ShowDialog();
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)
@@ -123,7 +137,7 @@ Try again please :)");
             FacebookService.LogoutWithUI();
             m_LoginButton.Text = "Login";
             m_HelloUserLabel.Text = "";
-            m_UserProfilePicture.Image = Properties.Resources.FacebookLogo;
+            m_UserProfilePicture.Image = Resources.FacebookLogo;
         }
 
         private void buttonFetchPosts_Click(object sender, EventArgs e)
@@ -404,29 +418,9 @@ Try again please :)");
             }
         }
 
-        public void Attach(IObserver observer)
-        {
-            observers.Add(observer);
-        }
-
-        public void Detach(IObserver observer)
-        {
-            observers.Remove(observer);
-
-        }
-
-        // Trigger an update in each subscriber.
-        public void Notify()
-        {
-            foreach (var observer in observers)
-            {
-                observer.Update();
-            }
-        }
-
         private void m_ShowChosenColorButton_Click(object sender, EventArgs e)
         {
-            Notify();
+            //Notify();
         }
         public string GetSelectedFavoriteColor()
         {
@@ -443,11 +437,6 @@ Try again please :)");
             {
                 m_ChoseColorPictureBox.Image = Properties.Resources.blue;
             }
-        }
-
-        private void m_ChoseColorButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
