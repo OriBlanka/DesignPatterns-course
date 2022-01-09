@@ -344,7 +344,7 @@ Try again please :)");
         {
             try
             {
-                m_RandomImagePictureBox.Image = getRandomImage();
+                m_RandomImagePictureBox.Image = LoggedUser.GetSelectedImage();
             }
             catch (Exception pictureException)
             {
@@ -397,18 +397,6 @@ Try again please :)");
             {
                 io_ItemPicture.Image = io_ItemPicture.ErrorImage;
             }
-        }
-        
-        private Image getRandomImage()
-        {
-            FacebookObjectCollection<Photo> taggedPictures = LoggedUser.GetPhotosTaggedIn();
-            if (taggedPictures.Count < 1)
-            {
-                throw new Exception("No Tagged pictures");
-            }
-
-            int randomizedIndex = r_Random.Next(taggedPictures.Count);
-            return taggedPictures[randomizedIndex].ImageAlbum;
         }
 
         public void Attach(IObserver observer)

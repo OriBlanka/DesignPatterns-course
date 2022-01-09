@@ -7,6 +7,7 @@ namespace FacebookWinFormsLogic
     public class FacebookUserProxy : IFacebookUser
     {
         private readonly User r_FacebookUser;
+        private readonly  PhotoSelectionAlgorithmBase r_PhotoSelectionAlgorithm = new PhotoRandomizer();
 
         public FacebookUserProxy(User i_User)
         {
@@ -51,6 +52,11 @@ namespace FacebookWinFormsLogic
         public FacebookObjectCollection<Event> GetAllEvents()
         {
             return r_FacebookUser.Events;
+        }
+
+        public Image GetSelectedImage()
+        {
+            return r_PhotoSelectionAlgorithm.GetPhoto(r_FacebookUser);
         }
 
         public void GetEventsSorted(ref FacebookObjectCollection<Event> i_Events, ref FacebookObjectCollection<Event> io_sortedEvents, bool i_IsOnline)

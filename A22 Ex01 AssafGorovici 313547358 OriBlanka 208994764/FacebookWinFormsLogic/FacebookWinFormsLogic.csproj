@@ -63,6 +63,8 @@
     <Compile Include="FacebookUserProxy.cs" />
     <Compile Include="IFacebookUser.cs" />
     <Compile Include="NasaFacade.cs" />
+    <Compile Include="PhotoRandomizer.cs" />
+    <Compile Include="PhotoSelectionAlgorithmBase.cs" />
     <Compile Include="SortListOfFriendsByAscendingStrategy.cs" />
     <Compile Include="SortListOfFriendsByDescendingStrategy.cs" />
   </ItemGroup>
