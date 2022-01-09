@@ -24,11 +24,9 @@ public interface IFacebookUser
 
     FacebookObjectCollection<Group> GetFavoriteTeams();
 
-    FacebookObjectCollection<Photo> GetPhotosTaggedIn();
-
     Image GetSelectedImage();
 
-    void GetFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest);
+    //void GetFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest);
     void GetFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest, string i_SortBy);
 
 }

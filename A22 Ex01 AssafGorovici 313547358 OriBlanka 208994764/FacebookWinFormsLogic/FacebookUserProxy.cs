@@ -45,11 +45,6 @@ namespace FacebookWinFormsLogic
             return r_FacebookUser.Groups;
         }
 
-        public FacebookObjectCollection<Photo> GetPhotosTaggedIn()
-        {
-            return r_FacebookUser.PhotosTaggedIn;
-        }
-
         public FacebookObjectCollection<Event> GetAllEvents()
         {
             return r_FacebookUser.Events;
