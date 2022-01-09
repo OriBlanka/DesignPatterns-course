@@ -254,7 +254,8 @@ Try again please :)");
         {
             bool isFriendWithCommonInterest = false;
             Dictionary<string, int> friendsCommonPagesLikes = new Dictionary<string, int>();
-            string sortBy = m_SortSelectionComboBox.SelectedItem.ToString();
+            string sortBy = "";
+            m_SortSelectionComboBox.Invoke(new Action(() => sortBy = m_SortSelectionComboBox.SelectedItem.ToString()));
 
             LoggedUser.GetFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest, sortBy);
             
