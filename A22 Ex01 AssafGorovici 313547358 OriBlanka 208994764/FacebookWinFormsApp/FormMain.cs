@@ -27,6 +27,7 @@ namespace BasicFacebookFeatures
         private readonly AppLogic r_AppLogic = AppLogic.Instance;
         private readonly NasaFacade r_NasaFacade = new NasaFacade();
         private List<IObserver> observers = new List<IObserver>();
+       
 
         private IFacebookUser LoggedUser { get; set; }
 
@@ -253,8 +254,10 @@ Try again please :)");
         {
             bool isFriendWithCommonInterest = false;
             Dictionary<string, int> friendsCommonPagesLikes = new Dictionary<string, int>();
+            string sortBy = m_SortSelectionComboBox.SelectedItem.ToString();
 
-            LoggedUser.GetFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest);
+            LoggedUser.GetFriendsCommonInterest(ref friendsCommonPagesLikes, ref isFriendWithCommonInterest, sortBy);
+            
             foreach (KeyValuePair<string, int> friendInDictionary in friendsCommonPagesLikes)
             {
                 m_CommonInterestListBox.Invoke(new Action(() => m_CommonInterestListBox.Items.Add($"{friendInDictionary.Key} - {friendInDictionary.Value.ToString()} Pages")));
