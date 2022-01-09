@@ -10,8 +10,8 @@ namespace FacebookWinFormsLogic
     {
         public void Sort(Dictionary<string, int> friendsList)
         {
-            friendsList = (Dictionary<string, int>)from friend in friendsList orderby friend.Value descending select friend;
-            //friendsList.Sort((a, b) => b.CompareTo(a));
+            var friendsKeyValueList = from friend in friendsList orderby friend.Value descending select friend;
+            friendsList = friendsKeyValueList.ToDictionary(x => x.Key, x => x.Value);
         }
     }
 }

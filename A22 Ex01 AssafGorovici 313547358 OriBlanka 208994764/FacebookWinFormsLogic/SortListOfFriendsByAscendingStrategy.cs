@@ -10,9 +10,10 @@ namespace FacebookWinFormsLogic
     {
         public void Sort(Dictionary<string, int> friendsList)
         {
-            //Dictionary<string, int> sortedFreindsList = new Dictionary<string, int>();
-            friendsList = (Dictionary<string, int>)from friend in friendsList orderby friend.Value ascending select friend;
-          //  friendsList.Sort((a, b) => a.Value.CompareTo(b.Value));
+            
+            var friendsKeyValueList = from friend in friendsList orderby friend.Value ascending select friend;
+            friendsList = friendsKeyValueList.ToDictionary(x => x.Key, x => x.Value);
+
         }
     }
 }
