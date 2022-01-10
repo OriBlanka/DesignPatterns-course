@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 using FacebookWrapper.ObjectModel;
@@ -124,6 +123,7 @@ Try again please :)");
             m_LoginButton.Text = $@"Logged in as {LoggedUser.GetFirstName()} {LoggedUser.GetLastName()}";
             this.BackColor = r_AppSettings.AppBackgroundColor;
         }
+
         private void m_ChoseColorButton_Click(object sender, EventArgs e)
         {
             r_ColorPickerForm.Attach(Update);
@@ -413,27 +413,6 @@ Try again please :)");
             else
             {
                 io_ItemPicture.Image = io_ItemPicture.ErrorImage;
-            }
-        }
-
-        private void m_ShowChosenColorButton_Click(object sender, EventArgs e)
-        {
-            //Notify();
-        }
-        public string GetSelectedFavoriteColor()
-        {
-            return m_ChoseColorComboBox.Text;
-        }
-
-        public void SetNotifiedColor(string i_Color)
-        {
-            if (i_Color == "Red")
-            {
-                m_ChoseColorPictureBox.Image = Properties.Resources.red;
-            }
-            else if (i_Color == "Blue")
-            {
-                m_ChoseColorPictureBox.Image = Properties.Resources.blue;
             }
         }
     }

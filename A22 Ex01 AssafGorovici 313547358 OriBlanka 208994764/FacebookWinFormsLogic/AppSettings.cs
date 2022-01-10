@@ -19,11 +19,11 @@ namespace FacebookWinFormsLogic
 
         public Color AppBackgroundColor => AutoLogin ? Color.FromArgb(BackgroundRed, BackgroundGreen, BackgroundBlue) : SystemColors.Control;
 
-        public byte BackgroundRed { get; set; }
+        public byte BackgroundRed { get; set; } = SystemColors.Control.R;
 
-        public byte BackgroundGreen { get; set; }
+        public byte BackgroundGreen { get; set; } = SystemColors.Control.G;
 
-        public byte BackgroundBlue { get; set; }
+        public byte BackgroundBlue { get; set; } = SystemColors.Control.B;
 
         private static readonly string sr_FileName;
 

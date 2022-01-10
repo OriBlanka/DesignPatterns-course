@@ -26,7 +26,6 @@ public interface IFacebookUser
 
     Image GetSelectedImage();
 
-    //void GetFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest);
     void GetFriendsCommonInterest(ref Dictionary<string, int> io_FriendsCommonPagesLikes, ref bool io_IsFriendWithCommonInterest, string i_SortBy);
 
 }
