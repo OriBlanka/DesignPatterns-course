@@ -48,28 +48,33 @@ namespace BasicFacebookFeatures
 
         private void m_RedTrackBar_Scroll(object sender, EventArgs e)
         {
-            m_ColorPanel.BackColor = Color.FromArgb(m_RedTrackBar.Value, m_GreenTrackBar.Value, m_BlueTrackBar.Value);
+            changePanelColor();
         }
 
         private void m_GreenTrackBar_Scroll(object sender, EventArgs e)
         {
-            m_ColorPanel.BackColor = Color.FromArgb(m_RedTrackBar.Value, m_GreenTrackBar.Value, m_BlueTrackBar.Value);
+            changePanelColor();
         }
 
         private void m_BlueTrackBar_Scroll(object sender, EventArgs e)
         {
-            m_ColorPanel.BackColor = Color.FromArgb(m_RedTrackBar.Value, m_GreenTrackBar.Value, m_BlueTrackBar.Value);
+            changePanelColor();
         }
 
         private void ColorPickerForm_Load(object sender, EventArgs e)
         {
-            m_ColorPanel.BackColor = Color.Black;
+            m_ColorPanel.BackColor = SystemColors.Control;
         }
 
         private void m_SubmitColorButton_Click(object sender, EventArgs e)
         {
             m_ChosenRGB = Color.FromArgb(m_RedTrackBar.Value, m_GreenTrackBar.Value, m_BlueTrackBar.Value);
             Close();
+        }
+
+        private void changePanelColor()
+        {
+            m_ColorPanel.BackColor = Color.FromArgb(m_RedTrackBar.Value, m_GreenTrackBar.Value, m_BlueTrackBar.Value);
         }
     }
 }

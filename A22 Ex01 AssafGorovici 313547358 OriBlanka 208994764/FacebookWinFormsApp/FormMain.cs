@@ -26,8 +26,7 @@ namespace BasicFacebookFeatures
         private readonly AppSettings r_AppSettings;
         private readonly AppLogic r_AppLogic = AppLogic.Instance;
         private readonly NasaFacade r_NasaFacade = new NasaFacade();
-        private ColorPickerForm m_ColorPickerForm = new ColorPickerForm();
-
+        private readonly ColorPickerForm r_ColorPickerForm = new ColorPickerForm();
 
         private IFacebookUser LoggedUser { get; set; }
 
@@ -43,7 +42,6 @@ namespace BasicFacebookFeatures
             this.Size = r_AppSettings.LastWindowSize;
             this.Location = r_AppSettings.LastWindowLocation;
             this.m_checkBoxRememberUser.Checked = false;
-            
             LoggedUser = r_AppLogic.GetUser();
         }
 
@@ -87,8 +85,10 @@ namespace BasicFacebookFeatures
 
         public void Update()
         {
-            this.BackColor = m_ColorPickerForm.ChosenColor;
-            r_AppSettings.AppBackgroundColor = this.BackColor;
+            this.BackColor = r_ColorPickerForm.ChosenColor;
+            r_AppSettings.BackgroundRed = BackColor.R;
+            r_AppSettings.BackgroundGreen = BackColor.G;
+            r_AppSettings.BackgroundBlue = BackColor.B;
         }
 
         private void autoLogin()
@@ -126,10 +126,8 @@ Try again please :)");
         }
         private void m_ChoseColorButton_Click(object sender, EventArgs e)
         {
-            AppSettings appSettings = r_AppSettings;
-            m_ColorPickerForm = new ColorPickerForm();
-            m_ColorPickerForm.Attach(Update);
-            m_ColorPickerForm.ShowDialog();
+            r_ColorPickerForm.Attach(Update);
+            r_ColorPickerForm.ShowDialog();
         }
 
         private void buttonLogout_Click(object sender, EventArgs e)

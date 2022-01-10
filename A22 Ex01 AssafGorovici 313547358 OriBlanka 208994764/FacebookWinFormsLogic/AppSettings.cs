@@ -8,15 +8,24 @@ namespace FacebookWinFormsLogic
     public class AppSettings
     {
         public bool AutoLogin { get; set; }
+
         public Size LastWindowSize { get; set; }
+
         public FormWindowState LastWindowState { get; set; }
+
         public Point LastWindowLocation { get; set; }
+
         public string AccessToken { get; set; }
 
-        public Color AppBackgroundColor { get; set; }
+        public Color AppBackgroundColor => AutoLogin ? Color.FromArgb(BackgroundRed, BackgroundGreen, BackgroundBlue) : SystemColors.Control;
+
+        public byte BackgroundRed { get; set; }
+
+        public byte BackgroundGreen { get; set; }
+
+        public byte BackgroundBlue { get; set; }
 
         private static readonly string sr_FileName;
-
 
         static AppSettings()
         {

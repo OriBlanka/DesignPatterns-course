@@ -37,6 +37,7 @@ namespace BasicFacebookFeatures
             this.m_GreenLabel = new System.Windows.Forms.Label();
             this.m_BlueLabel = new System.Windows.Forms.Label();
             this.m_SubmitColorButton = new System.Windows.Forms.Button();
+            this.m_ChooseColorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.m_RedTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_GreenTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_BlueTrackBar)).BeginInit();
@@ -113,12 +114,22 @@ namespace BasicFacebookFeatures
             this.m_SubmitColorButton.UseVisualStyleBackColor = true;
             this.m_SubmitColorButton.Click += new System.EventHandler(this.m_SubmitColorButton_Click);
             // 
+            // m_ChooseColorLabel
+            // 
+            this.m_ChooseColorLabel.AutoSize = true;
+            this.m_ChooseColorLabel.Location = new System.Drawing.Point(791, 497);
+            this.m_ChooseColorLabel.Name = "m_ChooseColorLabel";
+            this.m_ChooseColorLabel.Size = new System.Drawing.Size(665, 32);
+            this.m_ChooseColorLabel.TabIndex = 0;
+            this.m_ChooseColorLabel.Text = "Choose your new color and see the changes above ";
+            // 
             // ColorPickerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1484, 656);
+            this.ClientSize = new System.Drawing.Size(1468, 612);
+            this.Controls.Add(this.m_ChooseColorLabel);
             this.Controls.Add(this.m_SubmitColorButton);
             this.Controls.Add(this.m_BlueLabel);
             this.Controls.Add(this.m_GreenLabel);
@@ -151,5 +162,6 @@ namespace BasicFacebookFeatures
         private System.Windows.Forms.Label m_GreenLabel;
         private System.Windows.Forms.Label m_BlueLabel;
         private System.Windows.Forms.Button m_SubmitColorButton;
+        private System.Windows.Forms.Label m_ChooseColorLabel;
     }
 }
