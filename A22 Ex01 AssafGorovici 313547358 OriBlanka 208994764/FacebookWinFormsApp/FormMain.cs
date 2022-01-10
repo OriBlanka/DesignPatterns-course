@@ -84,10 +84,10 @@ namespace BasicFacebookFeatures
 
         public void Update()
         {
-            this.BackColor = r_ColorPickerForm.ChosenColor;
             r_AppSettings.BackgroundRed = BackColor.R;
             r_AppSettings.BackgroundGreen = BackColor.G;
             r_AppSettings.BackgroundBlue = BackColor.B;
+            this.BackColor = r_ColorPickerForm.ChosenColor;
         }
 
         private void autoLogin()
